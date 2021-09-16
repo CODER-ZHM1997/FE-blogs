@@ -1,5 +1,9 @@
 ## 问题
 
+[CI&CD](https://www.redhat.com/zh/topics/devops/what-is-ci-cd)
+
+
+
 js的参数传递还是值传递，
 
 - 引用传递就是指传递地址，所以js是引用传递
