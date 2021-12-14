@@ -6,6 +6,8 @@
 
 - 捕获、目标、冒泡阶段
   - addEventListener
+  - 阻止冒泡：stopPropagation
+  - 阻止默认行为：preventDefault
 
 如何绑定方法？
 
@@ -35,13 +37,9 @@ js就是es5
   - 对象的方法（应为我对象方法就是为了操作属性啊）
   - 动态上下文的回调函数（就是我需要你this指向新的对象了，但是你用回调函数就是固定的this指向了)
 
-
-
-
-
 this指向会被改变的四个场景
 
-- 通过call、bind、apply
+- 通过call、apply、bind、
 - 构造函数执行
 - 作为方法调用
 - 普通函数执行
@@ -89,25 +87,45 @@ for in和for of的区别
 #### [正则表达式](https://www.runoob.com/regexp/regexp-metachar.html)
 
 - 你要要求字符串***整体***由什么组成，则是需要加上^和$
-- test居然是正则表达式的方法，而search居然是返回首个符合的条件的下标，而match才是匹配的结果
+- test居然是正则表达式的方法，而search居然是返回首个符合的条件的下标，而match才是匹配的结果，match经常与/g，搭配使用
+
+[括号有什么用，](https://www.jb51.net/article/141294.htm)
+
+- 
+- 中括号[123]，是多选一
+- 小括号(123)，则是
+
+**字符串**
+
+- split，将字符串分割成数组
 
 
 
-#### 数组
+**对象**
+
+[对象如何遍历？](https://www.cnblogs.com/wangdashi/p/9606182.html)
+
+- for in
+- Object.keys、Object.values，返回的可枚举属性
+
+**数组**
 
 数组的常用方法
 
 - [reduce的运用](https://juejin.cn/post/7011096419985522701)
-- filter
+
 - every、some
 - find、findIndex
-- forEach、map
-  - forEach和map都不会影响原数组
+- [forEach、map、filter](https://juejin.cn/post/6844903807176933384#heading-5)
+  - map是返回新数组
+  - filter是返回为true的才能被留下来
+- 原来string和array都是includes
+
 - [对原数组有影响的函数](https://juejin.cn/post/6844904192671219719)
   - push、pop
   - unshift、shift
   - reverse、sort、splice、fill（简称rssf）
-    - splice则是能完成增、删、替换
+    - splice则是能完成增、删、替换，强的要死
 
 
 
