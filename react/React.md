@@ -1,22 +1,27 @@
-[TOC]
 
-什么是react？
+
+什么是react？他能解决什么问题
 
 - 也是构建用户界面的js库
 
-## 问题
+学习要点
 
-[前端的规范](https://github.com/niceboybao/front-end-develop-standard)
+- reactjs
+- react-router
+- redux
+- umi
 
-- 小写，用连字符-(即中划线)拼接
+项目
+
+- [后台管理系统](https://juejin.cn/post/6844903866052378638)，你把这个项目搞懂即可：[ant-design-pro](https://github.com/ant-design/ant-design-pro)项目即可，其他项目都只是需求不同而已，功能都是基于ant-design-pro来实现的
+  - 配套的教程：https://pro.ant.design/zh-CN/docs/getting-started
+- 
+
+# 问题
 
 react元素与dom元素是有区别的
 
 - react元素是对象（是你写的dom标签或者是自定义的组件）
-
-eslint的配置文件需要好好了解一下：.eslintrc.js
-
-- 
 
 类class组件才有state，函数组件没有
 
@@ -50,28 +55,11 @@ hook的好处是结合对比者class来做的
 - 就是当前插件只依赖核心，不依赖于其他插件
   - 就像是微信小程序依赖于微信app
 
-#### react-router
-
-：是一个映射关系，键是path，值是函数（后端）或者是组件（前端），
-
-关注点
-
-- 主要就是注册、嵌套、跳转、传参
-
-单页面应用，实现了页面不刷新的前提下而局部刷新
-
-push与replace的区别
-
-- 影响你的前进和后退，但是调用replace时url不会改动
-
-组件分路由组件和一般组件
-
-- 路由组件放在pages，而且路由组件能接受到router传入的信息
-- 一般组件则是放components
+- 
 
 
 
-## 坑
+
 
 
 
