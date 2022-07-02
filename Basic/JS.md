@@ -221,7 +221,13 @@ __proto__与prototype的区别？
 
 ：其实就是为了保证代码质量，紧急补救
 
+## 正则
 
+常用的正则：https://juejin.cn/post/6844903865293225997#comment
+
+^和$都是在//斜杠里面的
+
+^有两个作用，一个是表示以什么开头，一个是非，括号里面的是非
 
 ## 技巧
 
@@ -235,4 +241,6 @@ js的常见问题可以去mdn中查看
 
 - [如回调函数中的this指向问题](https://developer.mozilla.org/zh-CN/docs/Web/API/setTimeout)，发现回调函数this指向可能不是你想要的，你可以通过以下三种方法修改this指向：[that，bind，箭头、](https://juejin.cn/post/6914474760848506887)
 - window下的方法如setTimeout，setInterval中回调的this是指向window的，严格模式下也是，虽然全局的this是指向undefined的
+
+
 

@@ -1,8 +1,13 @@
-[TOC]
+教程
+
+- nodejs：https://juejin.cn/post/6844903767926636558
 
 ## 问题
 
+path
 
+- resolve与join区别？https://juejin.cn/post/7033394363443740685
+- resolve碰到/开头则是直接切到根目录下了，而join不会
 
 [buffer？](https://blog.csdn.net/u011127019/article/details/52512242)
 
@@ -59,14 +64,6 @@ tmd谁能把跨域工具解释清楚啊？
 - 因为只是临时存放数据
 
 
-
-## npm
-
-[npm和yarn的常见操作](https://juejin.cn/post/7013723042157166622)
-
-
-
-## yarn
 
 
 

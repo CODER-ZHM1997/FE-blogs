@@ -16,3 +16,4 @@ push与replace的区别
 
 - 路由组件放在pages，而且路由组件能接受到router传入的信息
 - 一般组件则是放components
+

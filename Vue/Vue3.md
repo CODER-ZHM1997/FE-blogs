@@ -1,10 +1,43 @@
 前言：本文档主要是记录一些vue3相对vue2学习要点和学习过程的产生的问题，读者通过阅读该文档+官方文档，完成vue3的入门，（注：官方文档有的东西，我不会冗余）
 
-vue是什么？
+学习计划
 
-- vue是用于构建用户界面的渐进式框架，就是你要增加功能再来引入，慢慢加
+- 官方文档+coderwhy的vue3教程
 
-## 问题
+教程
+
+- vue3教程
+  - https://www.bilibili.com/video/BV1QA4y1d7xf
+  - 全面：https://www.bilibili.com/video/BV1dS4y1y7vd
+- 项目部署
+  - https://juejin.cn/post/6844903768362860557
+  - 常见问题：https://juejin.cn/post/6844904149633466376
+- vue3新特性总结：https://juejin.cn/post/6940454764421316644
+- 教程：
+  - https://www.bilibili.com/video/BV1ra4y1H7ih?vd_source=522153461914a766fc002cc8619314e4
+  - 实战：https://www.bilibili.com/video/BV1qt4y1h7Ew?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
+- vue3中如何使用ts？
+  - https://juejin.cn/post/6844903633578885128
+  - https://juejin.cn/post/6844904063910281230
+  - ts教程：https://juejin.cn/post/6844903865255477261#heading-25
+  - 项目中使用ts：https://juejin.cn/post/7058868160706904078
+  - 
+
+项目推荐
+- https://juejin.cn/post/7036745610954801166#heading-4
+- 教你vue3如何做集成：https://juejin.cn/post/6951649464637636622
+
+开发插件
+
+- [volar](https://juejin.cn/post/6966106927990308872)
+
+#### 代码迁移
+
+- vue3移除了很多vue2的属性，或者是修改了写法
+
+
+
+构建项目
 
 如何把多个文件引入到一个文件？
 
@@ -53,9 +86,7 @@ created与mounted上发起请求，有什么区别？为什么要这么做？
 
 - 修改name不算改变，而stu={name:"ZENG"}，这种才算改变
 
-什么是响应式？
 
-- 我觉得就是数据与其视图是否同步更新
 
 解包？
 
@@ -140,7 +171,16 @@ filter与computed区别？
 
 v-bind数据单向绑定，能绑定响应式数据，
 
-- 
+- 绑定动态属性和动态绑定属性不同
+  - 绑定动态属性：基本的用直接写值，复杂的则是直接用调用方法
+  - 动态绑定属性：v-bind=“{id:'red'}”如id为red、green
+
+v-on
+
+：用于绑定事件监听器
+
+- 绑定监听器
+- 动态绑定监听器，通过绑定一个对象的方式实现
 
 如何界定子组件和父组件？
 
@@ -225,6 +265,27 @@ vue-cli还是基于webpack的
 
 ## 基础
 
+
+
+#### 生命周期
+
+：口诀，muu，destory已经被修改成为unMounted
+
+教程
+
+- https://juejin.cn/post/7093880734246502414#comment
+
+了解生命周期有啥用，不都是只使用onMounted吗？
+
+- created中可以访问数据了，但是不能访问dom，因为还没挂载上去，直接用setup能够代替create钩子
+- mounted的时候则是可以都可以访问了
+
+变量和函数应该按是否实现的是同一个功能来决定是否在同一个分组
+
+- 比如count和add、sub都在一组
+
+
+
 #### [组件通信](https://juejin.cn/post/6844903887162310669#heading-7)
 
 根据通信对象来分
@@ -265,6 +326,8 @@ console.log('nextTick', this.$refs.input.value);//APP
 ```
 
 #### 插槽
+
+口诀：ts，用的时候用template，而定义的时候则是用slot
 
 ref的对象元素某个元素或者是子组件实例
 
@@ -338,12 +401,22 @@ vue3在template中使用字符串需要在双引号里再加单引号
 
 
 
-#### Composition API
+#### 响应性api 
+
+什么是响应性？
+
+：我觉得就是数据与其视图是否同步更新，为了保证变量做到响应性，所以要用响应式的api对其进行包装，得到响应性的对象（普通对象不是响应性的），后面你修改值就会有效果了
+
+- 在template中会自动读取value，所以不用.value
+
+值传递修改不会同步，而引用传值则是修改会同步
+
+- 扩展运算符、解构不能随便用，它会导致属性失去响应性，除非你用上toRefs
 
 为什么要组合api来替代选项api？
 
 - 因为选项api的代码逻辑关注点（比如属性）太多了，**拆的太散**，可读性差，难以维护
-  - 组合api则是对同一逻辑关注点进行了**收集**，可读性好，代码可维护了，哈哈
+  - 组合api则是对同一逻辑关注点进行了归类，可读性好，代码可维护了，哈哈
 
 应用场景
 
@@ -361,11 +434,29 @@ vue3中on、emit方法被删了，所以用第三方库才行，
 
 在template中的数据不是所有都要响应式的，因为有些数据是不会改的，比如name
 
-- 
+**ref**
 
 ref和reactive都是响应式转换都是深层的
 
 - 推荐使用ref，ref方法是无敌的
+
+**reactive**
+
+：返回的就是proxy对象
+
+
+
+vue2与vue3的不同
+
+- 前者通过Object.defineProperty后者通过Proxy来实现响应式
+
+有时候要加入immediate:true才会监听到
+
+**watch**
+
+watch中什么时候要用函数，什么时候直接用值就行？
+
+- 监听响应式对象的时候可以直接用值，而监听普通值的时候则是要用函数
 
 为什么watch直接写属性不能跟踪，而写方法就能响应式的跟踪
 
@@ -376,9 +467,21 @@ console.log('age ' + student.age);
 })
 ```
 
-vue2与vue3的不同
 
-- 前者通过Object.defineProperty后者通过Proxy来实现响应式
+
+#### 组合式api
+
+：setup、生命周期钩子、provide|inject
+
+**setup**
+
+：pc，props+context（aees）
+
+props是响应性的对象
+
+attrs则是非响应性对象
+
+
 
 ## Hooks
 
@@ -401,6 +504,21 @@ vue2与vue3的不同
 - 就是有些东西不能刷新后也要保存起来，则是需要storage或者是同步到数据库，vuex刷新后就没了
 
 
+
+## JSX
+
+- https://juejin.cn/post/6846687590704381959
+- 语法：https://juejin.cn/post/6996214286292877326
+- 语法：https://juejin.cn/post/7029508496756310052
+
+vue中如何引入jsx
+
+- vite
+
+  - 引入jsx插件，无需配置babel
+  - 需要在script中配置lang=“jsx”
+
+通过v-slots属性来指定引用插槽
 
 
 
@@ -460,3 +578,48 @@ vue3带来的变化？
 
 - 比如动态的添加错误处理
 
+vue3使用setup语法报错，如defineProps
+
+- 而且在template中不用通过props来访问属性，直接用defineProps里面的参数即可，不用写的props.xxx，直接用xxx即可
+
+什么时候不能用解构？说是会破坏响应性？
+
+在script中使用响应式对象需要用value，而在template中使用则是都不用value
+
+
+
+
+
+#### 项目部署
+
+## 源代码
+
+源代码：https://juejin.cn/post/7097067108663558151
+
+## 其他
+
+指定template的三种方式：通过template属性、模板、render函数
+
+何为钩子：钩子即帮你把东西勾过来（如代码块），他会在指定的时机（如某个生命周期）执行
+
+有时候应该报错的，但是它只是提示为warning级别，所以警告信息也不能轻易放过
+
+注意有很多包，有些是压缩版，有些是未压缩的（可读），有些是阉割版，有些是完整版，你要搞清楚用的是哪个？什么时候用哪个
+
+- 代码如果需要某些编译支持，就应该选运行时+编译器版本，而不需要则是可以只选运行时runtime版本
+
+如何生成组件声明？
+
+变量应该怎么放？是变量放一起，函数放一起，还是按功能一起放
+
+**组件注册**
+
+- 按需引入
+- 全局注册
+  - 全局按需注册
+  - 全局全量注册
+
+cdn去哪里找
+
+- 框架、库的官网：https://element-plus.gitee.io/zh-CN/guide/installation.html#unpkg
+- 或者是直接去cdn的供应商里面找：unpkg、jsdelivr

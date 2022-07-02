@@ -1,6 +1,16 @@
+教程
+
+- https://juejin.cn/post/6921886428158754829
+
 [html设置form](https://segmentfault.com/a/1190000016374336)
 
 [h5新增的标签](https://juejin.cn/post/6844903878857588750)
+
+页面编写
+
+&符号：不能直接写&，而是写&amp;
+
+
 
 link和@import的区别？
 
@@ -52,5 +62,5 @@ a的href的值
 
 ## 技巧
 
-[html](https://juejin.cn/post/6905294475539513352#heading-6)
+[注意事项](https://juejin.cn/post/6905294475539513352#heading-6)
 

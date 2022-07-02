@@ -2,18 +2,41 @@
 
 推荐的和yarn搭配使用
 
+教程
+
+- [入门](https://juejin.cn/post/6910014283707318279#heading-0)
+- 基础：https://www.bilibili.com/video/BV1yu411U71S
+
 ## 问题
 
 有时候别人教你的可能是旧的，跟最新文档是对不上的，所以呢，你要么翻到旧文档，要么按新文档的写法来
 
 我怎么知道全家桶的中的其他东西适配不？
 
+常见操作
 
+- 基本配置
+- 查看配置
+- 优化配置
 
-## 技巧
+#### 基本配置
 
-vite2只支持vue3
+：修改配置好像不用重启项目
 
-[vite快速入门](https://juejin.cn/post/6910014283707318279#heading-0)
+**base**
 
-- 里面教你如何引入各种处理器
+**alias**
+
+文件不加后缀引入会出问题，如不加.vue后缀
+
+静态资源引入
+
+- 在script下，别名生效，
+- 在template中别名不生效，解决方案：别名用/开头，而且用相对路径，如"/asset": "./src/assets",
+  - https://juejin.cn/post/7009441745301667853
+
+**build**
+
+- 移除console，通过terserOptions
+- 
+

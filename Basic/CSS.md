@@ -1,6 +1,15 @@
-[TOC]
-
 ## css
+
+教程
+
+- https://juejin.cn/post/6941206439624966152
+- 试题：https://juejin.cn/post/6844904185847087111
+- 技巧：https://juejin.cn/post/6844903926110617613
+- windicss
+  - 官网：https://cn.windicss.org/guide/
+- 动画
+  - https://juejin.cn/post/6889226357851553805
+  - https://juejin.cn/post/6844904062689738765
 
 伪类、伪元素
 
@@ -77,13 +86,33 @@ bfc的特点
 
 - dom.style.width/height
 
+#### Flex布局
+
+flex的子元素称为flex item
+
+常见属性
+
+- 
+- justify-content
+  - 主轴方向：默认靠左justify-content:flex-start，靠右:flex-end
+- align-items
+  - 交叉轴方向：居中center，默认strech（高度如果未设置，则item占满整个容器高度），
+- align-content
+  - 是针对多行的
+
+flex布局只能父容器影响子容器，不会影响到孙元素
 
 
-#### 坑
+
+#### 基础动画
+
+@keyframe：关键帧
+
+
+
+#### css的坑
 
 - 伪元素要写content:''，至少为空字符串，不写的话，则是默认没有元素
-
-
 
 
 
@@ -109,6 +138,27 @@ js中指令与函数的区别？
 ：狗日的，antd选less
 
 [less常用操作](https://juejin.cn/post/6844903520441729037)
+
+## Windi
+
+常见操作
+
+- 通用
+  - 字体样式、排版有关
+- 集成
+- 基础功能
+  - 自动值推导：数字、百分比、尺寸（后缀）、颜色、定位、变量
+  - 可变修饰组、shortcut
+  - 响应式设计
+- 布局
+  - 容器
+    - 块级、
+  - 定位
+  - flex
+  - grid
+- 边框
+- 背景
+- 动画
 
 ## animate
 

@@ -1,12 +1,13 @@
 为什么要引入ts？他能解决什么问题？
 
-
+- 减少了bug，更加规范
+- 引入了类型检查，增强了编译器的功能：如代码补全，提示，跳转
 
 学习要点
 
 - 类型，类型熟悉就算学会一半了
   - 基本：5种+Symbol+BigInt
-  - 引用：any、function、interface、class、array、union、tuple、enum、object、内置对象
+  - 引用：any、never、unknown、function、interface、class、union、object、array、tuple、enum、内置对象
 
 学习进度
 
@@ -14,14 +15,21 @@
 
 教程
 
-- https://ts.xcatliu.com/advanced/enum.html
-- https://zhuanlan.zhihu.com/c_206498766
+- 官网：https://ts.xcatliu.com/advanced/enum.html
+- 保姆级：https://juejin.cn/post/6872111128135073806
+- 实战：https://juejin.cn/post/7058868160706904078
+- 视频教程：https://www.bilibili.com/video/BV1Xy4y1v7S2?p=2&vd_source=522153461914a766fc002cc8619314e4
+- ts教程：https://www.bilibili.com/video/BV1UU4y1K7Np?p=16&vd_source=522153461914a766fc002cc8619314e4
 
 
 
 ## 问题
 
+搭建一个ts项目？https://segmentfault.com/a/1190000040416940
 
+- 直接初始化一个node项目
+- 安装ts库
+- 初始化ts配置文件
 
 
 
@@ -60,19 +68,51 @@ tsconfig.json？
 
 纠结编译期与运行期有意义吗？
 
+- 编译期能够提前发现错误
+
 
 
 ## 类型
 
-symbol类型
+**symbol**
 
 ：唯一类型
 
 使用场景：类型可以创建独一无二的值，类型是symbol
 
-any类型
+**any**
 
 ：任意类型
+
+场景
+
+- 显式的any
+- 隐式any
+
+他可以赋值给任何对象
+
+**unknown**
+
+：未知类型，类型安全的any，尽量不要用any，用unknown代替
+
+unknown赋值给其他变量，不能直接赋值
+
+- 先判断类型，然后再赋值
+- 可以用类型断言来处理，断言用as和尖括号
+
+**void**
+
+：表示空值
+
+**never**
+
+：表示永远不存在值的类型，用来抛出异常的
+
+字面量
+
+：字面量也可以当值，它可以限制变量的值，如let a='red'|'green',let
+
+
 
 使用场景：则是你不确定某个变量的类型的时候使用
 
@@ -153,3 +193,28 @@ tuple类型
 - 如何**自定义类型声明文件**，哈哈
   - 声明模块、类、方法、变量、
 
+声明命名空间有啥用：declare namespace
+
+export = xxx？
+
+import与require的区别？
+
+## tsconfig文件
+
+什么时候编译器会主动提示，什么时候是编译的时候才会提示？
+
+## 声明文件
+
+一般都会有社区编写声明文件
+
+ts-node是不会主动去找类型声明文件的，所以你直接用tsc编译整个项目，然后再node执行指定的文件才行
+
+## 其他
+
+map文件有啥作用？
+
+loader（加载器）有啥用，用于解析语法，实现读取，如webpack打包时可能要用到，loader要配置rules
+
+小写与大写有啥区别？
+
+- string、String
