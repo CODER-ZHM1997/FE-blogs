@@ -1,3 +1,5 @@
+## 账号
+
 小程序的密钥（链式方程式）
 
 - 42d07798b75acbd4c7013f302c0c7ab3
@@ -17,4 +19,12 @@ github的账号
 账号：zbu9vrpw
 
 密码：10c6fb51
+
+
+
+## 软件安装&破解
+
+typora
+
+https://foxirj.com/typora
 

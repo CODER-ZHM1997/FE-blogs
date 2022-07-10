@@ -16,10 +16,12 @@
 教程
 
 - 官网：https://ts.xcatliu.com/advanced/enum.html
+- 文档：https://ts.xcatliu.com/
 - 保姆级：https://juejin.cn/post/6872111128135073806
 - 实战：https://juejin.cn/post/7058868160706904078
 - 视频教程：https://www.bilibili.com/video/BV1Xy4y1v7S2?p=2&vd_source=522153461914a766fc002cc8619314e4
 - ts教程：https://www.bilibili.com/video/BV1UU4y1K7Np?p=16&vd_source=522153461914a766fc002cc8619314e4
+- tsconfig：https://www.typescriptlang.org/tsconfig#esModuleInterop
 
 
 
@@ -42,9 +44,7 @@
 - 使用场景：我们比机器更加知道这个变量的类型时，可以使用这个，可以起到类型判断和类型转换的功能（可以转成更加精确或者是更泛的类型）
 - !是非空类型断言
 
-tsconfig.json？
-
-- 可以规定ts代码可以怎么写，不可以怎么写，如果不遵守规定则是编译不通过，编译通过才会执行嘛
+- 
 
 别名？
 
@@ -201,13 +201,26 @@ import与require的区别？
 
 ## tsconfig文件
 
+教程：https://juejin.cn/post/6844904178234458120#heading-16
+
 什么时候编译器会主动提示，什么时候是编译的时候才会提示？
+
+- 可以规定ts代码可以怎么写，不可以怎么写，如果不遵守规定则是编译不通过，编译通过才会执行嘛
+
+有些属性是有优先级的，配置了a，就先看a的，不用看b，如果a没指定，才看b的
+
+[include和exclude联系](https://juejin.cn/post/6844904166180159495)
 
 ## 声明文件
 
 一般都会有社区编写声明文件
 
 ts-node是不会主动去找类型声明文件的，所以你直接用tsc编译整个项目，然后再node执行指定的文件才行
+
+可以在src下
+
+- 创建types目录
+- 创建
 
 ## 其他
 
@@ -218,3 +231,9 @@ loader（加载器）有啥用，用于解析语法，实现读取，如webpack�
 小写与大写有啥区别？
 
 - string、String
+
+提示不是一个某个ts文件不是一个模块时，你需要把它声明为一个模块
+
+- 可以用export {}
+- 或export 某个类型，如export type a=xxx
+
