@@ -1,4 +1,4 @@
-前言：本文档主要是记录一些vite学习要点和学习过程的产生的问题，读者通过阅读该文档+官方文档，完成入门，（注：官方文档有的东西，我不会冗余）
+期望：了解vite的一些常用操作，了解vite能做什么，不能做什么
 
 推荐的和yarn搭配使用
 
@@ -6,6 +6,11 @@
 
 - [入门](https://juejin.cn/post/6910014283707318279#heading-0)
 - 基础：https://www.bilibili.com/video/BV1yu411U71S
+- docker部署前端项目：https://juejin.cn/post/6869736425953165319#heading-5
+
+特点
+
+- 快，编译和修改都很快
 
 ## 问题
 
@@ -17,7 +22,12 @@
 
 - 基本配置
 - 查看配置
-- 优化配置
+- 资源（图片、css、其他类型文件）的引入 
+- 优化配置（todo）
+  - 打包优化
+  
+  
+
 
 #### 基本配置
 
@@ -38,5 +48,58 @@
 **build**
 
 - 移除console，通过terserOptions
-- 
+
+动态引入静态资源，通过import.meta.url
+
+：https://itcn.blog/p/2341691814.html
+
+#### 静态资源
+
+支持导入多种静态资源（如字体、多媒体、图片、json）
+
+- 可以直接导入图片，为url
+  - 直接import
+  - 加载指定图片资源：或是通过import.meta.url来获取到当前模块的url，然后要构造新的url，则是需要用URL函数
+
+- 支持json，意味着你可以读取package.json文件
+
+**环境变量的读取**
+
+内置的环境变量，不用VITE_前缀
+
+vue文件中
+
+- 直接import.meta.env
+
+vite配置文件
+
+- 通过函数
+
+**css**
+
+- 支持变量，如--main-bg-color:green
+- 内置了postcss
+
+#### HMR
+
+默认是开启的，而HMR并不是所有都能热更新的，是需要通过实现的
+
+- tsx热更新可能会失效，你要另外配置一下一个defineComponent
+
+**Glob导入**
+
+- 可以配合正则来按需导入
+- 文件名为key，value则是需要通过then来获取，因为是通过import来获取的
+
+
+
+## 问题
+
+[构建、编译、打包、区别？](http://www.atdevin.com/4735.html)
+
+- 构建是指项目的构建
+- 编译是指源代码编译成可执行或可识别文件
+- 打包则代码要上线了
+
+AST哪里看？AST Exeplorer
 

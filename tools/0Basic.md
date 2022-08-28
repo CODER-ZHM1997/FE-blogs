@@ -96,10 +96,6 @@ render就是渲染啊
   
   
 
-## ESLint
-
-## Prettier
-
 ## Husky&lint-staged
 
 ## Window

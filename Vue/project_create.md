@@ -2,42 +2,18 @@
 
 项目构建教程：https://juejin.cn/post/7043702363156119565#heading-1
 
-#### eslint
+#### vue-router
 
-教程
+- npm i vue-router
+- 
 
-- https://juejin.cn/post/7067072359995457567#heading-11
-
-可以直接用npx eslint --init，这可以同时引入ts
-
-[项目提示module为未知变量，需要配置env添加node，](https://stackoverflow.com/questions/49789177/module-is-not-defined-and-process-is-not-defined-in-eslint-in-visual-studio-code)
-
-- 还需要配置eslint解析vue文件的插件：npm vue-eslint-parser -D
-- eslint中指定： parser: 'vue-eslint-parser',
-
-问题
-
-- 在vue文件中，eslint找不到全局声明类型，提示类型为undefined
-  - 解决方案：通过自己引入类型文件，我也是醉了
-- eslint的好多配置文件我都看不懂
-  - extends、plugins
-
-#### prettier
-
-[eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier#readme)，有关prettier，安装三个插件即可
-
-- npm i prettier -D
-- npm i eslint-plugin-prettier -D
-- npm i eslint-config-prettier -D
-- 修改eslint配置文件
-  - extends添加节点："plugin:prettier/recommended"
-- 创建.prettierrc文件
+#### pinia
 
 #### windicss
 
 - 安装vite-plugin-windicss，windicss
 - vite中注册
-- 引入css：import 'virtual:windi.css'
+- main引入css：import 'virtual:windi.css'
 
 #### mock
 

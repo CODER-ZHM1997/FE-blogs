@@ -1,4 +1,4 @@
-## css
+本文档意在：书写css的常用技术点和注意事项
 
 教程
 
@@ -7,6 +7,7 @@
 - 技巧：https://juejin.cn/post/6844903926110617613
 - windicss
   - 官网：https://cn.windicss.org/guide/
+  - 入门：https://juejin.cn/post/7071045543639646239
 - 动画
   - https://juejin.cn/post/6889226357851553805
   - https://juejin.cn/post/6844904062689738765
@@ -86,7 +87,7 @@ bfc的特点
 
 - dom.style.width/height
 
-#### Flex布局
+## Flex布局
 
 flex的子元素称为flex item
 
@@ -135,9 +136,19 @@ js中指令与函数的区别？
 
 ## less
 
-：狗日的，antd选less
-
 [less常用操作](https://juejin.cn/post/6844903520441729037)
+
+文件导入：@import xxx
+
+[指令与函数的区别？](https://blog.csdn.net/Rayshaan/article/details/111636018?spm=1001.2101.3001.6650.8&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-8-111636018-blog-104718018.pc_relevant_multi_platform_featuressortv2dupreplace&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-8-111636018-blog-104718018.pc_relevant_multi_platform_featuressortv2dupreplace&utm_relevant_index=13)
+
+：我们提到的指令是内置的指令，如@mixin、@import，用于定义和调用某些变量或函数的
+
+#### Ts
+
+vite直接支持是用ts，但是它只编译，不检查，你看到的飘红是因为vs自身的支持
+
+- vite虽然支持ts，但又不是完全支持，有些ts的功能在vite项目中不能用
 
 ## Windi
 

@@ -2,11 +2,12 @@
 
 推荐的和yarn搭配使用
 
-#### 教程
+教程
 
-pnpm：https://juejin.cn/post/7053340250210795557
+- pnpm：https://juejin.cn/post/7053340250210795557
+- 
 
-
+配置信息
 
 ## 问题
 
@@ -21,9 +22,10 @@ npm init xxx，如npm init vite
 vue add有啥用
 
 - [用于安装插件](https://blog.csdn.net/qq_34086980/article/details/114447578?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-114447578-blog-108338944.pc_relevant_paycolumn_v3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-114447578-blog-108338944.pc_relevant_paycolumn_v3&utm_relevant_index=5)
-- 
 
-## 技巧
+pnpm与npm区别？
+
+- 快？
 
 vite2只支持vue3
 

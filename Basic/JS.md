@@ -117,11 +117,14 @@ for in和for of的区别
 - [reduce的运用](https://juejin.cn/post/7011096419985522701)
 
 - every、some
-- find、findIndex
+- find（找元素）、findIndex（找下标）、indexOf（找下标）
 - [forEach、map、filter](https://juejin.cn/post/6844903807176933384#heading-5)
   - map是返回新数组
   - filter是返回为true的才能被留下来
 - 原来string和array都是includes
+
+- slice
+  - 取出数组的某个，或某几个元素
 
 - [对原数组有影响的函数](https://juejin.cn/post/6844904192671219719)
   - push、pop
@@ -228,6 +231,31 @@ __proto__与prototype的区别？
 ^和$都是在//斜杠里面的
 
 ^有两个作用，一个是表示以什么开头，一个是非，括号里面的是非
+
+## 模块化
+
+[commonjs与es module区别？](https://juejin.cn/post/6994224541312483336)
+
+- 语法
+  - cms：module.exports、exports、require
+  - ems：export、export default、import
+- cjs：（nodejs借鉴commonjs的模块系统）
+  - 问题：加载实现和加载流程、避免循环加载、加载先后顺序问题、动态加载
+  - 特性
+    - 每个文件都是一个模块，有一些内置的变量、函数，如require、exports、module
+    - 运行时导入并执行
+- esm：（这个才是算node自己的模块系统）
+  - 特性
+    - 提前导入并执行模块
+    - 支持混入导入|导出，但是default export的不支持解构
+    - 支持重命名导入
+    - 支持动态导入：import('xxx')，这个动态是指导入的动作是动态的，你来决定时候时候导入，而不是说导入的对象是动态的
+    - 导出绑定：即不能重新赋值
+    - 支持重定向导出：export * from 'xxx'
+
+ems被打包后还是ems格式吗？会不会统一变成cms？
+
+
 
 ## 技巧
 

@@ -9,6 +9,14 @@
 - vue3教程
   - https://www.bilibili.com/video/BV1QA4y1d7xf
   - 全面：https://www.bilibili.com/video/BV1dS4y1y7vd
+  - 源码
+    - https://www.bilibili.com/video/BV19V4y177gS?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
+    - https://www.bilibili.com/video/BV1Q3411w7SQ?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
+- vue2代码迁移到vue3：https://juejin.cn/post/7064909191210598408
+  
+- 前端基建
+  - 入门：https://juejin.cn/post/6844904145602740231
+
 - 项目部署
   - https://juejin.cn/post/6844903768362860557
   - 常见问题：https://juejin.cn/post/6844904149633466376
@@ -520,7 +528,13 @@ vue中如何引入jsx
 
 通过v-slots属性来指定引用插槽
 
+- 而直接用
 
+tsx中不能使用setup语法糖了
+
+什么时候要用括号，我老是花括号用错地方，
+
+- 有表达式的地方就要用花括号，而且是外层用，里层就不用了，比如{arr.length&&console.log('xxx')}
 
 ## 项目难点
 
@@ -596,7 +610,19 @@ vue3使用setup语法报错，如defineProps
 
 源代码：https://juejin.cn/post/7097067108663558151
 
-## 其他
+为什么不会响应式？数据改了，视图没改
+
+- 
+
+#### reactivity
+
+## 前端基建
+
+
+
+
+
+## 问题
 
 指定template的三种方式：通过template属性、模板、render函数
 
@@ -623,3 +649,8 @@ cdn去哪里找
 
 - 框架、库的官网：https://element-plus.gitee.io/zh-CN/guide/installation.html#unpkg
 - 或者是直接去cdn的供应商里面找：unpkg、jsdelivr
+
+数据字典咋用？
+
+：后端返回，前端存到sessionStorge即可，每次刷新页面的时候重新获取一下
+

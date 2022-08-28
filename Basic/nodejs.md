@@ -1,8 +1,91 @@
+nodejs能做什么？解决什么问题？
+
+：
+
 教程
 
-- nodejs：https://juejin.cn/post/6844903767926636558
+- nodejs入门：https://juejin.cn/post/6844903767926636558
+- [常见操作](https://juejin.cn/post/6844904029219192839#heading-1)
+- [node官方文档](https://nodejs.org/dist/latest-v14.x/docs/api/)
+
+要点
+
+- 数据类型
+- 常用的工具库
+- 模块机制
+- 文件系统
+- 加解密
+- http
+
+## 数据类型
+
+**buffer**
+
+：主要是stream数据生产和消费不同速的问题，buffer就是存放二进制数据
+
+使用场景
+
+- 文件、网络操作返回类型为buffer
+
+哪些会自动创建buffer，哪些时候需要手动
+
+Buffer.alloc、Buffer.from
+
+**Stream**
+
+：是一种读取和写入数据的方案
+
+**Event**
+
+**Error**
+
+**URL**
+
+**Process**
+
+**Global**
+
+：有些是看上去是全局变量，其实只是存在于当前模块作用域
+
+```js
+__dirname,__filename,module,require
+```
+
+## 模块机制
+
+加载流程、优先级：
+
+针对不同文件的处理
+
+- .js
+- .json
+- .node
+
+写的是文件目录，但是它有index文件，那这个文件目录也能当做一个模块
+
+## Http
+
+socket相当于快递小哥，你要发送和接收数据包只需要对接socket即可
+
+你要思考整个系统是怎么驱动的？
+
+：往往是基于事件驱动的
+
+## Node Cli
+
+命令行参数的处理：commanders、inquirer
+
+输出：chalk
+
+如何搭建自己的脚手架？
+
+- 推荐工具：plop、yeoman
 
 ## 问题
+
+node的架构是怎样的？
+
+
 
 path
 
@@ -31,8 +114,9 @@ npm与npx的区别
 
 [全双工与半双工](https://blog.csdn.net/liangtianmeng/article/details/84726606)
 
-- 全：两根线，能同时发和收
-- 半：一根线，不能同时发和收
+- 全：能同时发和收
+- 半：不能同时发和收，
+- 单：在任意时刻，都只能发或只能收
 
 代理？
 
@@ -65,18 +149,11 @@ tmd谁能把跨域工具解释清楚啊？
 
 
 
-
-
-## 技巧
-
 node是什么？
 
 - 基于chrome v8引擎的js运行环境，能解析、执行js代码
 
-[node常见操作](https://juejin.cn/post/6844904029219192839#heading-1)
-
-- 13个常用模块
-- [node官方文档](https://nodejs.org/dist/latest-v14.x/docs/api/)
+[node与浏览器的区别？](https://www.php.cn/website-design-ask-484186.html#:~:text=%E5%8C%BA%E5%88%AB%EF%BC%9A1%E3%80%81%E5%85%A8%E5%B1%80%E7%8E%AF%E5%A2%83%E4%B8%8B,%E7%9A%84%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E7%AD%89%E5%8A%9F%E8%83%BD%E3%80%82)
 
 搭配工具
 
