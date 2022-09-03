@@ -13,8 +13,8 @@
   - hooks
 
 - react-router
-- dva
-- umi
+- dva：数据流方案
+- umi：脚手架
 
 教程
 

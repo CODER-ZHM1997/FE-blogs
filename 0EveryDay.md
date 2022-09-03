@@ -270,8 +270,15 @@ v-permission 1h
 - [x] 学习测试基础 2h
 - [x] nodejs 2h
 - [ ] 学习源码 2h
+- [ ] 打造自己的组件库
 
 ## 9月
 
-- 了解react，完成一个react项目
+- [ ] 了解react，看完ant-design-pro
+- [ ] 学习小程序
+
+3日
+
+- [ ] 找书单 0.5h
+- [ ] 搭建react demo project
 

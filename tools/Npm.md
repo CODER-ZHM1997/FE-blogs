@@ -37,3 +37,8 @@ npx有啥用？https://juejin.cn/post/6929742176268058631#heading-3
 
 - 能够直接执行命令：他会去node_modules中的.bin还有path下查找命令
 
+npmrc配置文件，需要了解几个
+
+- 
+
+.editconfig：能够跨IDE，实现相同代码格式化

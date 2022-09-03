@@ -2,11 +2,21 @@
 
 ：它把前端开发过程中经常会碰到的一些开发问题做出总结和提出解决方案
 
+设计到的工具
+
+- webpack
+- vite
+- git
+- eslint
+- prettier
+
 教程
 
 - 入门：https://juejin.cn/post/6892003555818143752
 
-#### Bash
+
+
+## Bash
 
 shell
 
@@ -59,4 +69,10 @@ plugins是啥？它封装了一组env、globals、rules、processors的规则
 - 创建.prettierrc文件
 
 
+
+## 版本规范
+
+^,~来锁定版本范围
+
+可以通过commit-it来生成changelog
 
