@@ -1,6 +1,6 @@
 前端工程化能解决什么问题？
 
-：它把前端开发过程中经常会碰到的一些开发问题做出总结和提出解决方案
+：它能够帮你更加深刻的了解整个项目，而不是只会使用工具，而没有
 
 设计到的工具
 
@@ -13,6 +13,7 @@
 教程
 
 - 入门：https://juejin.cn/post/6892003555818143752
+- https://www.bilibili.com/video/BV1n44y1r7Dv/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
 
 
 

@@ -3,6 +3,9 @@
 教程
 
 - https://juejin.cn/post/6941206439624966152
+- 视频
+  - https://www.bilibili.com/video/BV15V411E7co/?spm_id_from=333.999.0.0&vd_source=522153461914a766fc002cc8619314e4
+
 - 试题：https://juejin.cn/post/6844904185847087111
 - 技巧：https://juejin.cn/post/6844903926110617613
 - windicss

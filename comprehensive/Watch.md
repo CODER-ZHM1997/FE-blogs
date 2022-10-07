@@ -9,6 +9,7 @@
 教程
 
 - https://juejin.cn/post/6844903650603565063
+- 基础：https://juejin.cn/post/6862559324632252430
 
 ## 异常监控
 

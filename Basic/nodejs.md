@@ -1,23 +1,26 @@
 nodejs能做什么？解决什么问题？
 
-：
+：js的运行时环境，能够让js浏览器之外，也能执行
 
 教程
 
 - nodejs入门：https://juejin.cn/post/6844903767926636558
+- 
 - [常见操作](https://juejin.cn/post/6844904029219192839#heading-1)
 - [node官方文档](https://nodejs.org/dist/latest-v14.x/docs/api/)
+- npm
+  - 入门：https://juejin.cn/post/6911853807756378125
 
-要点
+- 视频教程
+  - https://www.bilibili.com/video/BV1tZ4y1D7QU/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
+  - https://www.bilibili.com/video/BV1a34y167AZ/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
 
-- 数据类型
-- 常用的工具库
-- 模块机制
-- 文件系统
-- 加解密
-- http
 
-## 数据类型
+## 问题
+
+什么是流式数据？
+
+：多个数据源持续生成的数据
 
 **buffer**
 
