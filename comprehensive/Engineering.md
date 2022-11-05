@@ -14,6 +14,9 @@
 
 - 入门：https://juejin.cn/post/6892003555818143752
 - https://www.bilibili.com/video/BV1n44y1r7Dv/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
+- 构建：https://juejin.cn/post/6949138186886971429
+- eslint
+  - https://juejin.cn/post/7067072359995457567#heading-11
 
 
 
@@ -28,46 +31,147 @@ shell
 - bash
 - cmd
 - prowershell
-- 
+
+
+
+## 提交校验
+
+#### husky+lint-staged
+
+目的
+
+- 检查提交信息
+- 检查代码
+
+安装插件
+
+- npx husky-init && npm install
+- npm i lint-staged -D
+- 配置lint-staged
+
+```json
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,vue}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{html,css,less,scss,md}": [
+      "prettier --write"
+    ]
+```
+
+
+
+- 添加package脚本："lint:lint-staged":"lint-staged"
+- 修改pre-commit文件：npm run lint:lint-staged
+
+
 
 ## 代码规范
 
 目标：编写高质量，可读性良好的代码
 
-
-
 #### eslint
 
-教程
+```node
+npx eslint --init
+npm vue-eslint-parser -D
+```
 
-- https://juejin.cn/post/7067072359995457567#heading-11
-
-可以直接用npx eslint --init，这可以同时引入ts
+vue-eslint-parser是为了能够解析vue文件
 
 [项目提示module为未知变量，需要配置env添加node，](https://stackoverflow.com/questions/49789177/module-is-not-defined-and-process-is-not-defined-in-eslint-in-visual-studio-code)
 
 - 还需要配置eslint解析vue文件的插件：npm vue-eslint-parser -D
 - eslint中指定： parser: 'vue-eslint-parser',
 
-问题
-
-- 在vue文件中，eslint找不到全局声明类型，提示类型为undefined
-  - 解决方案：通过自己引入类型文件，我也是醉了
-- eslint的好多配置文件我都看不懂
-  - extends、plugins
-
 plugins是啥？它封装了一组env、globals、rules、processors的规则
+
+@typescript-eslint/parser与vue-eslint-parser有啥区别？
+
+parser与plugin、extends有啥区别？
+
+一些规则
+
+- singleQuote:true
+- semi:true
 
 #### prettier
 
-[eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier#readme)，有关prettier，安装三个插件即可
+```js
+npm i prettier -D
+npm i eslint-plugin-prettier -D
+npm i eslint-config-prettier -D
+```
 
-- npm i prettier -D
-- npm i eslint-plugin-prettier -D
-- npm i eslint-config-prettier -D
-- 修改eslint配置文件
-  - extends添加节点："plugin:prettier/recommended"
-- 创建.prettierrc文件
+```js
+// 创建文件.prettierrc.js
+module.exports = {
+    trailingComma: 'es5',
+    tabWidth: 4,
+    semi: true,
+    singleQuote: true,
+}
+```
+
+
+
+## Element-Plus
+
+```shell
+npm install element-plus
+// main.ts
+import { createApp } from 'vue'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import App from './App.vue'
+const app = createApp(App)
+app.use(ElementPlus)
+app.mount('#app')
+```
+
+
+
+
+
+## vue全家桶
+
+：vue-router、pinia、less
+
+```node
+npm i vue-router pinia pinia-plugin-persistedstate
+npm i less -D
+```
+
+
+
+
+
+## Vite插件
+
+：jsx、mock、windi
+
+```js
+npm i vite-plugin-windicss windicss -D 
+npm i mockjs vite-plugin-mock -D
+npm i @vitejs/plugin-vue-jsx -D
+```
+
+
+
+## 多语言
+
+
+
+
+
+## 其他
+
+抹除浏览器默认格式：npm i normalize.css
+
+使用node
+
+- npm i @types/node -D
 
 
 

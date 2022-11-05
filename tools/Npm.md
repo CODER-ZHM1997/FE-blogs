@@ -4,8 +4,10 @@
 
 教程
 
+- npm：https://juejin.cn/post/6844903870578032647
 - pnpm：https://juejin.cn/post/7053340250210795557
-- 
+- npx：https://juejin.cn/post/6844904098534260749
+- 发包：https://juejin.cn/post/6844903679162581005
 
 配置信息
 

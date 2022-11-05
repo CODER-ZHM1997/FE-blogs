@@ -96,8 +96,6 @@ render就是渲染啊
   
   
 
-## Husky&lint-staged
-
 ## Window
 
 右键shift+f10

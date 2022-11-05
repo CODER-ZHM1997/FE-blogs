@@ -69,10 +69,6 @@ vscode 中的 prettier 插件与配置文件.prettierrc 不同步怎么办？
 - 日了狗了，跑命令的需要是按照 prettierrc 的规定来写的，而 vs 插件提示又是按照它自己默认的，就不能按照我的 prettierrc 配置文件来吗
   - 解决方案，原来是修改了 prettierrc 需要重启 vscode，zz 设计，下次很多配置如果不起效果都要重启一下才行
 
-为了防止自己或别人提交垃圾代码（不按格式来）
-
-- 通过 husky 拦截 commit，进行代码代码校验和格式化，如果不通过则是不会通过 commit 操作的
-
 为了规范 commit 信息，通过 commitizen
 
 - 然后你就可以通过 git cz 命令来提交了

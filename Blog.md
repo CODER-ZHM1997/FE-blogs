@@ -14,9 +14,19 @@
 
 ## 视频博主
 
+打基础，统统看《尚硅谷》就行了，然后再看一下市面上比较实用的项目，就能做东西了
+
+- 
+
 老陈打码：https://www.bilibili.com/video/BV1Gg411X7FY?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
 
+慢羊羊村长：https://space.bilibili.com/480140591?spm_id_from=333.337.search-card.all.click
 
+手把手撸前端：https://space.bilibili.com/431551452/?spm_id_from=333.999.0.0
+
+前端面试：https://space.bilibili.com/479347166/?spm_id_from=333.999.0.0
+
+vue项目实战：https://space.bilibili.com/470892364
 
 ## 前端进阶
 

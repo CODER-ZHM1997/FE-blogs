@@ -12,16 +12,16 @@
 
 教程
 
+- 官网：https://zh-hans.reactjs.org/docs/hello-world.html
 - 入门
   - https://www.kancloud.cn/tjs5945111/react/887920
   - https://juejin.cn/post/6960262593265025031
-
 - api：https://juejin.cn/post/6950063294270930980
 - jsx：https://juejin.cn/post/7112595039863177223
 - 纯函数、副作用：https://juejin.cn/post/7057376945939415053
-- 官网：https://zh-hans.reactjs.org/docs/hello-world.html
 - [后台管理系统](https://juejin.cn/post/6844903866052378638)，你把这个项目搞懂即可：[ant-design-pro](https://github.com/ant-design/ant-design-pro)项目即可，其他项目都只是需求不同而已，功能都是基于ant-design-pro来实现的
   - 配套的教程：https://pro.ant.design/zh-CN/docs/getting-started
+- dva是啥？https://blog.csdn.net/qq_41918834/article/details/118379901
 
 
 
@@ -30,13 +30,6 @@ react能解决什么问题？
 - 
 
 项目构建
-
-- 
-
-生命周期口诀
-
-- react的是：muu
-- vue也是：muu
 
 大小写
 
@@ -92,10 +85,14 @@ https://blog.csdn.net/weiyi89/article/details/9992669
 
 
 
-**jsx**
+## **jsx**
+
+：即js+xml的格式，能够简化代码，提高开发效率
 
 - 能够让我们像html一样书写js
 - jsx能放表达式是，你直接放到括号里即可，如{name}，当然，它本身也是表达式
+
+
 
 哪些不会被渲染：boolean、null、undefined
 
@@ -155,6 +152,16 @@ ref转发：把ref通过组件自动的传递到其子组件上
 
 
 
+## 组件
+
+#### 生命周期
+
+：muu，didmount、update、willUnMount
+
+#### 事件处理
+
+
+
 ## Hooks
 
 ：是特殊的函数，能够让你钩入react的特性，能够让你不编写class组件的情况下使用state
@@ -184,3 +191,10 @@ hook的类型：state、effect hook
 last 2 versions，为啥是最近的2个，而不是1个版本呢，那前面的
 
 Suspense
+
+props支持解构吗？
+
+纯函数有啥用？
+
+：不会产生副作用的函数
+

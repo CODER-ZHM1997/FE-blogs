@@ -65,30 +65,8 @@ trim_trailing_whitespace = false  # 去除多余的空格
 
 
 
-#### husky+lint-staged
-
-- 安装插件
-
-  - npx husky-init && npm install
-  - npm i lint-staged -D
-  - 配置lint-staged
-
-  ```json
-    "lint-staged": {
-      "*.{js,vue,ts,jsx,tsx}": [
-        "prettier --write",
-        "eslint --fix"
-      ],
-      "*.{html,css,less,scss,md}": [
-        "prettier --write"
-      ]
-  ```
+- - 
 
   
-
-  - 添加package脚本："lint:lint-staged":"lint-staged"
-  - 修改pre-commit文件：npm run lint:lint-staged
-
   
-
   

@@ -2,7 +2,7 @@
 
 讨论群：https://www.kaiheila.cn/app/channels/1386303951534822/6050289365012477
 
-计划：2周看完并仿照一个，19号完工
+计划：2周看完并仿照一个，11月15日搞定
 
 - 指南、深入、其他：2d
 - windicss：1 d
@@ -14,22 +14,63 @@
 
 预览：https://vvbin.cn/next/#/login?redirect=/dashboard
 
-#### 问题
+## 目录结构
 
-**windiCss**
+：mock、public、types、tests、src（api、asset）
 
-教程
+## 项目配置
 
-- 官方文档：https://cn.windicss.org/utilities/behaviors/image-rendering.html
-- https://juejin.cn/post/7071045543639646239
+：环境变量、主题、布局、缓存、多语言
 
-访问中文文档只需要在域名下一级填入cn，即可，如cn.windicss.org
+## 路由
 
-都是/4是啥意思？
+：注册路由、多级路由、icon、刷新、跳转、外链、tagview
 
-**Pinia**
+**注册路由**
 
-教程：https://juejin.cn/post/7078281612013764616
+- 白名单（默认需要注册的，比如login、404、redirect、其他无需权限访问的页面）
 
-官网：
+**重置路由**
+
+helper有啥用？
+
+
+
+**刷新**
+
+**icon**
+
+**跳转**
+
+**外链**
+
+**tagview**
+
+
+
+## 菜单
+
+## 权限
+
+## 样式
+
+## mock
+
+## 图标
+
+## 国际化
+
+## 自定义组件
+
+## 异常
+
+## 路由动画
+
+：口诀（rtkc，router-view、transition、keep-alive、component），不能给router-view写key，写了动画就失效了
+
+transition必须在外层，不然会不生效
+
+多个文件依赖同一个文件
+
+：里面的变量是不是共享的？是，因为只导入一份了，a、b都依赖于c
 
