@@ -4,16 +4,18 @@ nodejs能做什么？解决什么问题？
 
 教程
 
-- nodejs入门：https://juejin.cn/post/6844903767926636558
-- 
+- 入门：https://juejin.cn/post/6844903767926636558
 - [常见操作](https://juejin.cn/post/6844904029219192839#heading-1)
+- 7天入门：http://nqdeng.github.io/7-days-nodejs/
 - [node官方文档](https://nodejs.org/dist/latest-v14.x/docs/api/)
 - npm
   - 入门：https://juejin.cn/post/6911853807756378125
-
+  - 
 - 视频教程
   - https://www.bilibili.com/video/BV1tZ4y1D7QU/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
   - https://www.bilibili.com/video/BV1a34y167AZ/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
+- 搭建cli：https://juejin.cn/post/7063657010885034020
+- liveserver：https://juejin.cn/post/7074620057547964453
 
 
 ## 问题
@@ -162,4 +164,8 @@ node是什么？
 
 - nodemon：负责热更新
 - liveserver：本地服务器，能热更新
+
+为啥直接开跟用liveserver不一样？
+
+：直接打开会有跨域问题
 

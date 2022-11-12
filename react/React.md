@@ -22,8 +22,8 @@
 - [后台管理系统](https://juejin.cn/post/6844903866052378638)，你把这个项目搞懂即可：[ant-design-pro](https://github.com/ant-design/ant-design-pro)项目即可，其他项目都只是需求不同而已，功能都是基于ant-design-pro来实现的
   - 配套的教程：https://pro.ant.design/zh-CN/docs/getting-started
 - dva是啥？https://blog.csdn.net/qq_41918834/article/details/118379901
-
-
+- 
+- 
 
 react能解决什么问题？
 
@@ -158,6 +158,12 @@ ref转发：把ref通过组件自动的传递到其子组件上
 
 ：muu，didmount、update、willUnMount
 
+为啥要学习生命周期？
+
+函数式组件怎么使用生命周期？
+
+
+
 #### 事件处理
 
 
@@ -197,4 +203,14 @@ props支持解构吗？
 纯函数有啥用？
 
 ：不会产生副作用的函数
+
+有那些常见的隐藏问题？
+
+- 
+
+为什么要页面无刷新的更新数据（ajax）？
+
+：为了更好的用户体验
+
+那些会自动触发？哪些会重复触发？那些可能会误触或者是不触发？
 
