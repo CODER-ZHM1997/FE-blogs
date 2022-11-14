@@ -1,6 +1,11 @@
-# react-router
+react-router
 
 ：是一个映射关系，键是path，值是函数（后端）或者是组件（前端），
+
+教程
+
+- 官网：https://v5.reactrouter.com/web/example/no-match
+- 
 
 学习要点
 
@@ -16,4 +21,13 @@ push与replace的区别
 
 - 路由组件放在pages，而且路由组件能接受到router传入的信息
 - 一般组件则是放components
+
+## 问题
+
+什么时候不会触发页面刷新？https://blog.csdn.net/weixin_45664402/article/details/114887508
+
+- hash模式：修改hash
+- history模式
+  - push
+  - replace
 
