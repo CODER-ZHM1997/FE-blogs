@@ -2,7 +2,10 @@
 
 教程
 
+- 入门：https://juejin.cn/post/6905539198107942919
 - https://juejin.cn/post/6941206439624966152
+- 常见布局：https://juejin.cn/post/6844903574929932301
+- 
 - 视频
   - https://www.bilibili.com/video/BV15V411E7co/?spm_id_from=333.999.0.0&vd_source=522153461914a766fc002cc8619314e4
 
@@ -26,6 +29,8 @@
   - [伪类、伪元素？](https://juejin.cn/post/6844903654756089864)，常用特效
 - 伪类是相当于添加类才能达到的效果
 - 伪元素则是相当于添加元素才能达到的效果
+
+## CSS
 
 #### 布局
 
@@ -119,6 +124,17 @@ flex布局只能父容器影响子容器，不会影响到孙元素
 - 伪元素要写content:''，至少为空字符串，不写的话，则是默认没有元素
 
 
+
+全局的样式：global.css
+
+重置样式：reset.css
+
+- 或者是用normal.css库
+
+css模块化？
+
+- 全局
+- 
 
 ## sass
 

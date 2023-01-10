@@ -16,22 +16,32 @@
 教程
 
 - 官网：https://ts.xcatliu.com/advanced/enum.html
+- 高阶：https://jkchao.github.io/typescript-book-chinese/typings/interfaces.html
 - 文档：https://ts.xcatliu.com/
 - 保姆级：https://juejin.cn/post/6872111128135073806
 - 实战：https://juejin.cn/post/7058868160706904078
-- 视频教程：https://www.bilibili.com/video/BV1Xy4y1v7S2?p=2&vd_source=522153461914a766fc002cc8619314e4
+- 视频教程
+  - https://www.bilibili.com/video/BV14Z4y1u7pi/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
+  - https://www.bilibili.com/video/BV1Xy4y1v7S2?p=2&vd_source=522153461914a766fc002cc8619314e4
 - ts教程：https://www.bilibili.com/video/BV1UU4y1K7Np?p=16&vd_source=522153461914a766fc002cc8619314e4
 - tsconfig：https://www.typescriptlang.org/tsconfig#esModuleInterop
+- 工具类型：https://juejin.cn/post/6994102811218673700
+- 面试题：https://juejin.cn/post/6999985372440559624
 
 
 
 ## 问题
+
+什么时候可以用@ts-ignore?
+
+
 
 搭建一个ts项目？https://segmentfault.com/a/1190000040416940
 
 - 直接初始化一个node项目
 - 安装ts库
 - 初始化ts配置文件
+- 执行文件：ts-node xxx.ts
 
 
 
@@ -44,7 +54,9 @@
 - 使用场景：我们比机器更加知道这个变量的类型时，可以使用这个，可以起到类型判断和类型转换的功能（可以转成更加精确或者是更泛的类型）
 - !是非空类型断言
 
-- 
+as的使用场景
+
+- 类型能够相互赋值的时候
 
 别名？
 
@@ -168,7 +180,7 @@ tuple类型
 
 ## 泛型
 
-：是为了代码的可复用性
+：是为了进一步保证类型安全，提高代码的安全性
 
 实现方式：类型参数化（即类型不是固定的，他取决于你传入的实参类型），调用时需要传入类型
 
@@ -176,9 +188,17 @@ tuple类型
 
 - 指不同类型的变量能也能赋值，多余的属性在类型推断时擦除了
 
+泛型如果不按规则来会怎样？
+
 
 
 ## 模块化
+
+模块分：全局、文件模块
+
+怎样算一个文件模块？
+
+- 在顶层使用import或export，
 
 作用域
 
@@ -198,6 +218,20 @@ tuple类型
 export = xxx？
 
 import与require的区别？
+
+不写export会怎样呢？变成全局变量声明文件吗？
+
+- 
+
+仅仅是import 不写变量有啥用?
+
+- 一般是import css
+
+仅导入模块？
+
+- import 'xxx'，有啥用？
+
+
 
 ## tsconfig文件
 
@@ -222,6 +256,31 @@ ts-node是不会主动去找类型声明文件的，所以你直接用tsc编译�
 - 创建types目录
 - 创建
 
+声明全局变量和函数只是为了应对实际实际有变量值，或者是有函数的情况，但是编译不通过的情况
+
+- 比如声明jQuery函数
+
+global.d.ts，declare global{}有啥用？
+
+- https://stackoverflow.com/questions/57040272/what-is-declare-global-in-typescript
+
+## 接口
+
+接口与类型别名的区别
+
+- 接口只能表示对象形状或者是函数签名，不能表示基础类型，而类型别名可以
+- 接口可以声明多次，再合并，而类型别名则是只能声明一次
+
+继承与实现的区别？
+
+标记为可实例化
+
+- new ():string
+
+## 函数
+
+可实例化：
+
 ## 其他
 
 map文件有啥作用？
@@ -236,4 +295,55 @@ loader（加载器）有啥用，用于解析语法，实现读取，如webpack�
 
 - 可以用export {}
 - 或export 某个类型，如export type a=xxx
+
+类型守卫
+
+- is有啥用？
+- typeof只能写boolean，number，string吗？
+
+类型别名不就包括联合类型吗？
+
+任意类型的值都可以给unknow，但是unknow则是只能赋值给any和unknown
+
+
+
+想要扩展类型？
+
+：通过interface
+
+修改覆盖已有类型？
+
+
+
+declare与export有啥区别？
+
+ts与d.ts文件的区别？https://juejin.cn/post/6987735091925483551
+
+- d.ts不会有js输出到output，而且使用的功能是ts文件的子集
+
+d.ts文件里声明的声明的变量是全局的吗？
+
+：不是，只有通过declare的才能声明全局变量，模块，命名空间
+
+namespace与modules区别？
+
+：https://blog.csdn.net/qq_31967569/article/details/98629070#:~:text=%E5%A6%82%E6%9E%9C%E8%A6%81%E7%94%A8%E4%B8%80%E5%8F%A5%E8%AF%9D,%E7%9A%84%EF%BC%8C%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E4%B8%80%E4%B8%AAmodule%E3%80%82
+
+- namespace等同于包名，而module则是相当于文件，推荐使用namespace
+
+export default后面要跟表达式，而export后面则是可以跟定义
+
+
+
+ts-node命令有坑啊
+
+：有些会检查不到，比如跨文件的时候
+
+- 
+
+d.ts好像就不用写啥export之类的
+
+赋值与断言的区别？https://stackoverflow.com/questions/69399211/typescript-why-does-as-unknown-as-x-work
+
+- 断言则是只要有一边可以赋值即可，要松一点，A能被B赋值，或者是B能被A赋值即可
 

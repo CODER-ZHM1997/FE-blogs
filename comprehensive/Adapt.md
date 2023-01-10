@@ -9,12 +9,7 @@
 
 教程
 
-- https://juejin.cn/post/7046169975706353701
-- https://www.bilibili.com/video/BV1dK411n7an?p=6
-- 响应式布局
-  - https://juejin.cn/post/6844903814332432397
-  - https://juejin.cn/post/6844903990669361165
-  - https://juejin.cn/post/6865107864139087886
+- 
 
 常用的适配方案
 

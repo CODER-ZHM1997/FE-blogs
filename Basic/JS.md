@@ -5,6 +5,8 @@
 ## 教程
 
 - 函数有关：https://juejin.cn/post/6864378349512065038
+- 闭包：https://juejin.cn/post/6937469222251560990
+- js操作style、class：https://juejin.cn/post/6844903822624555016
 
 ## 问题
 
@@ -269,6 +271,8 @@ ems被打包后还是ems格式吗？会不会统一变成cms？
 - [js面试题下](https://juejin.cn/post/6941194115392634888)
 - [闭包](https://juejin.cn/post/6937469222251560990#heading-7)
 
+
+
 js的常见问题可以去mdn中查看
 
 - [如回调函数中的this指向问题](https://developer.mozilla.org/zh-CN/docs/Web/API/setTimeout)，发现回调函数this指向可能不是你想要的，你可以通过以下三种方法修改this指向：[that，bind，箭头、](https://juejin.cn/post/6914474760848506887)
@@ -280,3 +284,15 @@ requirejs
 
 ：https://blog.csdn.net/weixin_36199877/article/details/118258085
 
+
+
+document与window的区别？常用哪个？
+
+
+
+js操作style或者是class
+
+- 操作style：el.styel.xxx，或者是el.setAttribute
+- 操作class
+  - el.className='xxx'，或者是el.setAttribute('class','xxx')
+  - 用el.classList，用add,remove,toggle,replace方法

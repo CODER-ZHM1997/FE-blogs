@@ -14,11 +14,11 @@ github的账号
 
 宝塔账号
 
-地址：http://120.24.70.152:8888/
+地址：[http://119.91.148.144:8888/b7e9634a](https://gitee.com/link?target=http%3A%2F%2F119.91.148.144%3A8888%2Fb7e9634a)
 
-账号：zbu9vrpw
+账号：menten1c
 
-密码：10c6fb51
+密码：uj2RTCPwLEVy
 
 
 
@@ -28,3 +28,6 @@ typora
 
 https://foxirj.com/typora
 
+账号
+
+- 

@@ -7,6 +7,7 @@
 - 入门：https://juejin.cn/post/7023242274876162084
 - 官网：https://webpack.docschina.org/concepts/
 - 视频：https://www.bilibili.com/video/BV14T4y1z7sw?p=2&vd_source=522153461914a766fc002cc8619314e4
+- 自定义loader：https://juejin.cn/post/6891565484324585480#heading-11
 
 常见操作
 
@@ -24,5 +25,8 @@ import xxx发生了什么，为什么js和css都能这样写
 webpack打包做了什么？
 
 - 合并js代码，解耦，合并，压缩
-- 
+
+
+
+
 

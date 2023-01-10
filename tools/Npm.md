@@ -44,3 +44,8 @@ npmrc配置文件，需要了解几个
 - 
 
 .editconfig：能够跨IDE，实现相同代码格式化
+
+依赖安装自己的依赖能够被顶级访问吗？
+
+：eslint-plugin-vue需要的vue-eslint-parser就被安装到顶级了，
+

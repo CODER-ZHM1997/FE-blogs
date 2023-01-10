@@ -13,7 +13,7 @@
     - https://www.bilibili.com/video/BV19V4y177gS?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
     - https://www.bilibili.com/video/BV1Q3411w7SQ?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
 - vue2代码迁移到vue3：https://juejin.cn/post/7064909191210598408
-  
+
 - 前端基建
   - 入门：https://juejin.cn/post/6844904145602740231
 
@@ -29,7 +29,10 @@
   - https://juejin.cn/post/6844904063910281230
   - ts教程：https://juejin.cn/post/6844903865255477261#heading-25
   - 项目中使用ts：https://juejin.cn/post/7058868160706904078
-  - 
+- tsx的使用
+  - https://juejin.cn/post/7007731144418394149
+  - https://juejin.cn/post/6914517242298236942
+
 
 项目推荐
 - https://juejin.cn/post/7036745610954801166#heading-4

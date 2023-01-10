@@ -6,8 +6,10 @@
 
 教程
 
+- elementPlus的源码解读：https://juejin.cn/post/7158846359175430158
+  - 视频：https://666java.com/8489.html
+
 - https://juejin.cn/post/7017957779176423454
-- 
 
 # 问题
 
