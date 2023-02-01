@@ -26,7 +26,7 @@ github的账号
 
 typora
 
-https://foxirj.com/typora
+：百度云有
 
 账号
 
