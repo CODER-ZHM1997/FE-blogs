@@ -19,15 +19,42 @@
 - api：https://juejin.cn/post/6950063294270930980
 - jsx：https://juejin.cn/post/7112595039863177223
 - 纯函数、副作用：https://juejin.cn/post/7057376945939415053
+  - 记一下副作用有那些即可
+
 - [后台管理系统](https://juejin.cn/post/6844903866052378638)，你把这个项目搞懂即可：[ant-design-pro](https://github.com/ant-design/ant-design-pro)项目即可，其他项目都只是需求不同而已，功能都是基于ant-design-pro来实现的
   - 配套的教程：https://pro.ant.design/zh-CN/docs/getting-started
 - dva是啥？https://blog.csdn.net/qq_41918834/article/details/118379901
-- 
+
+
+
+## 问题
+
+last 2 versions，为啥是最近的2个，而不是1个版本呢，那前面的
+
+Suspense
+
+props支持解构吗？
+
+纯函数有啥用？
+
+：不会产生副作用的函数
+
+有那些常见的隐藏问题？
+
 - 
 
-react能解决什么问题？
+为什么要页面无刷新的更新数据（ajax）？
 
-- 
+：为了更好的用户体验
+
+那些会自动触发？哪些会重复触发？那些可能会误触或者是不触发？
+
+懒加载的区别，动态加载：https://codeantenna.com/a/It61LatCFl
+
+- 懒加载是用到的时候再去加载，但是没有用到分包
+- 动态加载则是从服务端再去加载
+
+
 
 项目构建
 
@@ -77,7 +104,7 @@ hook的好处是结合对比者class来做的
 
 哪些是表达式？
 
-：万物皆是，除非是保留字、关键字
+：怎么构成，万物皆是，除非是保留字、关键字
 
 保留字与关键字区别？没啥区别，使用者都不能把它们作为变量名或函数名使用
 
@@ -192,29 +219,4 @@ hook的类型：state、effect hook
 
 
 
-## 问题
-
-last 2 versions，为啥是最近的2个，而不是1个版本呢，那前面的
-
-Suspense
-
-props支持解构吗？
-
-纯函数有啥用？
-
-：不会产生副作用的函数
-
-有那些常见的隐藏问题？
-
 - 
-
-为什么要页面无刷新的更新数据（ajax）？
-
-：为了更好的用户体验
-
-那些会自动触发？哪些会重复触发？那些可能会误触或者是不触发？
-
-懒加载的区别，动态加载：https://codeantenna.com/a/It61LatCFl
-
-- 懒加载是用到的时候再去加载，但是没有用到分包
-- 动态加载则是从服务端再去加载

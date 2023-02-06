@@ -12,7 +12,11 @@ Test能解决什么问题？
 
 - jest入门：https://juejin.cn/post/6844904196244766728
 - https://juejin.cn/post/7039108357554176037
-- 
+- vitest入门
+  - 官网：https://cn.vitest.dev/guide/features.html
+  - https://juejin.cn/post/7078906878779981832
+  - 搭配的框架（test-utils）：https://test-utils.vuejs.org/guide/
+
 
 ## unit测试
 
@@ -27,6 +31,14 @@ Test能解决什么问题？
 ## TDD
 
 原则
+
+## vitest
+
+it和test下面都能用expect，那区别是啥
+
+- 没啥区别，就是提示不同而已：https://stackoverflow.com/questions/45778192/what-is-the-difference-between-it-and-test-in-jest
+
+
 
 ## 问题
 

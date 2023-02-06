@@ -24,3 +24,12 @@ centos与ubuntu区别？
 
 - centos为首选，不考虑ubuntu
 
+软链接与硬链接的区别
+
+：https://developer.aliyun.com/article/558492
+
+- 硬链接是相当于源文件，但是硬链接的内容与软链接内容是同步的
+- 软链接则是相当于导航，跳转到源文件地址，仅此而已
+
+
+

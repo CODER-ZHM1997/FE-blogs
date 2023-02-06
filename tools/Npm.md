@@ -8,12 +8,22 @@
 - pnpm：https://juejin.cn/post/7053340250210795557
 - npx：https://juejin.cn/post/6844904098534260749
 - 发包：https://juejin.cn/post/6844903679162581005
+- monorepo：https://juejin.cn/post/7131709376921862158
+- workspace：https://juejin.cn/post/7071992448511279141
+- npm install常见错误
+  - http://soiiy.com/Vue-js/6114110.html
+
+
+关键名称
+
+- peerDependency:同伴依赖
+- legacy过时的，旧的
 
 配置信息
 
 ## 问题
 
-有时候别人教你的可能是旧的，跟最新文档是对不上的，所以呢，你要么翻到旧文档，要么按新文档的写法来
+
 
 我怎么知道全家桶的中的其他东西适配不？
 
@@ -48,4 +58,52 @@ npmrc配置文件，需要了解几个
 依赖安装自己的依赖能够被顶级访问吗？
 
 ：eslint-plugin-vue需要的vue-eslint-parser就被安装到顶级了，
+
+如果我没有下载这个库A，但是我下载的库B引用到了，那么我能用间接这个库吗？
+
+- 因为存在扁平安装
+
+#### script
+
+取决于minimist，看下他的解析
+
+- --mode，则是mode=true
+- --mode=dev，则是mode=‘dev’
+- 
+
+process.argv数组有啥用？
+
+#### npm配置
+
+- npmrc能够让npm的配置变成全局的，非常有用
+
+
+
+#### npm发包
+
+- 准备工作
+- 整体流程
+- 注意事项
+
+
+
+常见的报错及解决思路
+
+- 安装时提示解析报错
+  - peerDependency冲突直接给你报错，你可以选择-f，直接安装，不用管报错，这也报错也是醉了
+
+
+[npm的 --legacy-peer-deps](https://bbs.huaweicloud.com/blogs/349716)
+
+- --legacy-peer-deps（以过时legacy的方式去处理同伴依赖）会不会导致某些包安装缺失？
+
+--force有啥用？
+
+:https://segmentfault.com/q/1010000042600696/a-1020000042600698
+
+npm和pnpm的生成的node_module文件有没有冲突的？
+
+npm报错peer dependency conflict会怎样？
+
+- 我觉得不会冲突，都安装就行了呀
 

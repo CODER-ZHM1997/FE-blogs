@@ -1,6 +1,8 @@
 教程
 
 - https://juejin.cn/post/6921886428158754829
+- [注意事项](https://juejin.cn/post/6905294475539513352#heading-6)
+- websocket：https://juejin.cn/post/7038491693997359117
 
 [html设置form](https://segmentfault.com/a/1190000016374336)
 
@@ -60,7 +62,11 @@ a的href的值
 
 而且form的请求只支持2中，post和get
 
-## 技巧
+a标签指定href和click事件
 
-[注意事项](https://juejin.cn/post/6905294475539513352#heading-6)
+- 
+
+
+
+
 

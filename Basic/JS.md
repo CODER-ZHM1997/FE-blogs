@@ -8,6 +8,8 @@
 - 闭包：https://juejin.cn/post/6937469222251560990
 - js操作style、class：https://juejin.cn/post/6844903822624555016
 
+  
+
 ## 问题
 
 [事件模型？](https://juejin.cn/post/6844903568462331912)
@@ -296,3 +298,8 @@ js操作style或者是class
 - 操作class
   - el.className='xxx'，或者是el.setAttribute('class','xxx')
   - 用el.classList，用add,remove,toggle,replace方法
+
+## style
+
+：如何判断某些属性是可写？而且有些style又是不是通过style来控制的，比如scrollTop
+

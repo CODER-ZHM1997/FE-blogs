@@ -3,12 +3,13 @@
 教程
 
 - 入门：https://juejin.cn/post/6905539198107942919
+- flex布局：https://juejin.cn/post/7019075844664459278
 - https://juejin.cn/post/6941206439624966152
-- 常见布局：https://juejin.cn/post/6844903574929932301
-- 
-- 视频
-  - https://www.bilibili.com/video/BV15V411E7co/?spm_id_from=333.999.0.0&vd_source=522153461914a766fc002cc8619314e4
+- 常见布局
+  - https://juejin.cn/post/6844903574929932301
+  - https://juejin.cn/post/6844903491891118087
 
+- 视频：https://www.bilibili.com/video/BV15V411E7co/
 - 试题：https://juejin.cn/post/6844904185847087111
 - 技巧：https://juejin.cn/post/6844903926110617613
 - windicss
@@ -18,17 +19,11 @@
   - https://juejin.cn/post/6889226357851553805
   - https://juejin.cn/post/6844904062689738765
 
-伪类、伪元素
+- 伪类、伪元素
 
-- [两者区别、常见的伪类、伪元素](https://juejin.cn/post/6976646049456717838)
-- [三角、箭头、扇形、梯形、椭圆](https://juejin.cn/post/6844904062593269768#heading-4)
-  - 伪类可以方便的设置元素的状态
-    - link、hover、active、
-  - 伪元素可以方便的插入元素
-    - 常用的伪元素：before、after、first-letter、first-line
-  - [伪类、伪元素？](https://juejin.cn/post/6844903654756089864)，常用特效
-- 伪类是相当于添加类才能达到的效果
-- 伪元素则是相当于添加元素才能达到的效果
+  - [两者区别、常见的伪类、伪元素](https://juejin.cn/post/6976646049456717838)
+  - [三角、箭头、扇形、梯形、椭圆](https://juejin.cn/post/6844904062593269768#heading-4)
+- 
 
 ## CSS
 
@@ -95,6 +90,23 @@ bfc的特点
 
 - dom.style.width/height
 
+
+
+#### Image
+
+object-fit
+
+- contain：保持宽高比，缩放，直到有一边刚好相等
+- cover：保持宽高比，缩放，多余的被裁剪
+- fill：不保持，直接填满容器
+- none：啥都不做
+
+圆形（只对正方形生效）
+
+- border-radius: 50%
+
+
+
 ## Flex布局
 
 flex的子元素称为flex item
@@ -111,7 +123,7 @@ flex的子元素称为flex item
 
 flex布局只能父容器影响子容器，不会影响到孙元素
 
-
+flex-shink
 
 #### 基础动画
 
@@ -134,7 +146,20 @@ flex布局只能父容器影响子容器，不会影响到孙元素
 css模块化？
 
 - 全局
-- 
+
+#### 伪类
+
+- 伪类可以方便的设置元素的状态
+  - link、hover、active、
+- 伪元素可以方便的插入元素
+  - 常用的伪元素：before、after、first-letter、first-line
+- [伪类、伪元素？](https://juejin.cn/post/6844903654756089864)，常用特效
+
+伪类是相当于添加类才能达到的效果
+
+伪元素则是相当于添加元素才能达到的效果
+
+#### 
 
 ## sass
 
@@ -148,10 +173,18 @@ css模块化？
 
 [指令？](https://www.jianshu.com/p/e29a32d851af)
 
+- @use是引入外部文件
+- @mixin是定义方法
+- @include则是调用方法
+
 js中指令与函数的区别？
 
 - 指令是全局的，不需要导入
 - 我只知道指令与函数作用基本一直，只是指令形式不同，有些是v-开头，有些是@开头
+
+为啥有些class会找不到对应的定义？
+
+
 
 ## less
 
@@ -168,6 +201,8 @@ js中指令与函数的区别？
 vite直接支持是用ts，但是它只编译，不检查，你看到的飘红是因为vs自身的支持
 
 - vite虽然支持ts，但又不是完全支持，有些ts的功能在vite项目中不能用
+
+
 
 ## Windi
 
@@ -190,6 +225,8 @@ vite直接支持是用ts，但是它只编译，不检查，你看到的飘红�
 - 背景
 - 动画
 
+
+
 ## animate
 
 ：动画库
@@ -204,9 +241,9 @@ vite直接支持是用ts，但是它只编译，不检查，你看到的飘红�
 
 [很全](https://juejin.cn/post/6844903683411410951#heading-5)
 
-## 技巧
+
 
 关键词：布局、浮动、定位、
 
-[常见的布局](https://juejin.cn/post/6844903491891118087#comment)
+
 

@@ -6,6 +6,7 @@ git能解决什么问题？
 
 - 入门：https://juejin.cn/post/6974184935804534815
 - commitizen:https://juejin.cn/post/6844903606815064077
+- git actions:https://juejin.cn/post/7189510686760779833
 
 学习要点
 
@@ -59,6 +60,7 @@ git hooks
 
 ：git某个操作前或后会执行的钩子
 
+- commit：precommit，postcommit
 
 
 恢复指定的文件到某个版本

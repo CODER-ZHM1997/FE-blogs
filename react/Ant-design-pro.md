@@ -11,6 +11,14 @@
 
 ## 问题
 
+项目初始化
+
+- 按他github的文档即可，不然可能会有很多报错，太坑了
+
+我怎么知道要不要删除.umi文件夹？
+
+
+
 记住常用的几个组件即可：layout、card、table、form、descriptions、skeleton
 
 项目启动是用start，而不是dev
