@@ -3,10 +3,11 @@
 教程
 
 - 项目推荐
-  - 开源项目：https://juejin.cn/post/7164694758588153863
-  - 阿里的低代码（太复杂了）：https://lowcode-engine.cn/site/docs/guide/quickStart/intro
   - 数据大屏
     - openDataV：https://datav.byteportrait.com/#/docs/quick-satrt/intro
+  - 开源项目：https://juejin.cn/post/7164694758588153863
+  - 阿里的低代码（太复杂了）：https://lowcode-engine.cn/site/docs/guide/quickStart/intro
+  - 
 - 视野
   - https://juejin.cn/post/7131801252500865055
 

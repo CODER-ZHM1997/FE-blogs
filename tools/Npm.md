@@ -87,6 +87,20 @@ process.argv数组有啥用？
 
 
 
+#### npm install
+
+安装机制
+
+- 扁平化安装，先看当前项目的node_modules下的包是否兼容，不兼容则是安装到依赖包下的node_modules中
+- 根目录下的node_modules不会安装同一个包的2个版本
+
+包的查找机制
+
+- 会从当前包的node_modules进行查找
+- 找不到再向上级查找
+
+安装成功，你的项目不一定能跑起来！
+
 常见的报错及解决思路
 
 - 安装时提示解析报错
@@ -95,7 +109,9 @@ process.argv数组有啥用？
 
 [npm的 --legacy-peer-deps](https://bbs.huaweicloud.com/blogs/349716)
 
-- --legacy-peer-deps（以过时legacy的方式去处理同伴依赖）会不会导致某些包安装缺失？
+- --legacy-peer-deps（以过时legacy的方式去处理同伴依赖，即不安装伙伴依赖）会不会导致某些包安装缺失？
+- [peerdependency冲突咋办？](https://segmentfault.com/q/1010000011571000)
+  - 只能安装一个peerdependency，另一个包你只能找合适范围的版本
 
 --force有啥用？
 
@@ -106,4 +122,22 @@ npm和pnpm的生成的node_module文件有没有冲突的？
 npm报错peer dependency conflict会怎样？
 
 - 我觉得不会冲突，都安装就行了呀
+
+npm的解析流程是怎样的？
+
+什么时候需要安装lock和node_modules文件？
+
+安装了包的不同版本，会不会导致查找出现问题？
+
+[requires有啥用？主要是区别于dependencies](https://juejin.cn/post/6884061044218691598)
+
+- requires是描述当前包所有需要的依赖包（不包括间接依赖），而dependencies则是描述的是安装在当前包的node_modules下的包
+
+
+
+pnpm的安装机制是怎样的？
+
+#### npm update
+
+什么情况下需要进行升级操作？
 

@@ -18,6 +18,12 @@
 
 ## 视频博主
 
+面试相关的：
+
+- https://www.bilibili.com/video/BV1om4y1S7g3
+- https://space.bilibili.com/279624435/video
+- https://www.bilibili.com/video/BV1sN411974w
+
 尚硅谷全套：https://www.bilibili.com/read/cv5650633
 
 打基础，统统看《尚硅谷》就行了，然后再看一下市面上比较实用的项目，就能做东西了

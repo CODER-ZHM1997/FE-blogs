@@ -357,7 +357,25 @@ file对象、blob对象、base64之间的转换
 - 默认选中：结束日期为今天，开始日期则是往前推30日
 - 要求开始和结束时间间隔不能大于30，是有选中范围的
 
+
+
 #### Table
 
-分页多选
+- 支持插槽
+
+
+
+#### 幸运转盘&九宫格&老虎机
+
+：通过插件[lucky-canvas](https://100px.net/usage/vue.html)来实现
+
+
+
+#### [刮刮卡](https://juejin.cn/post/7142839691203575838)
+
+：通过canvas实现
+
+- https://juejin.cn/post/6844904090485407751#comment
+
+
 

@@ -39,6 +39,12 @@ gitignore文件应该忽略哪些？
 
 
 
+git fetch
+
+- git fetch origin xxx会新建一个分支，但是不会跟你的分支合并，你需要手动merge
+
+
+
 443的问题，直接取消代理即可
 
 -  git config --global --unset http.proxy 

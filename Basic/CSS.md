@@ -4,6 +4,7 @@
 
 - 入门：https://juejin.cn/post/6905539198107942919
 - flex布局：https://juejin.cn/post/7019075844664459278
+- 常用的库：https://juejin.cn/post/6844903683411410951
 - https://juejin.cn/post/6941206439624966152
 - 常见布局
   - https://juejin.cn/post/6844903574929932301
@@ -23,7 +24,13 @@
 
   - [两者区别、常见的伪类、伪元素](https://juejin.cn/post/6976646049456717838)
   - [三角、箭头、扇形、梯形、椭圆](https://juejin.cn/post/6844904062593269768#heading-4)
-- 
+- animate：
+
+## 难点
+
+- 响应式怎么实现？常见的实现方式和他们的优缺点是啥
+- 移动端如何做适配？
+  - 可以用：postcss-px-to-viewport
 
 ## CSS
 
@@ -104,6 +111,16 @@ object-fit
 圆形（只对正方形生效）
 
 - border-radius: 50%
+
+
+
+啥是响应式布局？
+
+：https://juejin.cn/post/6844903814332432397
+
+- 显示器或者是浏览器窗口的不同，大小和布局会进行一个调整
+
+max-width何时出生效？是不是写了max-width就不会有写width了？
 
 
 
@@ -204,7 +221,7 @@ vite直接支持是用ts，但是它只编译，不检查，你看到的飘红�
 
 
 
-## Windi
+## WindiCSS
 
 常见操作
 
@@ -227,23 +244,7 @@ vite直接支持是用ts，但是它只编译，不检查，你看到的飘红�
 
 
 
-## animate
 
-：动画库
-
-教程
-
-- [官方文档](https://animate.style/)
-
-
-
-## 常用的库
-
-[很全](https://juejin.cn/post/6844903683411410951#heading-5)
-
-
-
-关键词：布局、浮动、定位、
 
 
 
