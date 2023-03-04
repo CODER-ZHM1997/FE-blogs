@@ -1,0 +1,83 @@
+本文档主要编写mongodb的入门
+
+教程
+
+- 入门
+  - https://juejin.cn/post/7136365535796658183
+- mongose
+  - 官网：https://mongoosejs.com/docs/documents.html
+  - 入门：https://juejin.cn/post/7022851535461679141
+  - https://juejin.cn/post/6844904054196273159
+  - 查询
+    - https://juejin.cn/post/6945723463516553224
+    - https://juejin.cn/post/7065210967084236807
+- 难点
+  - 聚合查询？
+  - 非关系型数据库如何设计表？
+
+## 问题
+
+常见操作
+
+- 数据库
+  - 查看列表：show databases
+- 表
+  - 查看列表：show tables
+  - 清空表：db.xxx,deleteMany({})
+
+如何减少设计上的一些失误？
+
+- 改动真的很大的
+
+非关系型与关系型数据库有啥区别？
+
+- https://cloud.tencent.com/developer/article/1784274
+
+账号密码是啥？
+
+- 默认没有账号密码
+- [设置账号信息](https://www.jianshu.com/p/79caa1cc49a5)
+  - 连接数据的时候，只需要在协议那里补充账号密码即可
+
+mysql和mongodb的区别和使用场景：https://juejin.cn/post/7185560357816795192
+
+[mongodb和mongoose区别](https://www.py.cn/db/mongodb/15249.html)
+
+- 后者是做了一层封装的工具
+
+能够做啥复杂查询操作吗？
+
+索引有啥用？
+
+如何判断mongose是否连接成功？如何定位问题，他会有提示吗？
+
+- 控制台会报错
+
+数据库如何初始化？
+
+- 通过脚本
+
+如何创建空表
+
+- 好像创建不了，因为它可以插入任意内容
+
+聚合查询与连表查询有啥区别？
+
+不按格式插入记录会怎样？
+
+- 不会怎样，照样插入成功
+
+如何自增id如何实现？
+
+- 可以通过查表的长度来实现
+
+如何避免出错？
+
+以及出错的补救措施是啥？
+
+自定义的id好像没啥卵用啊，都是用他自定义的_id
+
+- 
+
+聚合查询是啥意思？
+

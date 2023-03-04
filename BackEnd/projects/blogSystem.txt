@@ -1,0 +1,18 @@
+本文档主要编写博客系统过程中碰到的一些问题
+
+## 问题
+
+eslint只检测没有修复
+
+- vs的eslint插件可以开启修复功能：https://juejin.cn/post/7050067415920541727
+- 也可以通过运行包命令的方式去修复，比如：exlint --fix
+  - 但是fix不能修复所有的，有些还是要手动修复一下
+
+vs的eslint插件依赖eslint 包吗？https://www.panyanbin.com/article/47d1c4a4.html
+
+- 依赖的
+
+本地的debug和服务器上部署有啥区别？
+
+- 为啥要用不同的工具来搞？
+

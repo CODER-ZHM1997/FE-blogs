@@ -2,15 +2,21 @@
 
 前言：本文主要记录一些js的要点和学习过程中产生的问题
 
-## 教程
+教程
 
 - 函数有关：https://juejin.cn/post/6864378349512065038
 - 闭包：https://juejin.cn/post/6937469222251560990
 - js操作style、class：https://juejin.cn/post/6844903822624555016
+- [js的常见操作](https://juejin.cn/post/6844904136161361933)（你后面所有的操作都不会超出这个）
+- 正则：
+- [js面试题](https://juejin.cn/post/6940945178899251230)
+- [js面试题下](https://juejin.cn/post/6941194115392634888)
+- [闭包](https://juejin.cn/post/6937469222251560990#heading-7)
+- [回调函数中的this指向问题](https://juejin.cn/post/6914474760848506887)
 
-  
 
-## 问题
+
+## 事件
 
 [事件模型？](https://juejin.cn/post/6844903568462331912)
 
@@ -19,21 +25,7 @@
   - 阻止冒泡：stopPropagation
   - 阻止默认行为：preventDefault
 
-如何绑定方法？
 
-- 
-
-
-
-[回调函数中的this指向问题](https://juejin.cn/post/6914474760848506887)
-
-：像setTimeout，setInternal都是window对象下的方法，它里面的this默认都是指向window对象
-
-解决方案
-
-- 可以通过that保存this
-- 通过bind来修改
-- 通过箭头函数
 
 
 
@@ -47,6 +39,10 @@ js就是es5
   - 对象的方法（应为我对象方法就是为了操作属性啊）
   - 动态上下文的回调函数（就是我需要你this指向新的对象了，但是你用回调函数就是固定的this指向了)
 
+
+
+## this指向问题
+
 this指向会被改变的四个场景
 
 - 通过call、apply、bind、
@@ -54,6 +50,8 @@ this指向会被改变的四个场景
 - 作为方法调用
 - 普通函数执行
 - 箭头函数的this是改不了的
+
+
 
 函数定义计算一下还是函数定义，但是表达式（如立即执行函数）执行一下就是可能返回了新的函数
 
@@ -77,39 +75,13 @@ A.prototype被重新指向新的原型对象了，那么之前的生成的对象
 
 
 
-sort默认是升序的，它预计返回是负值，这样就不会调换位置，所以是升序，
+## 遍历问题
 
 for in和for of的区别
 
 - in拿的是键，of拿的是值
 - in用来遍历对象（这个是es5的）
 - 而of则是遍历数组和set和map（这是es6出的）
-
-[e.target与this的区别？](https://juejin.cn/post/6974662159120728077)
-
-- target是触发事件的对象，而this则是绑定this的对啊ing
-- 就举例了ul里面套用3个li的例子，点击li触发的触发的事件，e.target是li，this是ul
-
-
-
-## 基础
-
-#### [正则表达式](https://www.runoob.com/regexp/regexp-metachar.html)
-
-- 你要要求字符串***整体***由什么组成，则是需要加上^和$
-- test居然是正则表达式的方法，而search居然是返回首个符合的条件的下标，而match才是匹配的结果，match经常与/g，搭配使用
-
-[括号有什么用，](https://www.jb51.net/article/141294.htm)
-
-- 
-- 中括号[123]，是多选一
-- 小括号(123)，则是
-
-**字符串**
-
-- split，将字符串分割成数组
-
-
 
 **对象**
 
@@ -142,18 +114,34 @@ for in和for of的区别
 
 
 
-#### 原型与原型链
+## 原型与原型链
+
+什么是原型对象？
+
+：系统在构造函数定义时，自动关联的一个对象，目标是能够为构造函数生成的实例提供一些公共的属性和方法（不过一般值加公共方法）
+
+那构造函数的__proto__得到的是啥
 
 instanceof
 
 ：用来判断实例的原型链上是否能找到该类型的原型
 
-__proto__与prototype的区别？
-：普通对象只有__proto__属性，而函数特有的属性是prototype,原型对象他里面保存的是所有实例共享的属性和方法，prototype只是为了方便的拿到原型对象，
+规则（原型链应该是从顶层开始往下推，你记住那个原型链的图就行了）
 
+：https://juejin.cn/post/6844904093828251662#heading-18
 
+- 所有对象或实例都有构造函数（如Person），而构造函数的原型又是对象，这些对象的构造函数就是Object
 
-#### 闭包
+- null是Object原型的原型
+- 任意构造函数的原型都是Function原型
+  - Person.proto==Function.prototype
+  - Object.proto==Function.prototype
+
+prototype与proto的区别
+
+- 两者指向的都是同一个东西，如Person.prototype==p.proto，但是调用它们的人不同，前者是prototype来调用，后者是proto
+
+## 闭包
 
 使用场景
 
@@ -170,136 +158,11 @@ __proto__与prototype的区别？
 
 
 
-#### [执行上下文（执行时确定）](https://juejin.cn/post/6844903682283143181#heading-2)
+## 问题
 
-- 
+this的上下文是啥意思？
 
-
-
-执行上下文与作用域链怎么用？
-
-- 确定一个变量的值，就根据作用域链来找
+- 即this的指向
 
 
-
-#### 面向对象
-
-继承如何实现？
-
-
-
-#### es
-
-**同步，异步**
-
-：什么是同步？同步就是大家按顺序来，上面的事做完再做下面的，异步就秀了，它上面的操作没做完，他就做下面的事，直接跳过，它等同步那些操作完成后再做异步的操作
-
-#### 通信类
-
-什么是源？
-
-- 协议+域名+端口
-
-前后端如何通信？
-
-- ajax（浏览器不允许ajax发送跨域请求，只能同个域下面的）
-- websocket（socket肯定可以）
-- cros（相当于变种的ajax的，能够发送跨域请求
-
- 
-
-**浏览器的渲染**
-
-- 如何避免reflow重拍
-- 如何避免repaint重绘
-
-**js的运行**
-
-- 任务队列
-- 事件循环Event Loop
-
-**提升页面的性能**
-
-实现方式
-
-- 资源合并压缩，减少http请求
-- 非核心代码异步加载
-- 利用浏览器缓存
-- 使用CDN
-- 预解析DNS
-
-错误监控
-
-：其实就是为了保证代码质量，紧急补救
-
-## 正则
-
-常用的正则：https://juejin.cn/post/6844903865293225997#comment
-
-^和$都是在//斜杠里面的
-
-^有两个作用，一个是表示以什么开头，一个是非，括号里面的是非
-
-## 模块化
-
-[commonjs与es module区别？](https://juejin.cn/post/6994224541312483336)
-
-- 语法
-  - cms：module.exports、exports、require
-  - ems：export、export default、import
-- cjs：（nodejs借鉴commonjs的模块系统）
-  - 问题：加载实现和加载流程、避免循环加载、加载先后顺序问题、动态加载
-  - 特性
-    - 每个文件都是一个模块，有一些内置的变量、函数，如require、exports、module
-    - 运行时导入并执行
-- esm：（这个才是算node自己的模块系统）
-  - 特性
-    - 提前导入并执行模块
-    - 支持混入导入|导出，但是default export的不支持解构
-    - 支持重命名导入
-    - 支持动态导入：import('xxx')，这个动态是指导入的动作是动态的，你来决定时候时候导入，而不是说导入的对象是动态的
-    - 导出绑定：即不能重新赋值
-    - 支持重定向导出：export * from 'xxx'
-
-ems被打包后还是ems格式吗？会不会统一变成cms？
-
-
-
-## 技巧
-
-[js的常见操作](https://juejin.cn/post/6844904136161361933)（你后面所有的操作都不会超出这个）
-
-- [js面试题](https://juejin.cn/post/6940945178899251230)
-- [js面试题下](https://juejin.cn/post/6941194115392634888)
-- [闭包](https://juejin.cn/post/6937469222251560990#heading-7)
-
-
-
-js的常见问题可以去mdn中查看
-
-- [如回调函数中的this指向问题](https://developer.mozilla.org/zh-CN/docs/Web/API/setTimeout)，发现回调函数this指向可能不是你想要的，你可以通过以下三种方法修改this指向：[that，bind，箭头、](https://juejin.cn/post/6914474760848506887)
-- window下的方法如setTimeout，setInterval中回调的this是指向window的，严格模式下也是，虽然全局的this是指向undefined的
-
-
-
-requirejs
-
-：https://blog.csdn.net/weixin_36199877/article/details/118258085
-
-
-
-document与window的区别？常用哪个？
-
-
-
-js操作style或者是class
-
-- 操作style：el.styel.xxx，或者是el.setAttribute
-- 操作class
-  - el.className='xxx'，或者是el.setAttribute('class','xxx')
-  - 用el.classList，用add,remove,toggle,replace方法
-
-## style
-
-：如何判断某些属性是可写？而且有些style又是不是通过style来控制的，比如scrollTop
 

@@ -1,0 +1,16 @@
+本文档主要是编写
+
+- 
+
+设置自动保存时自动格式化
+
+- 死活不生效，醉了
+
+设置手动保存时自动格式化，eslint
+
+```js
+"editor.codeActionsOnSave": {
+    "source.fixAll": true
+},
+```
+

@@ -7,7 +7,12 @@ uni-app
 教程
 
 - 官网：https://uniapp.dcloud.net.cn/history.html
-- 常见的坑
+- 入门：https://juejin.cn/post/7137195631151415333
+- 小程序开发：https://juejin.cn/post/7020680215009427470
+- 多端开发：https://juejin.cn/post/7138221718518595621
+- 常见的坑：https://juejin.cn/post/7054467902648352798
+
+
 
 ## 问题
 
@@ -92,7 +97,6 @@ ui的结构你要清楚，有哪几部分？
 - 即开发web应用相关的框架
 
 有些组件可以通过配置即可以实现的，比如搜索栏，但是有些平台可能不支持，如小程序
-
 
 
 

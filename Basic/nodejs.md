@@ -17,6 +17,7 @@ nodejs能做什么？解决什么问题？
 - liveserver：https://juejin.cn/post/7074620057547964453
 - nvm：https://juejin.cn/post/7000652162950758431
   - 安装：直接跑到官网去安装即可：https://github.com/coreybutler/nvm-windows/releases
+- 命令行解析工具minimist：https://juejin.cn/post/6975687741761650695
 
 
 
