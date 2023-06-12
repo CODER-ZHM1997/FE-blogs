@@ -7,6 +7,7 @@ git能解决什么问题？
 - 入门：https://juejin.cn/post/6974184935804534815
 - commitizen:https://juejin.cn/post/6844903606815064077
 - git actions:https://juejin.cn/post/7189510686760779833
+- github 搜索技巧：https://juejin.cn/post/6844904058755481607
 
 学习要点
 

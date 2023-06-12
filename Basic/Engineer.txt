@@ -1,0 +1,10 @@
+本文档主要是书写一些项目工程化（包括vue、react、后端的）的内容
+
+教程
+
+- vue3项目搭建：https://juejin.cn/post/7118294114734440455#heading-9
+
+问题
+
+- 配置不生效：可能需要重启一下，有时候是vscode的eslint、prettier插件缓存了旧的配置
+

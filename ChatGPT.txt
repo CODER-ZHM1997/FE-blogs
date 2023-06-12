@@ -1,0 +1,62 @@
+本文档主要是编写一些chatGPT的一些使用技巧
+
+教程
+
+- 修改学习方式：https://www.bilibili.com/video/BV17M411L7mp
+- prompt
+  - https://www.bilibili.com/video/BV1g24y1L7WX
+  - 文档：https://learningprompt.wiki/docs/chatgpt-learning-path
+
+账号密码
+
+- 账号：kenthomas4873cc@web.de
+
+- 密码：xH1TvnKT7eRChG2eS
+- API：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 
+- 使用教程：https://help.idid88.com/chatgptHelp.html 
+- 如线路导致的无法登录或限制使用可以使用免翻方式，参考教程：https://help.idid88.com/gpt.png
+
+
+## 问题
+
+它能为我们做什么？
+
+- 了解感兴趣的内容：总而言之，人类上出现的任何事情，你都可以
+- 锻炼自己：让gpt来做你的陪练
+- 模拟场景：很多问题你找不到场景，很难理解，他能够为你模拟场景
+
+
+
+如何更好的学习gpt，通过学习prompt
+
+- 
+
+
+
+提问变得更加重要！因为gpt会给你答案，你负责提问，它负责答案
+
+- 问出一个好问题至关重要！
+
+在chatgpt影响下，学习新的技术方式是否会发生改变，如果改变，个人应该如何上手这种新的学习方式？比如如何学习react？
+
+- 
+
+chat如何图片时长限制？
+
+如何解决gpt总是掉线的问题？
+
+- 更换vpn节点
+- 把vpn的安全防护给关了
+- 重新登录一下
+- 搞个客户端
+
+chatgpt如何改变我们的学习方式？
+
+- 把gpt来当成一个机器人，你负责提需求，由他来负责生成，生成后你只需要检查一下它写的好不好即可
+
+
+
+如何让gpt来辅助写代码？
+
+- 
+

@@ -3,12 +3,23 @@
 教程
 
 - 官方文档：https://eggjs.github.io/zh/guide/
+- express、koa、egg、midway、nest，这四者的区别：https://juejin.cn/post/6998355750917505061
 
 
 
 学习日记
 
 - 
+
+## 驱动问题
+
+- 如何快速测试接口？
+- 异常处理要怎么做？
+- 怎么去做划分，比如怎样算划分为一个controller、一个service、一个model？
+- controller、service、model分别应该做什么？
+- 应用、框架、插件三者的区别
+
+
 
 ## 插件
 
@@ -67,11 +78,17 @@ egg内置controller和service的方法口诀：ciud,还有个s，即show，他�
 
 - 有些参数是不需要的，比如内部的一些属性，需要裁剪吗？
 
+
+
 ## Service
 
 接收：一般都是接收处理好的参数，可以传入params，然后通过点来访问，或者是具体的参数
 
 返回：返回的是数据库的操作结果
+
+什么时候可以不用service？
+
+- 
 
 单个service模块如何测试？我访问要通过controller来测试的，不可能专门写一个controller来搞把？
 
@@ -82,6 +99,13 @@ egg内置controller和service的方法口诀：ciud,还有个s，即show，他�
 
 
 ## 问题
+
+驱动问题
+
+- 如何去debug api
+- 如何去定位问题？
+
+
 
 怎么调试接口？
 
@@ -161,4 +185,19 @@ _id有啥用？
 组合操作的要怎么弄？
 
 - 比如选课，如何防止重复选中同一门课？我需要先判断一下用户有没有选中这门课先，没有选中我才能选这门课
+
+常见的报错原因
+
+- 参数值传入不符合规范，比如
+
+
+
+能不能选中代码片段来执行
+
+- 
+
+注意下这几类对象挂载的位置的区别？
+
+- controller挂载到app下
+- service和model则是挂载到context下，基本都是挂载context下
 

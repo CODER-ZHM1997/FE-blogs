@@ -10,27 +10,18 @@ Test能解决什么问题？
 
 教程
 
-- jest入门：https://juejin.cn/post/6844904196244766728
+- jest入门
+  - https://juejin.cn/post/6844904196244766728
+
 - https://juejin.cn/post/7039108357554176037
 - vitest入门
   - 官网：https://cn.vitest.dev/guide/features.html
   - https://juejin.cn/post/7078906878779981832
   - 搭配的框架（test-utils）：https://test-utils.vuejs.org/guide/
 
+## Jest
 
-## unit测试
-
-你可以测试antd的组件，看它是否正常
-
-## e2e测试
-
-：模拟用户操作，直到完成某个工作，关注的是某个链路是否能够正常走完
-
-工具：Crypress
-
-## TDD
-
-原则
+：只能对返回值进行测试吗？
 
 ## vitest
 
@@ -41,6 +32,14 @@ it和test下面都能用expect，那区别是啥
 
 
 ## 问题
+
+tdd的工作流是怎样的？
+
+- 先编写空壳函数，然后编写测试用例（比如预测返回值）编写代码时就要通过测试用例才能算是符合条件的代码
+
+怎么场景下需要去做测试？
+
+- 
 
 测试的原则
 

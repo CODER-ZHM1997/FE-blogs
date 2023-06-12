@@ -11,7 +11,7 @@
 - monorepo：https://juejin.cn/post/7131709376921862158
 - workspace：https://juejin.cn/post/7071992448511279141
 - npm install常见错误
-  - http://soiiy.com/Vue-js/6114110.html
+  - https://blog.csdn.net/meimeib/article/details/121969219
 
 
 关键名称
@@ -22,6 +22,13 @@
 配置信息
 
 ## 问题
+
+常见操作
+
+常见问题
+
+- peer dependency依赖冲突
+- pnpm又解决了什么问题？
 
 
 
