@@ -13,11 +13,19 @@
 - [常用的设计模式](https://github.com/csxiaoyaojianxian/JavaScriptStudy)
 - 实战
   - https://juejin.cn/post/6844904138707337229
+- mvc、mvvm、mvp模式？
+  - https://juejin.cn/post/6844903480126078989
+  - https://juejin.cn/post/6844903662897070093
+
 
 
 前置准备
 
 - 原型链
+
+
+
+- 
 
 ## 继承、封装、多态
 
@@ -141,4 +149,10 @@
 
 
 
-闭包
+声明式与非声明式区别？
+
+- 声明式只关注“做什么”
+- 命令式则是关注“怎么做”
+
+
+

@@ -4,13 +4,52 @@
 
 项目推荐
 
+- [hello](https://github.com/521xueweihan/HelloGitHub)
 - 大全：https://github.com/FrontEndGitHub/FrontEndGitHub
 
-github搜索技巧
+面试
+
+- https://github.com/azl397985856/fe-interview
+
+## github搜索技巧
 
 - https://juejin.cn/post/6891056415440535565#heading-13
 
-优秀后台管理系统
+github搜索技巧
+
+- 可以根据关键字，比如egg-demo、egg-example、awesome-egg
+
+- topic大法：如topic:egg，还可以带上admin
+
+  - 因为你大多数写的都是admin项目
+
+  - 如果是多个关键字，则是要用 OR 来展示
+
+    - vue react in:topic 是必须要同时包含
+    - vue OR  react in:topic 则是二选一
+
+    
+
+## js基础
+
+- JS study：https://github.com/csxiaoyaojianxian/JavaScriptStudy
+- Leo script:https://github.com/pingan8787/Leo-JavaScript
+
+
+
+## vue
+
+- awesome-vue：https://github.com/vuejs/awesome-vue
+
+
+
+## react
+
+- awesome-react：https://github.com/enaqx/awesome-react
+
+
+
+## 优秀后台管理系统
 
 - vben：https://doc.vvbin.cn/guide/
 - pure-admin：https://github.com/pure-admin/vue-pure-admin
@@ -29,33 +68,27 @@ github搜索技巧
   - 
 
 
-低代码
+
+## 低代码
 
 - go-view
   - 仓库地址：https://gitee.com/dromara/go-view
   - 预览：https://gitee.com/link?target=https%3A%2F%2Fvue.mtruning.club%2F
+- https://github.com/woai3c/visual-drag-demo
 
-后端
 
-- 
-- cool admin（基于midway）
-  - 仓库地址：https://github.com/cool-team-official
-  - 文档：https://admin.cool-js.com/admin/node/introduce.html#%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93
-  - 预览：https://cool-js.com/admin/node/introduce.html#%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93
-  - 教程：https://space.bilibili.com/17864501/video
 
-js基础
+## BE
 
-- JS study：https://github.com/csxiaoyaojianxian/JavaScriptStudy
-- Leo script:https://github.com/pingan8787/Leo-JavaScript
+- egg
+  - https://github.com/hangjob/vue-bag-admin
+  - https://github.com/huangwei9527/Ink-wash-docs
+  - cool admin（基于midway）
+    - 仓库地址：https://github.com/cool-team-official
+    - 文档：https://admin.cool-js.com/admin/node/introduce.html#%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93
+    - 预览：https://cool-js.com/admin/node/introduce.html#%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93
+    - 教程：https://space.bilibili.com/17864501/video
 
-基础
-
-- hellogithub：https://github.com/521xueweihan/HelloGitHub
-
-vue仓库
-
-- 
 
 
 
@@ -65,23 +98,6 @@ vue仓库
 
 - 功能齐全的
 - 有文档的
-- 
-
-
-
-怎样找框架的demo？
-
-- 可以根据关键字，比如egg-demo、egg-example、awesome-egg
-- 或者是根据搜索topic:egg，还可以带上admin
-  - 因为你大多数写的都是admin项目
-
-
-
-常见的系统类型：CMS、CRM，OA，ERP系统
-
-- https://www.wtdms.com/zixun/406.html
-
-- https://www.zhihu.com/question/591506825
 
 
 
