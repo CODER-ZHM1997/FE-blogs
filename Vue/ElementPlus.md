@@ -8,3 +8,9 @@ dialog 组件add与edit弹窗共用，出现打开add弹窗，但是edit数据�
 
 - 在nextTick回调再给formModel赋值
 - 在弹窗关闭的时候清除一下表单数据即可
+
+
+
+多图片上传功能
+
+- 其实是每次上传都

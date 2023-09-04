@@ -1,23 +1,23 @@
-nodejs能做什么？解决什么问题？
 
-：js的运行时环境，能够让js浏览器之外，也能执行
 
-教程
+## 教程
 
 - github项目
   - 入门：https://github.com/FrontEndGitHub/FrontEndGitHub/issues/47
-  
-- 入门
-  - https://juejin.cn/post/6844903767926636558
-  - https://www.bilibili.com/video/BV1gM411W7ex
-  - 7天入门：http://nqdeng.github.io/7-days-nodejs/
-- node项目
+  - 
+  - 实战：https://blog.51cto.com/u_15069443/2575927
   - https://juejin.cn/post/6961101653709684772
   - awesome node：https://github.com/sindresorhus/awesome-nodejs
-- [常见操作](https://juejin.cn/post/6844904029219192839#heading-1)
-- [node官方文档](https://nodejs.org/dist/latest-v14.x/docs/api/)
-- npm
-  - 入门：https://juejin.cn/post/6911853807756378125
+- 入门
+  - 学习指南：https://juejin.cn/post/7246689952933625914
+  - 实战：https://github.com/csxiaoyaojianxian/JavaScriptStudy/blob/master/17-nodejs/03-buffer.js
+  - 7天入门：http://nqdeng.github.io/7-days-nodejs/
+  - 快速入门：https://juejin.cn/post/6911853807756378125
+  - https://github.com/csxiaoyaojianxian/JavaScriptStudy/blob/master/17-nodejs/02-%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF.js
+  - https://juejin.cn/post/6844903767926636558
+  - 大纲：https://github.com/ringcrl/node-point/blob/master/README.md
+  - 视频：https://www.bilibili.com/video/BV1gM411W7ex
+  - [常见操作](https://juejin.cn/post/6844904029219192839#heading-1)
 - 视频教程
   - https://www.bilibili.com/video/BV1tZ4y1D7QU/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
   - https://www.bilibili.com/video/BV1a34y167AZ/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
@@ -28,22 +28,65 @@ nodejs能做什么？解决什么问题？
 - 命令行解析工具minimist：https://juejin.cn/post/6975687741761650695
 - nodejs的流：https://juejin.cn/post/6854573219060400141
 - web worker:https://juejin.cn/post/7176788060619669565
+- npx：https://juejin.cn/post/7142666525365764104
+- package：https://juejin.cn/post/7240805459288522808?searchId=20230717003123FDFD6C5E378389D16FA2
+- 实战：https://juejin.cn/column/7246672925667344441
 
 
 
-nodejs能做什么？
+## 核心问题
+
+node是什么？适用场景有哪些？
+
+- 他是js的运行时环境
+- 适用场景：https://juejin.cn/post/7258881840823713848?searchId=20230903234954A6D80AD93A5581AA7891#heading-2
+
+学习项目或博主有哪些？
+
+核心模块有哪些？
+
+- npm
+- fs模块
+- http模块
+- url、path模块
+- stream模块
+- buffer模块
+
+特点
 
 - 模块化
-- 文件操作
-- 网络操作
-- 进程管理
-- 异步编程
+- 事件驱动
+- 异步编程（或者叫非阻塞IO）
+
+生态
+
+- 可以集成哪些框架？
+
+架构
+
+- 
+
+面试题有吗？
 
 
 
 
 
 ## 模块化
+
+模块分类
+
+- 核心
+- 第三方
+- 自定义
+
+核心
+
+- 导入导出
+- 路径解析
+- 缓存
+
+
 
 主题
 
@@ -94,6 +137,24 @@ socket相当于快递小哥，你要发送和接收数据包只需要对接socke
 
 
 
+## Buffer
+
+：用于操作二进制数据
+
+适用场景
+
+- 文件操作
+- 网络操作
+
+crud操作
+
+- 比如创建、读取、修改
+- 还有比较、合并成一个新的、拷贝、读取长度啥的
+
+
+
+
+
 ## Node Cli
 
 命令行参数的处理：commanders、inquirer
@@ -109,6 +170,12 @@ socket相当于快递小哥，你要发送和接收数据包只需要对接socke
 ## 问题
 
 node的架构是怎样的？
+
+事件驱动有啥好处？
+
+非阻塞io有啥优点？
+
+
 
 
 
@@ -241,4 +308,30 @@ __dirname,__filename,module,require
 
 缓冲与缓存区别
 ：缓存是在cpu中的，有三级缓存，一级缓存最快，三级缓存最慢，缓冲是在内存中的
+
+
+
+为啥npx xxx 就能跑
+
+：
+
+
+
+怎么判断要导出函数还是类？
+
+- 导出函数：没有内部状态的，不需要多次实例化的
+- 导出类：需要维护内部状态的，需要多次实例化的
+
+
+
+二进制与编码的关系
+
+- 二进制本身是没有编码的，但是为了能够解析二进制数据，就必须知道他的编码才能解析（即解码）
+  - 默认编码为utf8
+
+
+
+为什么有些要设计成静态方法，有些则是实例方法，如何选择？
+
+
 

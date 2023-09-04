@@ -8,8 +8,11 @@ egg 能解决什么问题？
 
 - ejs模板引擎：https://github.com/eggjs/egg-view-ejs
 
-
 ## 问题
+
+笑死我了，登录你都写不出来！
+
+
 
 企业级框架？
 
@@ -61,3 +64,10 @@ json.stringify和json.parse的解析：https://juejin.cn/post/704772881382375425
 - this的指向问题
 - 在哪个对象上进行扩展？
 
+
+
+什么时候需要无状态化？
+
+token是啥？
+
+：令牌，

@@ -12,6 +12,7 @@
   - 前端面试实录或现场：https://www.bilibili.com/video/BV1Qu411D71c
   - 教程：https://juejin.cn/post/6996841019094335519
   - 小丑面试员：https://www.bilibili.com/video/BV1CD4y1W73U
+  - 简历：https://juejin.cn/post/7230348908382601275
 - 关键动作
   - 简历要写好
   - 技术点要全面，可以不精通
