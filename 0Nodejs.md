@@ -4,12 +4,11 @@
 
 - github项目
   - 入门：https://github.com/FrontEndGitHub/FrontEndGitHub/issues/47
-  - 
   - 实战：https://blog.51cto.com/u_15069443/2575927
   - https://juejin.cn/post/6961101653709684772
   - awesome node：https://github.com/sindresorhus/awesome-nodejs
 - 入门
-  - 学习指南：https://juejin.cn/post/7246689952933625914
+  - 学习指南：https://juejin.cn/column/7246672925667344441
   - 实战：https://github.com/csxiaoyaojianxian/JavaScriptStudy/blob/master/17-nodejs/03-buffer.js
   - 7天入门：http://nqdeng.github.io/7-days-nodejs/
   - 快速入门：https://juejin.cn/post/6911853807756378125
@@ -41,22 +40,30 @@ node是什么？适用场景有哪些？
 - 他是js的运行时环境
 - 适用场景：https://juejin.cn/post/7258881840823713848?searchId=20230903234954A6D80AD93A5581AA7891#heading-2
 
+局限性有哪些？
+
+- 
+
 学习项目或博主有哪些？
+
+- 
+
+核心理念
+
+- 模块化
+- 单线程
+- 事件驱动、非阻塞I/O
 
 核心模块有哪些？
 
 - npm
-- fs模块
-- http模块
-- url、path模块
-- stream模块
-- buffer模块
-
-特点
-
-- 模块化
-- 事件驱动
-- 异步编程（或者叫非阻塞IO）
+- fs
+- url、path、os
+- http
+- stream
+- buffer
+- event
+- process
 
 生态
 
@@ -72,18 +79,27 @@ node是什么？适用场景有哪些？
 
 
 
-## 模块化
+## 模块系统
 
-模块分类
+模块系统
+
+- cjs
+- esm
+
+
+
+模块类型
 
 - 核心
 - 第三方
 - 自定义
 
-核心
+
+
+常见操作
 
 - 导入导出
-- 路径解析
+- 模块查找
 - 缓存
 
 
@@ -100,13 +116,19 @@ node是什么？适用场景有哪些？
 
 
 
-写的是文件目录，但是它有index文件，那这个文件目录也能当做一个模块
+模块查找机制
 
-模块的代码只会被初始化1次
+- 是否为内置模块，是则直接返回内置模块
+- 是否已/开头
+  - 是则直接设置当前文件为根路径
+- 是否已./,../或者是/开头
+  - 已文件方式加载
+  - 以目录访问加载
+- 查找node_modules
 
 
 
-如何把注册一个shell命令，然后用新命令来执行js脚本
+源代码可以打包成不同的模块系统吗？
 
 
 
@@ -139,7 +161,7 @@ socket相当于快递小哥，你要发送和接收数据包只需要对接socke
 
 ## Buffer
 
-：用于操作二进制数据
+：用于处理二进制数据
 
 适用场景
 
@@ -152,6 +174,31 @@ crud操作
 - 还有比较、合并成一个新的、拷贝、读取长度啥的
 
 
+
+二进制内容跟编码有关，不同的编码会有不同的二进制
+
+- 
+
+
+
+## Stream
+
+：用于处理数据的接口
+
+4种类型
+
+- 可读流》能够读出点数据
+- 可写流》能够写入点数据
+- 
+
+
+
+## Process
+
+进程&线程
+
+- 一个进程可以包括多个线程，一个进程至少一个线程，最重要的线程一般就是主线程
+  - 可以想象成
 
 
 
@@ -167,6 +214,57 @@ crud操作
 
 
 
+- 
+
+## install
+
+跟新库的版本
+：通过npm update xxx来更新，如果不写版本号，那么就会更新到最新的版本
+
+## npx
+
+：自动安装包，然后执行包中的命令（即临时安装）
+
+包中的命令是如何定义的？
+
+- 有个匹配机制
+
+
+
+## npm
+
+npm init（别名create）
+
+- 包名转换规则（直接加create前缀）：<https://docs.npmjs.com/cli/v9/commands/npm-init>
+  - foo》create-foo
+  - @usr/foo》@usr/create-foo
+  - @usr》@usr/create
+
+
+
+npx
+
+npx执行命令：找的命令在package.json中的bin中找，然后执行bin中的命令
+
+
+
+## package.json文件解读
+
+bin
+：
+
+main啥时候回被触发？
+
+- 
+
+如何发布一个npm包？
+
+main
+
+- 导入包的时候，导入的是bin定义的
+
+
+
 ## 问题
 
 node的架构是怎样的？
@@ -174,10 +272,6 @@ node的架构是怎样的？
 事件驱动有啥好处？
 
 非阻塞io有啥优点？
-
-
-
-
 
 path
 
@@ -332,6 +426,82 @@ __dirname,__filename,module,require
 
 
 为什么有些要设计成静态方法，有些则是实例方法，如何选择？
+
+
+
+devops：https://juejin.cn/post/6965860856311578637?searchId=20230913084100195ECB2552388C28549D
+
+
+
+流（stream）模式与缓冲器（buffer）模式的区别
+：<https://blog.csdn.net/sunlizhen/article/details/78016323>
+
+如果第三方库没有声明对应的类型文件，那么就需要自己去声明
+
+- 可以通过声明模块的方式来声明
+- 也可以通过声明文件的方式来声明
+
+npm i
+：没有与
+
+缓冲与缓存区别
+：缓存是在cpu中的，有三级缓存，一级缓存最快，三级缓存最慢，缓冲是在内存中的
+
+import与require区别？
+：import *是导入所有的，require是导入默认的
+
+- require是动态加载，而import是静态编译
+
+动态编译、静态编译的区别？
+
+- 执行时机不同：静态编译是在编译时编译、动态编译是在运行时编译
+- 链接内容大小不同：静态编译只需要链接链接库的一部分内容，动态编译需要链接整个链接库
+
+
+
+
+
+是选择多进程还是多线程？
+
+网络端口是与进程还是线程绑定的？
+：进程
+
+什么情况下需要封装成一个类，什么情况下，则是只用函数就可以了？
+：如果需要保存状态，那么就需要封装成一个类，如果不需要保存状态，那么就只需要函数就可以了
+
+为啥要有call、apply？
+：为了改变this的指向，那改变this指向又有啥用呢？可以让某个对象方便的去调用不在它身上的方法
+
+形参应该如何设计？
+
+跨域cors原理
+：<https://juejin.cn/post/6859351705453068295>
+
+- 跨域被阻塞，其实是浏览器对响应的阻塞，而非对请求的阻塞，它是有发出去请求的
+
+直接import 'xxx'会发生什么？
+：会去node_modules中找xxx，如果找不到，那么就会去node_modules中找xxx文件夹，然后找xxx文件夹中的index.js
+
+**pageage.json**
+
+- main入口文件
+- bin命令行入口文件
+- files指定哪些文件需要被打包，安装的时候才会被安装进去
+
+**commander**
+
+- 命令行的解析是可定义的，取决于你怎么定义
+  - boolean选项与带参数的选项
+
+node通过命令行执行脚本时如何给脚本传参？
+
+- 直接传递即可，比如node xxx.js 1 2 3
+
+
+
+不同模块系统可以相互导入吗？
+
+- esm可以import cjs的模块吗？不直接支持，需要另外配置babel才支持
 
 
 

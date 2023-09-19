@@ -1,0 +1,44 @@
+本文档主要是编写ai有关的文档，看ai能够辅助我们做什么事
+
+## 教程
+
+- 博主
+  - https://space.bilibili.com/471000665
+  - 老陈打码：https://www.bilibili.com/video/BV1Uh4y1X76G
+
+- flowise：https://juejin.cn/post/7230350725461082170
+- langchain：https://juejin.cn/post/7230350725461082170
+- 实战
+  - 搭建个人助理：https://www.bilibili.com/video/BV1xz4y1H756
+
+
+https://juejin.cn/post/7260820017758519333?searchId=202307301632027CEF055546C33021A49D
+
+
+
+## 驱动问题
+
+gpt会修改我们的学习方式，那具体是怎么改变呢？
+
+- 互动性增强：能够实时解答问题、生成实例
+
+
+
+
+
+## 问题
+
+
+
+大语言模型有啥用？
+
+：能够理解文本、生成内容，内容包括：文本、代码、图片、甚至能够生成视频
+
+
+
+
+
+flowise有啥用？
+
+：能够
+

@@ -15,7 +15,8 @@
 
 教程
 
-- 官网：https://ts.xcatliu.com/advanced/enum.html
+- 指南：https://ts.xcatliu.com/advanced/enum.html
+- 中文网：https://www.tslang.cn/docs/handbook/modules.html
 - 高阶：https://jkchao.github.io/typescript-book-chinese/typings/interfaces.html
 - 文档：https://ts.xcatliu.com/
 - 保姆级：https://juejin.cn/post/6872111128135073806
@@ -23,7 +24,6 @@
 - 视频教程
   - https://www.bilibili.com/video/BV14Z4y1u7pi/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
   - https://www.bilibili.com/video/BV1Xy4y1v7S2?p=2&vd_source=522153461914a766fc002cc8619314e4
-- ts教程：https://www.bilibili.com/video/BV1UU4y1K7Np?p=16&vd_source=522153461914a766fc002cc8619314e4
 - tsconfig：https://www.typescriptlang.org/tsconfig#esModuleInterop
 - 工具类型：https://juejin.cn/post/6994102811218673700
 - 面试题：https://juejin.cn/post/6999985372440559624
@@ -200,9 +200,10 @@ tuple类型
 
 模块分：全局、文件模块
 
-怎样算一个文件模块？
+怎样算一个文件模块？（一个文件不一定就是一个模块，它还可能是全局脚本）
 
 - 在顶层使用import或export，
+- 或者是使用namespace
 
 作用域
 
@@ -362,3 +363,6 @@ d.ts好像就不用写啥export之类的
 
 
 类实现implement类是啥操作？
+
+如何自己搭建ts项目跑起来，不通过他们配置好了的
+

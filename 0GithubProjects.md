@@ -1,9 +1,29 @@
 本文档主要是编写优秀的前端基础仓库，避免自己去维护一堆链接，你能把仓库里的东西、模仿消化完，你就能及格了
 
+## 面试
+
+- 在线题库：https://interview.poetries.top/weapp-interview/
+- https://github.com/FrontEndGitHub/FrontEndGitHub#%E9%9D%A2%E8%AF%95%E4%B8%93%E9%A2%98
+- https://lucifer.ren/fe-interview
+
+- https://juejin.cn/post/7161292246526984228?searchId=20230916192232261863B31B01D09C99F0
+
+
+
+
+
 ## 注意事项
 
 - 有些打着开源的名号卖系统的，死垃圾，操他妈的，直接跳过
   - 比如h5-dooring那个项目，太他妈恶心了
+
+
+
+## 博主
+
+- 阿里大佬：https://github.com/encode-studio-fe
+
+
 
 ## 教程
 
@@ -65,7 +85,9 @@ ai项目推荐
 
 
 
-- 
+## ts
+
+- 入门：https://wangdoc.com/typescript/
 
 
 
@@ -85,7 +107,14 @@ ai项目推荐
 后台系统
 
 - https://github.com/HalseySpicy/Hooks-Admin.git
-- 
+
+日历系统
+
+- https://github.com/usememos/memos
+
+博客系统
+
+- https://github.com/ManfredMT/nextjs-blog-react-admin/tree/main
 
 
 
@@ -126,6 +155,7 @@ ai项目推荐
     - 文档：https://www.yuque.com/visualdev/vform3/intro
   - formily：https://github.com/Liberty-liu/Everright-formEditor
     - 这个不是表单低代码的
+- https://github.com/illacloud/illa-builder
 
 
 
@@ -172,12 +202,19 @@ ai项目推荐
 
 
 
+## 副业
+
+- https://github.com/easychen/lean-side-bussiness
+
+
+
+
+
 ## 综合
 
 - https://github.com/ponkans/F2E
 - 面试专题
-  - https://github.com/FrontEndGitHub/FrontEndGitHub#%E9%9D%A2%E8%AF%95%E4%B8%93%E9%A2%98
-  - https://lucifer.ren/fe-interview
+
 - leo-script:https://github.com/pingan8787/Leo-JavaScript
 
 - javascript-stydy:https://github.com/csxiaoyaojianxian/JavaScriptStudy
