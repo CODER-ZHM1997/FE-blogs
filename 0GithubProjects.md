@@ -1,5 +1,7 @@
 本文档主要是编写优秀的前端基础仓库，避免自己去维护一堆链接，你能把仓库里的东西、模仿消化完，你就能及格了
 
+## 
+
 ## 面试
 
 - 在线题库：https://interview.poetries.top/weapp-interview/
@@ -7,6 +9,20 @@
 - https://lucifer.ren/fe-interview
 
 - https://juejin.cn/post/7161292246526984228?searchId=20230916192232261863B31B01D09C99F0
+
+
+
+## 学习路线
+
+- 大全：https://interview.poetries.top/roadmap/frontend.html#react%E8%B7%AF%E7%BA%BF
+
+
+
+## 算法
+
+电子书：https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/easy/101.symmetric-tree
+
+仓库：https://github.com/JunLiangWangX/js-algorithm
 
 
 
@@ -75,6 +91,8 @@ ai项目推荐
 
 - 直接多个关键字去搜，就能找到：nest admin
 - 
+
+
 
 
 
@@ -224,4 +242,10 @@ ai项目推荐
 
 
 
+
+## linux
+
+指南
+
+- https://wangchujiang.com/linux-command/list.html#!kw=%E7%B3%BB%E7%BB%9F
 

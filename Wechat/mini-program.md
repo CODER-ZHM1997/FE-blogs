@@ -8,9 +8,33 @@
 
 - 入门：https://juejin.cn/post/6844903670589423623
 - 原生项目：https://zhuanlan.zhihu.com/p/463950919
-- uni-app项目：
 - 微信公众号开发：https://blog.csdn.net/woshisangsang/article/details/122669018
 - 微信支付接入：https://pay.weixin.qq.com/wiki/doc/apiv3/index.shtml
+
+
+
+## 驱动问题
+
+#### 核心模块
+
+- 开发流程
+
+
+
+
+
+#### 常见业务操作
+
+
+
+#### 生态
+
+- taro
+- uni-app
+
+
+
+## 开发流程
 
 
 
@@ -20,6 +44,8 @@
 
 - 有些是说一半不说完整
 - 或者是直接抛出一个新概念，又不解释说明
+
+
 
 小程序的开放能力的流程要搞清楚
 

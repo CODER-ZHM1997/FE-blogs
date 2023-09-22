@@ -21,14 +21,15 @@
 
 
 
-## 核心问题
+## 驱动问题
 
-主要关注点
+#### 核心模块
 
 - jsx
   - 规则
 - 组件
   - 类型
+  - 生命周期
   - 属性：props、state
     - props：可以传哪些东西、读取、默认值
       - 可以传递值、可以传递函数（比如事件处理函数）、可以
@@ -44,16 +45,12 @@
     - props
     - context
   - 事件
-  - 生命周期
 - 应急方案
   - ref
   - effect
 - 常用的hook
 - 内置组件
-  - fragment
-  - suspense
 - react dom
-  - 
 - 生态
   - 脚手架：create-react-app
   - 路由：react-router

@@ -2,16 +2,9 @@
 
 ：它能够帮你更加深刻的了解整个项目，而不是只会使用工具，而没有
 
-设计到的工具
-
-- webpack
-- vite
-- git
-- eslint
-- prettier
-
 教程
 
+- 指南：https://juejin.cn/post/6867861517603438605
 - 入门：https://juejin.cn/post/6892003555818143752
 - https://www.bilibili.com/video/BV1n44y1r7Dv/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
 - 构建：https://juejin.cn/post/6949138186886971429
@@ -20,17 +13,11 @@
 
 
 
-## Bash
+## 驱动问题
 
-shell
+啥是工程化？为啥要这么做？
 
-：是命令行，如shell脚本
-
-命令行解释器
-
-- bash
-- cmd
-- prowershell
+- 
 
 
 

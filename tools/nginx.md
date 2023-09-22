@@ -16,6 +16,12 @@ Nginx能解决什么问题？
 - nginx中location的详解：https://juejin.cn/post/7048952689601806366
 - proxy_pass详解：https://juejin.cn/post/7007053840419651592#heading-6
 
+
+
+## 核心问题
+
+
+
 ## 问题
 
 常见需求
