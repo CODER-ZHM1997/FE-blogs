@@ -6,3 +6,4 @@ if [ $? -eq 0 ]; then
 else
     echo "提交失败。请检查错误消息并解决问题。"
 fi
+read -p "按回车结束任务"
