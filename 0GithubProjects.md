@@ -5,6 +5,7 @@
 ## 面试
 
 - 在线题库：https://interview.poetries.top/weapp-interview/
+- 大全：https://juejin.cn/column/6964717704712290317
 - https://github.com/FrontEndGitHub/FrontEndGitHub#%E9%9D%A2%E8%AF%95%E4%B8%93%E9%A2%98
 - https://lucifer.ren/fe-interview
 
@@ -136,8 +137,15 @@ ai项目推荐
 
 
 
-## 优秀后台管理系统
+## 源码
 
+指南：https://juejin.cn/column/7137123916396363783
+
+
+
+## 后台系统
+
+- demo：https://juejin.cn/post/7124909032808120328
 - vben：https://doc.vvbin.cn/guide/
 - pure-admin：https://github.com/pure-admin/vue-pure-admin
   - 文档：https://yiming_chang.gitee.io/pure-admin-doc/pages/introduction/
@@ -249,3 +257,10 @@ ai项目推荐
 
 - https://wangchujiang.com/linux-command/list.html#!kw=%E7%B3%BB%E7%BB%9F
 
+
+
+## serverless
+
+教程
+
+- https://pan.baidu.com/s/1sUJH2jpPhy84pnQbaEkqeQ?pwd=1234 
