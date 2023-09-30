@@ -85,3 +85,71 @@ git hooks
 
 ：能够提供持续的ci、cd服务
 
+教程
+
+- 主教程：<https://www.cnblogs.com/anding/p/16987769.html>
+- git提交规范：<https://juejin.cn/post/6970275680047071240>
+- 分支命名规则
+  - <https://blog.csdn.net/qq_33858250/article/details/81047883>
+
+# 问题
+
+# 版本回退（也叫还原）
+
+：<https://m.php.cn/faq/506249.html>
+如：git reset <commit> <file-path>，用checkout也行
+
+# 连接超时
+
+：一般是ssl认证的问题，把他都关掉即可
+
+- git config --global http.sslVerify false
+- git config --global https.sslVerify false
+
+# 忽略文件
+
+叫法：目录=文件夹
+
+忽略规则，一般有5种写法
+
+- a: 忽略所有（任意目录）a文件或目录，包括子目录下的文件或目录，与几乎a/**等价，
+- a/*：忽略a文件夹下直接子文件或目录，但是不包括子目录下的文件或目录
+- a/**: 忽略a目录下的所有文件或目录，包括子目录下的文件或目录
+  - 与a/等级
+- !a: 不忽略a文件或目录
+- *.zip：忽略所有zip文件
+
+要熟练使用回退功能，减少线上错误的损失
+
+# commit相关
+
+修改commit描述
+
+合并commit
+
+## 查看改变内容
+
+commit为单位
+
+- github上面可以翻到commit记录
+- 也可以通过git的gui来查看
+  - 可以通过查看整个分支的提交历史
+
+以文件为单位
+
+- git diff <commit> <file-path>
+- vscode的git插件可以查看，这个更加方便一些
+
+# git reset
+
+mixed、soft、hard
+：区别在于对你现有的几个区有么有影响（比如工作区、暂存区）有没有影响
+
+- hard：会把你现有的工作区、暂存区都清空，回退到指定的commit
+- soft：只会把你现有的工作区清空，回退到指定的commit
+- mixed：不会清空你现有的工作区，回退到指定的commit
+
+# git tag
+
+新建的tag不会自动推送到远程，你需要执行一下推送到远程
+：git push origin --tags

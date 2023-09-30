@@ -248,3 +248,70 @@ vite直接支持是用ts，但是它只编译，不检查，你看到的飘红�
 
 
 
+本文档主要书写css常见问题，以及css的一些技巧
+
+# 教程
+
+- tailwindcss：<https://tailwindcss.com/docs/height>
+- css变量命名规范：<https://juejin.cn/post/7126505567408881677?searchId=2023083114402490F24A723CB95B052F57#heading-1>
+
+# 问题
+
+被指示器误导，宽度其实是全的，你可以跑到computed里面看看
+
+修改变量一定要在style里面吗？能不能在class
+：
+
+flex 自适应滚动
+
+滚动穿透问题
+
+- 不穿透：overscroll-behavior-y:contain
+
+吸顶效果
+：<https://juejin.cn/post/6844904199256293384>
+
+css变量命名规范
+
+# less
+
+&:hover与:hover有啥区别？
+：不要用:hover，会不生效的
+
+如何想控制外层的类属性，如何做？
+
+# tailwind
+
+# windi css
+
+# 动画
+
+下拉动画
+
+- 设置面板高度为0，同时配置：transition: all 0.3s;
+- 由另一个元素的某些事件如hover来触发面板高度变化，比如height:300px
+
+如何设置文字颜色只作用于当前，不影响子节点
+：无法设置，只能在子节点上设置一下，来覆盖父节点设置的样式
+
+content-box还是border-box好？
+：推荐content-box
+
+列表渲染成多列
+
+- 用flex：允许换行即可
+
+如何让锚点跳转的位置下移一点？
+：可以通过设置scroll-margin-top
+
+flex 换行之类的，有缺陷，
+：列表渲染可能会
+
+transition
+：配置height时可以不指定height吗？
+
+文字从上面滚下来的效果？
+
+- 上下滚动、左右滚动
+
+如何快速加上
