@@ -36,6 +36,11 @@ linux有几个类型？
   - yum
 - shell
 
+#### 常见操作
+
+- 查看进程
+- 杀死进程
+
 
 
 ## 开机、关机、重启
@@ -62,7 +67,22 @@ linux有几个类型？
 
 ## 进程
 
+查找指定进程
 
+- 根据端口：netstat -an|grep 80
+- 根据名称：ps aux|grep xxx
+
+杀死进程
+
+- kill PID
+
+重启进程
+
+- systemctl start
+
+#### systemctl
+
+- start、stop、restart、reload xxx.service
 
 ## 磁盘
 
@@ -124,4 +144,13 @@ usr与etc有啥区别？
 怎么算子进程？比如export设置了变量到子进程中去了
 
 - 
+
+命令与服务的区别
+
+- 命令一般是用户在终端输入的文本
+- 服务则是进程
+
+
+
+
 

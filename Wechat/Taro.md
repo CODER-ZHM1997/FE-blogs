@@ -5,6 +5,9 @@
 - 官方：https://taro-docs.jd.com/taro/docs/
 - taroui：https://taro-ui.jd.com/#/docs/introduction
 - awesome：https://github.com/NervJS/awesome-taro
+- 项目
+  - 音乐app：https://github.com/lsqy/taro-music.git
+
 
 
 

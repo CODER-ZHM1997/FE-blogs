@@ -1,27 +1,17 @@
-什么是react？他能解决什么问题
 
-- 也是构建用户界面的js库
-- 前景：react才是未来，他社区很热闹，有很多人回馈社区的
-
-学习要点
-
-- reactjs
-  - hooks
-- react-router
-- umi：脚手架
 
 教程
 
-- 官网：https://zh-hans.reactjs.org/docs/hello-world.html
-- 入门
-  - https://juejin.cn/post/6960262593265025031
+- 官网：https://zh-hans.react.dev/learn
 - 状态管理库：https://juejin.cn/post/7195513281228898363?searchId=202309101453107D2EB6FCFD72B42FDB0E#comment
-
+- 面试题：
 - 
 
-
-
 ## 驱动问题
+
+react是什么？解决了什么问题？
+
+- 是构建用户界面的js库
 
 #### 核心模块
 
@@ -45,6 +35,9 @@
     - props
     - context
   - 事件
+- 状态管理
+  - 数据如何组织、流动
+
 - 应急方案
   - ref
   - effect
@@ -55,9 +48,6 @@
   - 脚手架：create-react-app
   - 路由：react-router
   - 状态管理：redux
-- 规则
-  - 目录规范
-  - 多看文档里面的提到的规则
 
 
 
@@ -84,9 +74,9 @@ last 2 versions，为啥是最近的2个，而不是1个版本呢，那前面的
 
 
 
-## Hooks
+## Hook
 
-：是特殊的函数，能够让你钩入react的特性，能够让你不编写class组件的情况下使用state
+：是特殊的函数，能够让函数组件钩入react的状态和特性，能够让你不编写class组件的情况下使用state
 
 它解决了什么问题？
 
@@ -94,8 +84,6 @@ last 2 versions，为啥是最近的2个，而不是1个版本呢，那前面的
   - 把不需要要关联的函数进行了拆分
   - 把需要关联的函数进行了合并
 - 解决了复用问题，而且无需修改代码结构
-
-hook的类型：state、effect hook
 
 规则
 
@@ -106,13 +94,9 @@ hook的类型：state、effect hook
 
 两个hook数据共享的问题，只需要通过传参即可，一个给另一个传参
 
+类型
 
-
-副作用是啥？
-
-：是指函数执行会对系统或环境产生的影响
-
-常见的副作用
+- 
 
 
 
@@ -135,6 +119,10 @@ hook的类型：state、effect hook
 
 
 ## 应急方案
+
+
+
+## react dom
 
 
 

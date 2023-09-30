@@ -1,26 +1,8 @@
-为什么要引入ts？他能解决什么问题？
 
-- 减少了bug，更加规范
-- 引入了类型检查，增强了编译器的功能：如代码补全，提示，跳转
-
-学习要点
-
-- 类型，类型熟悉就算学会一半了
-  - 基本：5种+Symbol+BigInt
-  - 引用：any、never、unknown、function、interface、class、union、object、array、tuple、enum、内置对象
-
-学习进度
-
-- [x] 2月11日类型、泛型
 
 教程
 
-- 指南：https://ts.xcatliu.com/advanced/enum.html
-- 中文网：https://www.tslang.cn/docs/handbook/modules.html
-- 高阶：https://jkchao.github.io/typescript-book-chinese/typings/interfaces.html
-- 文档：https://ts.xcatliu.com/
-- 保姆级：https://juejin.cn/post/6872111128135073806
-- 实战：https://juejin.cn/post/7058868160706904078
+- 指南：https://juejin.cn/post/6872111128135073806
 - 视频教程
   - https://www.bilibili.com/video/BV14Z4y1u7pi/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
   - https://www.bilibili.com/video/BV1Xy4y1v7S2?p=2&vd_source=522153461914a766fc002cc8619314e4
@@ -30,7 +12,21 @@
 
 
 
-## 问题
+## 核心问题
+
+ts是啥？
+
+- js的超集，增加了静态类型检查，还有一些面向对象的特性：接口、装饰器、枚举
+
+为什么要用ts？
+
+- （静态）即编译期类型检查：提前发现问题，js则是没有编译期
+- 支持丰富的类型
+- 更加容易维护
+
+ts核心模块
+
+- 看指南，都是围绕类型的
 
 配置文件怎么去理解？
 
@@ -182,17 +178,9 @@ tuple类型
 
 别名type与let的区别？type定义的是一个类型，而let则是定义了一个变量，前者是右值，后者是左值
 
-## 泛型
 
-：是为了进一步保证类型安全，提高代码的安全性
 
-实现方式：类型参数化（即类型不是固定的，他取决于你传入的实参类型），调用时需要传入类型
 
-擦除？
-
-- 指不同类型的变量能也能赋值，多余的属性在类型推断时擦除了
-
-泛型如果不按规则来会怎样？
 
 
 
@@ -250,6 +238,8 @@ import与require的区别？
 
 [include和exclude联系](https://juejin.cn/post/6844904166180159495)
 
+
+
 ## 声明文件
 
 一般都会有社区编写声明文件
@@ -269,6 +259,8 @@ global.d.ts，declare global{}有啥用？
 
 - https://stackoverflow.com/questions/57040272/what-is-declare-global-in-typescript
 
+
+
 ## 接口
 
 接口与类型别名的区别
@@ -282,11 +274,27 @@ global.d.ts，declare global{}有啥用？
 
 - new ():string
 
-## 函数
 
-可实例化：
 
-## 其他
+## 泛型
+
+：是为了进一步保证类型安全，提高代码的安全性
+
+实现方式：类型参数化（即类型不是固定的，他取决于你传入的实参类型），调用时需要传入类型
+
+擦除？
+
+- 指不同类型的变量能也能赋值，多余的属性在类型推断时擦除了
+
+泛型如果不按规则来会怎样？
+
+
+
+## 装饰器
+
+
+
+## 问题
 
 map文件有啥作用？
 
@@ -366,3 +374,8 @@ d.ts好像就不用写啥export之类的
 
 如何自己搭建ts项目跑起来，不通过他们配置好了的
 
+
+
+动态语言与静态语言有啥区别？
+
+- 

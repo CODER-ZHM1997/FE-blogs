@@ -9,6 +9,7 @@
 - 入门：https://juejin.cn/post/7050304120082661407
 - 官网：https://docs.docker.com/compose/
 - 部署vue项目：https://juejin.cn/post/6992848354753380389#comment
+- 视屏：https://www.bilibili.com/video/BV1gr4y1U7CY?p=31&vd_source=522153461914a766fc002cc8619314e4
 
 
 
@@ -43,6 +44,8 @@ Docker是啥？
 
 - 部署前端项目
 - 部署后端项目
+- 镜像的备份和还原，即迁移
+- 
 
 
 
@@ -74,7 +77,22 @@ crud
 
 启动关闭移除：start、stop、kill、remove
 
+容器迁移
 
+- 导入
+- 导出
+
+分组问题
+
+- 如何给创建分组
+
+什么时候需要重新构建容器或者是镜像？
+
+- 分本地环境和线上环境
+
+开发过程中能否使用docker来开启服务？
+
+- 比如后端服务用docker来开启
 
 
 
@@ -94,9 +112,26 @@ crud
 
 - 后面你使用这个镜像的时候就不需要配置啥命令了，除非你想自定义启动
 
+镜像迁移
+
+- 备份：docker save xxx
+- 还原：docker load xxx
+
 
 
 ## volume 卷
+
+：用于保存数据，目的：跟容器生命周期解耦，避免容器挂了后数据丢失
+
+什么时候需要指定卷？
+
+
+
+啥时候要配置卷volume？
+
+- 数据持久化
+  - 不然重启容器后会数据丢失
+- 容器间数据共享
 
 
 
@@ -104,17 +139,21 @@ crud
 
 ：用于定义和运行多容器的工具
 
+常见操作
+
+- 启动、关闭：docker compose up、down
+
+我好想没看到docker哪里配置了具体的启动命令啊
+
+
+
 docker-compose.yml配置文件应该怎么写？
 
 ：可以看next-admin里面的docker配置文件是怎么写的！不难
 
 - 而且要配合env文件来写
 
-
-
-啥时候要配置卷volume？
-
-
+- 
 
 
 
@@ -159,8 +198,6 @@ docker软件中的怎样执行初始化？比如docker中安装了mysql，如何
 哪些是要我改的？写着占位的？哪些则是
 
 什么时候需要重启docker才能生效？什么时候则是需要重新执行package中的脚本才能生效？
-
-
 
 
 
