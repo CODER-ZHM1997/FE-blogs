@@ -4,6 +4,14 @@
 
 - 指南：https://juejin.cn/post/6867861517603438605
 - https://juejin.cn/post/7268533072995598347?searchId=20230927174330002E22CDAE5ACD179673
+- eslint：https://juejin.cn/post/7257710391018455098?searchId=20231002135933C64CED8E3052AE8399AC#heading-17
+- 搭建项目
+  - 要么找别人一组的模板，直接下载
+    - https://github.com/jeddygong/vite-templates
+
+  - 要么自己找教程一个一个搭建
+    - https://juejin.cn/post/7267879720577663015?searchId=20231003110430907097F54F325823672F
+
 
 
 
@@ -11,7 +19,7 @@
 
 啥是工程化？工程化需要做什么？
 
-：前端开发是指前端开发过程中采用一系列工具、方法，以提高开发效率、代码质量和团队协作能力的方法，工程化做的事都是围绕这3个主题
+：前端开发是指前端开发过程中采用一系列工具、方法，以提高开发效率、保证代码质量和提高团队协作能力的方法
 
 - 自动化构建
 - CI、CD
@@ -85,6 +93,36 @@ insert_final_newline = true       # 在尾部插入一行
 insert_final_newline = false      # 在尾部插入一行
 trim_trailing_whitespace = false  # 去除多余的空格
 ```
+
+
+
+## eslint
+
+核心概念
+
+- 环境配置
+  - env
+  - 
+- 插件
+- 继承
+
+
+
+## 搭建react项目
+
+方式1：通过vite
+
+1. 脚手架搭建（vite）：pnpm create vite -- --template=react
+2. 安装windcss：https://tailwindcss.com/docs/guides/vite
+3. 安装路由：pnpm i react-router-dom
+4. 安装redux：pnpm i @reduxjs/toolkit react-redux
+5. 安装其他的库：pnpm i axios
+
+
+
+方式2：通过umijs
+
+1. pnpm create umi
 
 
 

@@ -259,6 +259,18 @@ global.d.ts，declare global{}有啥用？
 
 - https://stackoverflow.com/questions/57040272/what-is-declare-global-in-typescript
 
+module：决定了当前项目的模块系统哪种？
+
+- 一般都是esnext或者是es6，越新的则是支持越多新特性，比如顶级的await
+
+moduleResolution：则是模块解析策略
+
+- 给定一个模块标识符，怎么去找到这个模块，一般为node即可
+
+target：指定生成的代码
+
+- 一般为es5，如果配置成esnext
+
 
 
 ## 接口
@@ -379,3 +391,9 @@ d.ts好像就不用写啥export之类的
 动态语言与静态语言有啥区别？
 
 - 
+
+ts转码与babel转码的区别？
+
+- ts是ts转js
+- babel则是高版本的js转低版本
+

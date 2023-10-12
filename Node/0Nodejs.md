@@ -130,6 +130,12 @@ node是什么？适用场景有哪些？
 
 源代码可以打包成不同的模块系统吗？
 
+模块的加载与解析、执行
+
+- 加载：只是加载内容到内存，不关心里面有啥
+- 解析：则是解析内容，构建依赖关系，解析动作可能会触发其他模块的加载、解析动作
+- 执行：做变量初始化、函数调用等动作
+
 
 
 ## 文件操作
@@ -235,18 +241,13 @@ crud操作
 
 npm init（别名create）
 
-- 包名转换规则（直接加create前缀）：<https://docs.npmjs.com/cli/v9/commands/npm-init>
-  - foo》create-foo
-  - @usr/foo》@usr/create-foo
-  - @usr》@usr/create
+- 注意下包转换规则，是可以缩写的
 
 
-
-npx
 
 npx执行命令：找的命令在package.json中的bin中找，然后执行bin中的命令
 
-
+安装时可以大胆使用legacy-peer-dependenc
 
 ## package.json文件解读
 
@@ -504,4 +505,8 @@ node通过命令行执行脚本时如何给脚本传参？
 - esm可以import cjs的模块吗？不直接支持，需要另外配置babel才支持
 
 
+
+升级问题
+
+- 直接npm update 报错咋解？
 

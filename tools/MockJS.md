@@ -1,25 +1,17 @@
-mockjs能解决什么问题？
-
-
-
-学习要点
-
-- 
-
 教程
 
-- vue引入mock：https://juejin.cn/post/7035489422397145095
-  - vite有专门的mock插件
+- mockjs：https://github.com/nuysoft/Mock/wiki/Getting-Started
+
+
+
+## 驱动问题
+
+- 数据模拟
+- 接口模拟
+- 集成操作：集成到开发环境中
+- 第三方工具：apifox，可以提供在线mock的功能
 
 
 
 
-
-## 问题
-
-
-
-vue中如何引入mock
-
-：https://blog.csdn.net/weixin_46670795/article/details/109129987
 

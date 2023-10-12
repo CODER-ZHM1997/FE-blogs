@@ -14,6 +14,8 @@
     - https://www.bilibili.com/video/BV1Q3411w7SQ?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
 - vue2代码迁移到vue3：https://juejin.cn/post/7064909191210598408
 
+- 规范：https://v2.cn.vuejs.org/v2/style-guide/#%E7%BB%84%E4%BB%B6-%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%89%E9%A1%B9%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%8E%A8%E8%8D%90
+
 - 前端基建
   - 入门：https://juejin.cn/post/6844904145602740231
 

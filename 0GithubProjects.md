@@ -1,6 +1,6 @@
 本文档主要是编写优秀的前端基础仓库，避免自己去维护一堆链接，你能把仓库里的东西、模仿消化完，你就能及格了
 
-## 
+
 
 ## 面试
 
@@ -16,6 +16,8 @@
 ## 学习路线
 
 - 大全：https://interview.poetries.top/roadmap/frontend.html#react%E8%B7%AF%E7%BA%BF
+- https://www.bilibili.com/video/BV1nh411e7oG/?vd_source=522153461914a766fc002cc8619314e4
+- 文字版：https://github.com/liyupi/code-roadmap/blob/main/docs/roadmap/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.md#%E7%BB%84%E4%BB%B6%E6%8F%92%E4%BB%B6
 
 
 
@@ -126,6 +128,7 @@ ai项目推荐
 后台系统
 
 - https://github.com/HalseySpicy/Hooks-Admin.git
+- 通过umi生成的：
 
 日历系统
 

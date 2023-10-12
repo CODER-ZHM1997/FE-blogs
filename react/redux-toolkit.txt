@@ -8,9 +8,14 @@
 
 #### 核心模块
 
--  
+-  store仓库
+-  reducer 状态处理函数，或者叫归约器，或者叫英文名reducer
+-  useSelector查找
+-  useDispatch派发
 
 
 
 ## 问题
+
+reducers与reducer区别：后者是根reducers
 
