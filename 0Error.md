@@ -6,10 +6,19 @@
 - 库存管理系统：<https://github.com/FJ-OMS/oms-erp>
 - 规范：<https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/basis/RESTfulAPI.md>
 
-好的东西
-
 - https://www.bilibili.com/video/BV1AF411s78P
 - https://www.bilibili.com/video/BV1R64y1q7iA
+- 工作流
+  - 前端
+
+    - https://juejin.cn/post/7052955623255703588
+  - 开发习惯
+
+    - https://juejin.cn/post/7072252275002966030
+    - https://juejin.cn/post/7157508782874968094
+
+
+
 
 一定要抓住游戏规则，你才能赢下这把游戏！
 ：而不是你付出越多就会赢，规则最重要
@@ -1222,3 +1231,8 @@ uml图是面向对象的，包括时序图
 - 找志同道合的人
 - 去创建一些东西
 
+
+
+## 工作流
+
+- 
