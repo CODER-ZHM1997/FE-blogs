@@ -4,18 +4,6 @@
 
 
 
-## 个人网站
-
-[如何搭建自己的博客？](https://juejin.cn/post/6844903791083388935)
-
-- hexo+gitpage，不过是静态的网站
-
-数据模拟：[mockjs](https://github.com/nuysoft/Mock/wiki/Getting-Started)
-
-思维导图工具：drawio（这个是在线的），自己用xmind（没钱），有钱就用mindmaster（开通一个，买通只需要600）
-
-
-
 ## Gitlab
 
 ：类似宝塔
