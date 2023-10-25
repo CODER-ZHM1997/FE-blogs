@@ -10,20 +10,21 @@ vercel 云服务厂商
 
 #### 关注点
 
-- 部署
+- deploy
   - 环境变量
   - 部署静态网站
   - 部署服务端应用，比如node服务
 - vercel.json：配置文件
 - cdn
-- 日志
+- log
 - webhook
-- 插件
+- plugin
 - serverless
+- database
 
 
 
-## 部署
+## deploy
 
 环境变量
 
@@ -59,7 +60,7 @@ vercel 云服务厂商
 
 
 
-## 日志
+## log
 
 ：看logs选项
 
@@ -75,7 +76,7 @@ vercel 云服务厂商
 
 
 
-## 插件
+## plugin
 
 
 
