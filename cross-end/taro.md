@@ -2,11 +2,10 @@
 
 教程
 
-- 官方：https://taro-docs.jd.com/taro/docs/
+- 官方：https://taro-docs.jd.com/docs/
 - taroui：https://taro-ui.jd.com/#/docs/introduction
-- awesome：https://github.com/NervJS/awesome-taro
 - 项目
-  - 音乐app：https://github.com/lsqy/taro-music.git
+  - 
 
 
 
@@ -16,6 +15,13 @@
 taro是啥？
 
 - 一个跨端+跨框架的解决方案
+- 比uni-app要优秀
+
+核心关注点？
+
+- 
+
+
 
 #### 核心模块
 
@@ -26,4 +32,13 @@ taro是啥？
 ## cli
 
 
+
+## 问题
+
+相比uni-app，taro有啥优点？
+
+- 多语言支持
+- 支持ts
+- 支持多种构建工具
+- 生态更好
 

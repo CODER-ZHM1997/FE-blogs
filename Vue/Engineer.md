@@ -46,11 +46,15 @@
 - vite中注册
 - main引入css：import 'virtual:windi.css'
 
+
+
 #### mock
 
 - npm i mockjs -D
 - npm i vite-plugin-mock -D
 - vite中注册插件
+
+
 
 #### element-plus
 
@@ -59,15 +63,21 @@
   - 导入样式：import 'element-plus/dist/index.css'
   - 注册elementPlus
 
+
+
 #### axios
 
 - npm i axios
 - 在api下创建http文件，编写请求方法get、post、拦截方法
 
+
+
 #### [postcss-px-to-viewport](https://juejin.cn/post/7018433228591595550)
 
 - npm install postcss-px-to-viewport -D
 - 修改配置文件：postcss.config.js
+
+
 
 #### [editorConfig](https://editorconfig.org/)
 

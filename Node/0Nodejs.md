@@ -1,14 +1,19 @@
+#### 
 
+nodejs是js的运行时环境
 
 ## 教程
 
 - github项目
+  - 
   - 入门：https://github.com/FrontEndGitHub/FrontEndGitHub/issues/47
   - 实战：https://blog.51cto.com/u_15069443/2575927
   - https://juejin.cn/post/6961101653709684772
   - awesome node：https://github.com/sindresorhus/awesome-nodejs
 - 入门
-  - 学习指南：https://juejin.cn/column/7246672925667344441
+  - 学习指南
+    - https://juejin.cn/column/7246672925667344441
+    - https://github.com/qufei1993/Nodejs-Roadmap
   - 实战：https://github.com/csxiaoyaojianxian/JavaScriptStudy/blob/master/17-nodejs/03-buffer.js
   - 7天入门：http://nqdeng.github.io/7-days-nodejs/
   - 快速入门：https://juejin.cn/post/6911853807756378125
@@ -30,51 +35,25 @@
 - npx：https://juejin.cn/post/7142666525365764104
 - package：https://juejin.cn/post/7240805459288522808?searchId=20230717003123FDFD6C5E378389D16FA2
 - 实战：https://juejin.cn/column/7246672925667344441
+- 适用场景：https://juejin.cn/post/7258881840823713848?searchId=20230903234954A6D80AD93A5581AA7891#heading-2
 
 
 
 ## 核心问题
 
-node是什么？适用场景有哪些？
-
-- 他是js的运行时环境
-- 适用场景：https://juejin.cn/post/7258881840823713848?searchId=20230903234954A6D80AD93A5581AA7891#heading-2
-
-局限性有哪些？
-
-- 
-
-学习项目或博主有哪些？
-
-- 
-
-核心理念
-
-- 模块化
-- 单线程
-- 事件驱动、非阻塞I/O
-
-核心模块有哪些？
+#### 关注点
 
 - npm
 - fs
 - url、path、os
 - http
-- stream
 - buffer
 - event
+- stream
+  - 流类型、流事件、管道流、数据处理（比如解析、转换、压缩）、错误处理、应用场景（文件处理、网络通信、图像&视频&音频处理）
+
 - process
-
-生态
-
-- 可以集成哪些框架？
-
-架构
-
-- 
-
-面试题有吗？
-
+  - 进程状态、创建、销毁、通信、监控、错误处理
 
 
 
@@ -88,9 +67,9 @@ node是什么？适用场景有哪些？
 
 
 
-模块类型
+模块分类
 
-- 核心
+- 内置模块
 - 第三方
 - 自定义
 
@@ -132,9 +111,33 @@ node是什么？适用场景有哪些？
 
 模块的加载与解析、执行
 
-- 加载：只是加载内容到内存，不关心里面有啥
+- 加载：只是加载内容，不关心里面有啥
 - 解析：则是解析内容，构建依赖关系，解析动作可能会触发其他模块的加载、解析动作
-- 执行：做变量初始化、函数调用等动作
+- 执行：做变量初始化等动作
+  - 而且只执行1次，多次导入也只会执行1次
+
+
+
+
+nodejs如何加载es模块？
+
+默认是把所有js模块都当成cjs模块的
+
+- 命名模块后缀为mjs
+- package文件中type为module
+
+
+
+node如何混合使用模块？
+
+- 只允许esm模块支持导入cjs模块，通过import的方式，不能用require，还有文件名也要改成cjs
+
+```js
+import foo from "./src/foo.js";
+import bar from "./src/bar.cjs";
+console.log("foo:", foo);
+console.log("bar:", bar);
+```
 
 
 
@@ -189,22 +192,52 @@ crud操作
 
 ## Stream
 
-：用于处理数据的接口
+：用于处理数据的接口，用于数据的输入、输出，
+
+流的好处
+
+- 分块处理：避免一次性加载全部数据到内存
+
+流动是有方向的
+
+- 可读到可写
+- 可写到可写
+
+
 
 4种类型
 
-- 可读流》能够读出点数据
-- 可写流》能够写入点数据
+- 可读流Readable：可以从数据源里面读数据
+- 可写流Writable：可以往数据目标里写数据
+- 双工流Duplex：可读可写
+- 转换流Transform：也是Duplex流，但是它可以做一些转换动作，比如压缩、加密、解密
+
+
+
+常见的数据源：文件、数据库、网络请求
+
+常见的数据目标：文件、数据库
+
+
+
+管道流
+
+：一种流处理技术，可以把数据从一个流输入到另一个流，把多个流连在一起
+
+- 管道：就是连在一起的东西，有输入和输出，有先后关系
 - 
 
 
 
 ## Process
 
-进程&线程
+进程 process & 线程 thread
 
 - 一个进程可以包括多个线程，一个进程至少一个线程，最重要的线程一般就是主线程
-  - 可以想象成
+
+子进程也是属于进程，它不等于线程
+
+- 
 
 
 
@@ -220,34 +253,15 @@ crud操作
 
 
 
-- 
-
-## install
-
-跟新库的版本
-：通过npm update xxx来更新，如果不写版本号，那么就会更新到最新的版本
-
 ## npx
 
-：自动安装包，然后执行包中的命令（即临时安装）
+：自动安装包（临时安装），然后执行包中的命令，然后卸载
 
 包中的命令是如何定义的？
 
 - 有个匹配机制
 
 
-
-## npm
-
-npm init（别名create）
-
-- 注意下包转换规则，是可以缩写的
-
-
-
-npx执行命令：找的命令在package.json中的bin中找，然后执行bin中的命令
-
-安装时可以大胆使用legacy-peer-dependenc
 
 ## package.json文件解读
 
@@ -509,4 +523,6 @@ node通过命令行执行脚本时如何给脚本传参？
 升级问题
 
 - 直接npm update 报错咋解？
+
+- 
 

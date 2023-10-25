@@ -5,10 +5,11 @@
 ## 面试
 
 - 在线题库：https://interview.poetries.top/weapp-interview/
-- 大全：https://juejin.cn/column/6964717704712290317
-- https://github.com/FrontEndGitHub/FrontEndGitHub#%E9%9D%A2%E8%AF%95%E4%B8%93%E9%A2%98
-- https://lucifer.ren/fe-interview
+- 前端仓库
+  - https://github.com/FrontEndGitHub/FrontEndGitHub#%E9%9D%A2%E8%AF%95%E4%B8%93%E9%A2%98
+  - https://juejin.cn/column/6964717704712290317
 
+- https://lucifer.ren/fe-interview
 - https://juejin.cn/post/7161292246526984228?searchId=20230916192232261863B31B01D09C99F0
 
 
@@ -114,8 +115,15 @@ ai项目推荐
 
 ## vue
 
-- awesome-vue：https://github.com/vuejs/awesome-vue
-- 源码：https://vue3js.cn/global/h.html
+- awesome-vue
+  - https://github.com/vuejs/awesome-vue
+  - https://vue3js.cn/
+
+- vue2源码：https://vue-js.com/learn-vue/start/
+- vue3源码
+  - https://vue3js.cn/start/
+  - https://diy4869.github.io/vue-next-analysis/page/bitOperators.html#%E5%8F%B3%E7%A7%BB
+
 - https://eladmin.vip/pages/010301/
 
 
@@ -137,6 +145,24 @@ ai项目推荐
 博客系统
 
 - https://github.com/ManfredMT/nextjs-blog-react-admin/tree/main
+
+
+
+## uni-app
+
+插件市场：笑了，居然没有awesome项目
+
+- https://ext.dcloud.net.cn/?cat1=3&cat2=33&type=UpdatedDate
+
+
+
+## taro
+
+项目
+
+- 音乐app：https://github.com/lsqy/taro-music.git
+
+
 
 
 
@@ -267,3 +293,10 @@ ai项目推荐
 教程
 
 - https://pan.baidu.com/s/1sUJH2jpPhy84pnQbaEkqeQ?pwd=1234 
+
+
+
+## AI
+
+copilot：https://docs.github.com/zh/copilot/github-copilot-chat/about-github-copilot-chat
+

@@ -4,6 +4,10 @@
 
 - 面试：https://juejin.cn/post/6908327746473033741?searchId=20230921165222F78A9E32FAA216AD7873
 - 表单提交：<https://juejin.cn/post/6844903623206371342#heading-2>
+- websocket
+  - 聊天室：https://juejin.cn/post/7266037480750841896?searchId=2023102410150387D8AB9FD861EADE5DEA
+  - 库：sockit.io、ws
+
 
 
 
@@ -25,6 +29,8 @@
 
 ## http
 
+
+
 ## http2
 
 
@@ -36,6 +42,37 @@
 
 
 ## websocket
+
+：一种双向通信通信协议
+
+**关注点**
+
+- 创建websocket服务
+- 创建、断开websocket连接
+- 通信：发送&接收
+- websocket事件
+  - open：连接成功
+  - close
+  - error
+  - message
+    - 对应方法send
+
+**实践**
+
+- 实现一个聊天室demo
+
+websocket对象表示的是websocket连接
+
+有些事件是必须要嵌套在其他事件里
+
+- 比如open、message之类的事件必须放到connect之内
+
+全双工&半双工
+
+- 区别
+  - 全双工：双方可以同时发送和接受数据，如电话
+  - 半双工：在某一时刻只能有一方在发送，另一方在接受数据，如对讲机
+- 相同点：都能双向通信
 
 
 
@@ -144,5 +181,8 @@ mime类型错误会怎样
   - 强缓存：有Cache-Control
   - 协商缓存：一般都是返回304的
 
+带宽：是指客户端带宽+服务端带宽（主要影响）
 
+- 单个下载任务就能够占满客户端带宽了
+- 多个下载任务也只是会相互竞争带宽
 

@@ -10,6 +10,7 @@
 - 生态
   - antd
   - pro
+- 
 
 
 
@@ -116,7 +117,24 @@ hook触发时机的问题
 
 父组件更新，子组件一定会更新
 
-- 
+- 除非你用了缓存，而且满足缓存条件
+
+
+
+memo和useCallback、useMemo经常是一起使用的
+
+- memo生效时有条件的，只要组件的prop不同，不管是值还是函数的prop
+  - 所以要useCallback、useMemo来确保prop不同
+
+useCallback的依赖项
+
+- 需要：函数里用到了props中的值，为了能够正确获取到props中的值
+  - 如果不写，那么缓存函数里的props值是旧的
+- 不用：作为缓存函数参数传入的，因为调用函数时传入的值肯定是正确的
+
+memo
+
+- 组件不是props没变，就会自动缓存的，它需要你套一个memo函数
 
 
 
@@ -167,10 +185,15 @@ react中的响应式与非响应式区别？
 - 浏览器原生的元素，比如div、canvas
 - 其他框架生成的组件，比如
 
-渲染分几种类型？
+渲染分几种类型？有啥区别？
 
-- 初次渲染
-- 更新渲染
+- 初次渲染（组件初次挂载到dom的过程）
+  - 会触发componentDidMount生命周期
+  - state会被重新初始化
+
+- 更新渲染（挂载到dom后，由于props或者是state改变导致重新渲染过程）
+  - 不会触发componentDidMount生命周期
+
 
 useCallback？
 
@@ -185,3 +208,4 @@ useCallback？
 传递组件与函数区别？
 
 - 
+

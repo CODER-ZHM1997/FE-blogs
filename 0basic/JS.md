@@ -6,12 +6,12 @@
 
 - 指南：https://github.com/csxiaoyaojianxian/JavaScriptStudy/tree/master/01-JS%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%AF%B9%E8%B1%A1
 - es指南：https://es6.ruanyifeng.com/#README
+  - 能读懂这里面的，就能够回答90%的问题了
 - 函数有关：https://juejin.cn/post/6864378349512065038
 - 闭包：https://juejin.cn/post/6937469222251560990
 - [事件模型？](https://juejin.cn/post/6844903568462331912)
 - js操作style、class：https://juejin.cn/post/6844903822624555016
 - [js的常见操作](https://juejin.cn/post/6844904136161361933)（你后面所有的操作都不会超出这个）
-- 正则：
 - [js面试题](https://juejin.cn/post/6940945178899251230)
 - [js面试题下](https://juejin.cn/post/6941194115392634888)
 - [闭包](https://juejin.cn/post/6937469222251560990#heading-7)
@@ -73,7 +73,14 @@ this指向
 
 ：js两者都有
 
-- 
+
+
+为啥要用call、apply、bind来调用（顺序是cab，类似于tab）
+
+- 借用方法：因为这样可以不用修改对象结构就能够调用函数，修改函数里的this
+  - 比如打印person，但是不用往person对象挂载greet方法
+
+
 
 #### 原型
 
@@ -137,15 +144,135 @@ proto与prototype区别
 
 
 
+#### 函数参数
+
+可选参数
+
+- 提供了默认值就自动算可选参数
+- 可选参数需要放到参数lie'biao后面去
 
 
-## 正则
 
-## DOM
+# 字符串
+
+裁剪
+
+- 按下标
+  - slice
+  - substring
+  - substr
+- 按内容
+  - replace
+    - 利用正则来完
+  - trim
+  - 还可以用split拆分，然后取第一个元素之类的
+    - 比如www.juejin.cn?name=chenzong&age=18，可以用split['?'](0)来获取www.juejin.cn
+
+# 数组
+
+- 优点
+  - 可以保证遍历顺序
+- 缺点
+  - 不能通过key来获取、设置value，只能通过下标，但是下标是数字，不方便记忆
+
+console语句是同步还是异步？
+：<https://segmentfault.com/q/1010000014613305>
+
+类型判断
+
+- typeof：可以判断基本类型，但是不能判断引用类型
+  - 判断数组：Array.isArray()
+  - 判断是否为：
+
+数组通过对象实现过滤、数组通过数组实现过滤要多练一下，而且条件可能有嵌套
+
+- 数组过滤数组：应该拿数组来遍历，而不是拿ids来遍历，ids只是用来判断的
+
+根据值来移除某个元素
+-
+
+数组批量拼接另一个数组
+：arr1=arr1.concat(arr2)
+
+为啥会出现获取整个值可以获取到，但是获取某个属性却无法获取的情况？
+
+如何给对象类型的参数提供默认值？引入传入对象的时候会直接覆盖默认值，所以需要先判断一下
+
+- 可以用Oject.assign的方式来赋值
+  代码如下
+
+校验跟过滤是两个概念，校验是判断是否符合要求，过滤是把不符合要求的过滤掉，留下符合条件的
+
+- 校验一般是返回false，或者是抛出异常
+- 过滤一般是返回一个新的数组
+
+2个数组匹配的
+
+- 一个数组里面必须包括另一个数组的所有元素
+
+怎样获取到一串二进制数据？
+
+- 通过new Buffer()或Buffer.from()来生成
+
+不同进制的转换
+16进制是4位二进制，8进制是3位二进制，10进制则是需要4位二进制来表示
+：所以一个字节是8位二进制，一个字节=2位16进制
+
+数组构造树结构，根据pid
+
+list的for循环如何阻塞
+：通过for of、for in来阻塞，而不是通过map、forEach
+
+结果写在返回值与写在参数
+
+- 一般都是写在返回值
+- 写在参数的场景：为了能够修改参数的值，如updateArray(arr,value)
+
+# json
+
+序列化会丢失哪些类型的属性？
+
+- undefined
+- function
+- Symbol
 
 
 
-## 问题
+
+
+匹配多行的正则表达式
+
+js怎么判断是单行还是多行？
+：有\n就是多行，没有就是单行，不过用``就不用写\n来表示多行了
+
+修饰符
+
+函数调用：传递一个对象参数，但是我传递了一部分属性，剩下的我希望用默认属性
+：可以
+
+动态添加属性
+
+- 扩展运算符 ...
+
+```js
+      title: item.title,
+      ...(item.href ? { href: item.href } : {}),
+      key: item.title,
+```
+
+数组转对象，指定其中一个为key即可
+：通过reduce即可
+
+```js
+  arr.reduce((pre,cur)=>{
+    pre[key]=cur
+    return pre
+  },{})
+```
+
+
+
+# 问题
 
 原型与原型链
 
@@ -251,7 +378,7 @@ this指向会被改变的四个场景
 - 正则的文档：找到正则表达式的学习项目啊
 - 常见的业务：<https://github.com/pingan8787/Leo-JavaScript/blob/master/Cute-Article/article/9-%E5%B8%B8%E7%94%A8%E4%B8%9A%E5%8A%A1%E6%A8%A1%E5%9D%97%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86.md>
 
-# 问题
+- - 
 
 js 必须要从中间属性开始赋值，不支持跳过中间属性赋值
 for in 和 for of 的区别
@@ -313,124 +440,29 @@ for in 和 for of 的区别
 - 缺点
   - 不能保证遍历顺序
 
-# 字符串
+&&不一定是得到boolean值，还可能得到
 
-裁剪
+宏任务
 
-- 按下标
-  - slice
-  - substring
-  - substr
-- 按内容
-  - replace
-    - 利用正则来完
-  - trim
-  - 还可以用split拆分，然后取第一个元素之类的
-    - 比如www.juejin.cn?name=chenzong&age=18，可以用split['?'](0)来获取www.juejin.cn
+- 
 
-# 数组
+script标签放哪里有关系吗？
 
-- 优点
-  - 可以保证遍历顺序
-- 缺点
-  - 不能通过key来获取、设置value，只能通过下标，但是下标是数字，不方便记忆
+- 推荐
+  - 放在body结尾前
+- 因为浏览器解析html是逐行解析的，把script放到后面就不会阻塞文字、图片的显示了，你要是放到head里面就会阻塞
 
-console语句是同步还是异步？
-：<https://segmentfault.com/q/1010000014613305>
+传统的script脚本：即script标签内type为text/javascript的
 
-类型判断
+- 没有模块的概念，不能再一个script内导入另一个script
 
-- typeof：可以判断基本类型，但是不能判断引用类型
-  - 判断数组：Array.isArray()
-  - 判断是否为：
+只有esm模块才有模块概念
 
-数组通过对象实现过滤、数组通过数组实现过滤要多练一下，而且条件可能有嵌套
+- 设置script的type为module
 
-- 数组过滤数组：应该拿数组来遍历，而不是拿ids来遍历，ids只是用来判断的
+网络请求直接得到的js文件，并不会直接执行
 
-根据值来移除某个元素
--
+- 需要放到html页面，以html文件作为启动器，它才会执行
 
-数组批量拼接另一个数组
-：arr1=arr1.concat(arr2)
 
-为啥会出现获取整个值可以获取到，但是获取某个属性却无法获取的情况？
-
-如何给对象类型的参数提供默认值？引入传入对象的时候会直接覆盖默认值，所以需要先判断一下
-
-- 可以用Oject.assign的方式来赋值
-  代码如下
-
-校验跟过滤是两个概念，校验是判断是否符合要求，过滤是把不符合要求的过滤掉，留下符合条件的
-
-- 校验一般是返回false，或者是抛出异常
-- 过滤一般是返回一个新的数组
-
-2个数组匹配的
-
-- 一个数组里面必须包括另一个数组的所有元素
-
-怎样获取到一串二进制数据？
-
-- 通过new Buffer()或Buffer.from()来生成
-
-不同进制的转换
-16进制是4位二进制，8进制是3位二进制，10进制则是需要4位二进制来表示
-：所以一个字节是8位二进制，一个字节=2位16进制
-
-数组构造树结构，根据pid
-
-list的for循环如何阻塞
-：通过for of、for in来阻塞，而不是通过map、forEach
-
-结果写在返回值与写在参数
-
-- 一般都是写在返回值
-- 写在参数的场景：为了能够修改参数的值，如updateArray(arr,value)
-
-# json
-
-序列化会丢失哪些类型的属性？
-
-- undefined
-- function
-- Symbol
-
-# regex
-
-：<https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp>
-有两种方式构造：字面量、构造函数
-
-- 字面量的方式：需要用//斜杠包括
-- 构造函数的方式：则是需要用字符串
-
-匹配多行的正则表达式
-
-js怎么判断是单行还是多行？
-：有\n就是多行，没有就是单行，不过用``就不用写\n来表示多行了
-
-修饰符
-
-函数调用：传递一个对象参数，但是我传递了一部分属性，剩下的我希望用默认属性
-：可以
-
-动态添加属性
-
-- 扩展运算符 ...
-
-```js
-      title: item.title,
-      ...(item.href ? { href: item.href } : {}),
-      key: item.title,
-```
-
-数组转对象，指定其中一个为key即可
-：通过reduce即可
-
-```js
-  arr.reduce((pre,cur)=>{
-    pre[key]=cur
-    return pre
-  },{})
-```
 
