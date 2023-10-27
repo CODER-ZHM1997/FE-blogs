@@ -1,12 +1,12 @@
 
 
-教程
+## 教程
 
 - 指南
   - https://juejin.cn/post/6844904198761349134
   - https://juejin.cn/post/7172115767880581150/
   - https://juejin.cn/post/6917096816118857736?searchId=20230920221401DE543A267612AC31C759#heading-17
-- 字典：https://wangchujiang.com/linux-command/hot.html
+- 在线字典：https://wangchujiang.com/linux-command/hot.html
 - https://juejin.cn/post/6917096816118857736
 - 前端：https://juejin.cn/post/6844904110056013832#comment
 - yum：https://juejin.cn/post/7015234288807313444

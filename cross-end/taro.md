@@ -5,7 +5,7 @@
 - 官方：https://taro-docs.jd.com/docs/
 - taroui：https://taro-ui.jd.com/#/docs/introduction
 - 项目
-  - 
+  - 音乐app：https://github.com/lsqy/taro-music.git
 
 
 

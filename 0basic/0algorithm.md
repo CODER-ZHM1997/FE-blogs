@@ -2,9 +2,12 @@
 
 教程
 
+- 怎么学？https://juejin.cn/post/7255217876365115449?searchId=20230919113658FCFBAE399D57ED702F2E
+
 - 大全：https://github.com/sisterAn/JavaScript-Algorithms
-- 算法怎么学？https://juejin.cn/post/7255217876365115449?searchId=20230919113658FCFBAE399D57ED702F2E
+
 - 在线练题：https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings
+
 - 复杂度
   - https://zhuanlan.zhihu.com/p/248284657#:~:text=log%E8%A1%A8%E7%A4%BA%E5%AF%B9%E6%95%B0.,%E6%95%B0%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89%E5%9F%9F%E2%80%A6
   - https://cloud.tencent.com/developer/article/1613822
