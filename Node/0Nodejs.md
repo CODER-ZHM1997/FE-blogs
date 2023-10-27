@@ -1,15 +1,7 @@
-#### 
-
 nodejs是js的运行时环境
 
 ## 教程
 
-- github项目
-  - 
-  - 入门：https://github.com/FrontEndGitHub/FrontEndGitHub/issues/47
-  - 实战：https://blog.51cto.com/u_15069443/2575927
-  - https://juejin.cn/post/6961101653709684772
-  - awesome node：https://github.com/sindresorhus/awesome-nodejs
 - 入门
   - 学习指南
     - https://juejin.cn/column/7246672925667344441
@@ -22,9 +14,7 @@ nodejs是js的运行时环境
   - 大纲：https://github.com/ringcrl/node-point/blob/master/README.md
   - 视频：https://www.bilibili.com/video/BV1gM411W7ex
   - [常见操作](https://juejin.cn/post/6844904029219192839#heading-1)
-- 视频教程
-  - https://www.bilibili.com/video/BV1tZ4y1D7QU/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
-  - https://www.bilibili.com/video/BV1a34y167AZ/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
+- node18新特性：https://juejin.cn/post/7089353090687565832
 - 搭建cli：https://juejin.cn/post/7063657010885034020
 - liveserver：https://juejin.cn/post/7074620057547964453
 - nvm：https://juejin.cn/post/7000652162950758431
@@ -43,22 +33,49 @@ nodejs是js的运行时环境
 
 #### 关注点
 
-- npm
+- npm、npx
+- module
 - fs
 - url、path、os
 - http
+  - 事件、方法、客户端&服务端
+
 - buffer
-- event
 - stream
   - 流类型、流事件、管道流、数据处理（比如解析、转换、压缩）、错误处理、应用场景（文件处理、网络通信、图像&视频&音频处理）
+- net
+- dns
+- event
+- process & thread
+  - process：创建&销毁进程、状态、事件、方法、通信、错误处理
+  - thread：
 
-- process
-  - 进程状态、创建、销毁、通信、监控、错误处理
+- cluster
+
+- 
+
+
+
+## basic 基础
+
+架构
+
+- 
+
+特点
+
+- 单线程
+- 事件驱动
+- 非阻塞式IO
+
+适用场景
+
+- 
 
 
 
 
-## 模块系统
+## module 模块系统
 
 模块系统
 
@@ -141,34 +158,33 @@ console.log("bar:", bar);
 
 
 
-## 文件操作
+## path 路径
 
-主题
+join：拼接路径
 
-- crud
-- 同步、异步
+- 
 
+resolve：解析成绝对路径
 
-
-
-
-#### 流
-
-pipe起到流连接的作用
+normalize：格式化路径
 
 
 
-## Http
+## event 事件
+
+
+
+## http 请求
+
+
 
 socket相当于快递小哥，你要发送和接收数据包只需要对接socket即可
 
-你要思考整个系统是怎么驱动的？
-
-：往往是基于事件驱动的
 
 
 
-## Buffer
+
+## buffer 缓冲区
 
 ：用于处理二进制数据
 
@@ -190,7 +206,7 @@ crud操作
 
 
 
-## Stream
+## stream 流
 
 ：用于处理数据的接口，用于数据的输入、输出，
 
@@ -229,19 +245,56 @@ crud操作
 
 
 
-## Process
+## crypto 加解密
+
+：
+
+
+
+
+
+## process 进程
 
 进程 process & 线程 thread
 
+- 进程：资源分配的基本单位
+- 线程：cpu调度的基本单位
 - 一个进程可以包括多个线程，一个进程至少一个线程，最重要的线程一般就是主线程
 
-子进程也是属于进程，它不等于线程
+状态：等待、运行、挂起、终止
 
-- 
+为啥要有父子进程？
+
+发布&订阅模式方法的搭配
+
+- 发布：emit、其他方法比如send
+- 订阅：on
 
 
 
-## Node Cli
+IPC：进程通信
+
+- 父子进程的通信通道是自动创建的，创建子进程后就可以通过on、send来通信了
+
+
+
+## thread 线程
+
+
+
+## net 网络
+
+
+
+## dns 域名解析
+
+
+
+## cluster 集群
+
+
+
+## node cli
 
 命令行参数的处理：commanders、inquirer
 
@@ -277,6 +330,41 @@ main啥时候回被触发？
 main
 
 - 导入包的时候，导入的是bin定义的
+
+
+
+## schedule 定时任务
+
+库：node-schedule
+
+关注点
+
+- 定义定时任务：基于你指定的时间点
+- 定义间隔任务：基于你指定的时间间隔
+
+适用场景
+
+- 
+
+
+
+0,7是周日，其他都是对的上的
+
+有些配置是冲突的，比如表示日期的几号和星期几，其中一个配了，另一个就要用?
+
+
+
+定时任务
+
+```js
+// 每晚晚八点掘金开奖
+* * 20 * * ?
+
+// 每周的1、3、5晚上6点30锻炼身体，
+* 30 18 ? * 1,3,5
+```
+
+
 
 
 
@@ -525,4 +613,9 @@ node通过命令行执行脚本时如何给脚本传参？
 - 直接npm update 报错咋解？
 
 - 
+
+为啥有些数据通过属性获取比如.name，而有些则是方法来获取比如getName
+
+- 属性：比较简单、次要的
+- 方法：比较关键的数据，需要有其他副作用的
 

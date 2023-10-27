@@ -1,18 +1,35 @@
-移动端
-
-：很多项目都是移动端的
+移动端开发会有哪些问题还有对应的解决方案
 
 教程
 
+- 大全：leo中搜索：移动
 - 移动端h5开发：https://juejin.cn/post/6844904066301050893
 - 适配
-  - https://juejin.cn/post/7046169975706353701#heading-38
   - https://juejin.cn/post/7046169975706353701
   - https://www.bilibili.com/video/BV1dK411n7an?p=6
 - 响应式布局
   - https://juejin.cn/post/6844903814332432397
   - https://juejin.cn/post/6844903990669361165
   - https://juejin.cn/post/6865107864139087886
+  
+  
+
+## 驱动问题
+
+#### 关注点
+
+- 适配问题
+- 兼容问题
+
+
+
+## 问题
+
+有没有要同时支持移动端和pc端的
+
+- 一般比较少，除了官网这类的，此时可以用antd
+
+
 
 移动端与pc端的区别
 
