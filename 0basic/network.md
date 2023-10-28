@@ -13,12 +13,15 @@
 
 ## 驱动问题
 
-#### 核心模块有哪些？
+#### 关注点
 
 - 网络模型
-- http、https、websocket
+- http、http2、https
+- websocket
 - tcp、udp
 - dns
+- CORS
+- cookie、session、token
 - 性能优化
 
 
@@ -29,7 +32,16 @@
 
 ## http
 
+如何看http是1还是2
 
+- 在谷歌浏览器》网络》标头选项
+- 1：http1.2，2：h2
+
+状态码
+
+- 
+
+## http2
 
 
 

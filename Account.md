@@ -28,16 +28,6 @@
 
 
 
-#### 宝塔账号
-
-地址：[http://119.91.148.144:8888/b7e9634a](https://gitee.com/link?target=http%3A%2F%2F119.91.148.144%3A8888%2Fb7e9634a)
-
-账号：menten1c
-
-密码：uj2RTCPwLEVy
-
-
-
 #### clash
 
 账号：2435565917@qq.com
@@ -45,13 +35,3 @@
 密码：xiandiao202288
 
 
-
-## 软件安装&破解
-
-typora
-
-：百度云有
-
-账号
-
-- 

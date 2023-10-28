@@ -10,9 +10,11 @@
   - https://juejin.cn/post/6959352704745357326
   - https://juejin.cn/post/7230348908382601275
 
+- 在线题库：https://interview.poetries.top/interview-exp/%E5%89%8D%E7%AB%AF%E9%9D%A2%E7%BB%8F%E6%B1%87%E6%80%BB.html#%E4%BB%80%E4%B9%88%E6%98%AFbfc
+
 - 前端面试实录或现场：https://www.bilibili.com/video/BV1Qu411D71c
 
-- 在线题库：https://interview.poetries.top/weapp-interview/
+- 
 
   
 
@@ -33,6 +35,11 @@
 - 薪资
 
 
+
+#### 口诀
+
+- 有些问题，你不先问自己，就会有别人来问你
+  - 比如你的项目难点有哪些？
 
 #### 关键动作
 
@@ -102,6 +109,27 @@
 
 很多手写题：比如手写算法，手写call、bind
 
+#### 加分项
+
+- 有自己的或参与的开源项目
+
+
+
+#### 面试题
+
+：面试题涉及哪些范围
+
+1. html、css、js、nodejs
+2. 网络、浏览器
+3. 框架：vue、react
+   - 使用 & 源码
+4. 工程化：webpack、vite
+5. 多端：uni-app
+6. 算法、设计模式
+7. 性能优化、安全问题
+8. 综合问题
+9. 项目
+
 
 
 ## 项目
@@ -153,6 +181,8 @@
   - 大胆的去面试公司啊！！！不然薪资永远不会涨
 
 
+
+## 
 
 ## 问题
 

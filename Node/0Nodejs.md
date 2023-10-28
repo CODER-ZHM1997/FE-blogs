@@ -72,6 +72,10 @@ nodejs是js的运行时环境
 
 - 
 
+event loop
+
+- 
+
 
 
 

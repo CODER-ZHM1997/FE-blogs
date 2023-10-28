@@ -525,75 +525,9 @@ tsx中不能使用setup语法糖了
 
 - 有表达式的地方就要用花括号，而且是外层用，里层就不用了，比如{arr.length&&console.log('xxx')}
 
-## 项目难点
-
-[常见操作](https://juejin.cn/post/6844904122747977741#heading-15)
-
-## 技巧
-
-短发哦我的我
-
-[vue2常用操作](https://juejin.cn/post/6844903548870721549?utm_medium=fe&utm_source=weixinqun#heading-1)
-
-- [专题版](https://juejin.cn/post/6936061897892429855#heading-3)
-- [官网](https://v3.cn.vuejs.org/guide/instance.html#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B)，是官网写的不够详细？你还要瞎鸡巴找？
-- [hooks](https://juejin.cn/post/6888925879243079687#heading-9)
-
-[vue3常见操作](https://juejin.cn/post/6977004323742220319)
-
-- [专栏](https://juejin.cn/column/6978074740883718151)
-
-将源码的目的是为了更好的理解vue，不是为了讲源码而讲源码
-
-- 
-
-[vue练手项目](https://github.com/chuzhixin/vue-admin-beautiful-pro)
-
-vue3的特点？相比vue2
-
-- 更小
-- 更快
-  - 
-- 更好维护
-
-vue3带来的变化？
-
-：主要从增删改查、优化的方向考虑
-
-- 由选项api改成组合api，但是还是支持选项api
-- 支持hook，
-  - 其实就是mixins，但是直接的mixins还是有很多的弊端的
-
-- 删除了一些属性和api，$on，$off，
-- 优化
-  - diff算法优化
-
-合并的规则很关键
-
-- 有些是按照自身的优先级来的，比如我行内样式的优先级就是内联的优先级高啊
-- 有些是按照书写的优先级来处理的，比如我写在后面的有优先级高，比较偏的就是写在前面的优先级高
-
-搭配的开发工具
-
-- vscode插件：vetur
-
-写代码不仅仅是要看效果，如果还可以顺便瞄一下他这样做的理由
-
-- 比如动态的添加错误处理
-
-vue3使用setup语法报错，如defineProps
-
-- 而且在template中不用通过props来访问属性，直接用defineProps里面的参数即可，不用写的props.xxx，直接用xxx即可
-
-什么时候不能用解构？说是会破坏响应性？
-
-在script中使用响应式对象需要用value，而在template中使用则是都不用value
 
 
 
-
-
-#### 项目部署
 
 
 
@@ -634,3 +568,8 @@ cdn去哪里找
 怎样修改已有类型，而且复用已有类型
 
 - 
+
+路由懒加载跟异步组件是有区别的
+
+- 路由懒加载一定是用到了异步组件
+- 异步组件则不一定是路由懒加载

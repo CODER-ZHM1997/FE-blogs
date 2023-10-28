@@ -32,6 +32,12 @@ ai项目推荐
 
 - 综合：https://github.com/aalansehaiyang/technology-talk.git
 
+blog
+
+- vue
+  - https://space.bilibili.com/1621571159?spm_id_from=333.337.0.0
+- 
+
 
 
 ## 算法
