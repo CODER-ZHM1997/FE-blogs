@@ -16,15 +16,33 @@
 
 - js三大模块：es、dom、bom
   - es是语言规范，而js才是实现，不同浏览器厂商可能有不同的js实现方式，但是es调用方式都是一样的
-- 看这个仓库目录即可：https://github.com/csxiaoyaojianxian/JavaScriptStudy/blob/master/01-JS%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E8%BD%AC%E6%8D%A2/Date.html
+
+
+
+## Array
+
+会修改数组的函数：ssr（splice、sort、reverse）
+
+
+
+## BOM
+
+
+
+## DOM
 
 
 
 
 
-# 问题
 
-- 
+
+## 问题
+
+为什么要有数据类型？
+
+- 可以帮助编程语言有效的存储和处理处理，
+- 保证了数据的准确性和完整性：如果一个变量被定义为number，那么它不会包含string
 
 只有esm模块才有模块概念
 
@@ -34,5 +52,19 @@
 
 - 需要放到html页面，以html文件作为启动器，它才会执行
 
+面向对象oop与面向过程pop编程区别？
 
+- 基本单位
+  - oop：对象
+  - pop：函数
+- 数据与行为是否耦合
+  - oop：数据与行为都封装在对象里面
+  - pop：则是数据与行为分离的，数据容易修改
+- 高级特性
+  - oop：有继承、封装、多态
+  - pop：面向过程没有
 
+浏览器的dom更新跟渲染不是一起的
+
+- 通常是dom更新在前：比如对dom节点的curd，dom更新是js操作
+- 渲染在后：将多个dom更新合并在一起，一次性渲染
