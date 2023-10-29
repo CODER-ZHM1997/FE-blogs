@@ -22,13 +22,16 @@
 #### 关注点
 
 - 版本控制
-- 自动化构建
-- CI、CD
-- 文档生成：api、用户文档
 - 质量检查：如eslint
 - 测试：单元、集成测试
-- 容器化：如docker
+- 构建：vite、webpack、rollup、babel
+- CI、CD
 - 性能优化
+- 监控
+- 文档生成：api、用户文档
+- 容器化：如docker
+
+
 
 
 
