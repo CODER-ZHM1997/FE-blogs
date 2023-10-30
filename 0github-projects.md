@@ -4,68 +4,52 @@
 
 ## 教程
 
-看看老外是怎么做应用的，每一步都很清晰
+项目日刊
 
-- https://www.bilibili.com/video/BV17o4y1x78N
-
-项目推荐
-
-- [hello](https://github.com/521xueweihan/HelloGitHub)
-- 大全：https://github.com/FrontEndGitHub/FrontEndGitHub
-
-面试
-
-- https://github.com/azl397985856/fe-interview
-
-ai项目推荐
-
-- https://nav.phpblog.com.cn/ainav
-- gpt怎么用？https://github.com/PlexPt/awesome-chatgpt-prompts-zh
+- https://github.com/521xueweihan/HelloGitHub
+- https://github.com/FrontEndGitHub/FrontEndGitHub
 
 学习路线
 
-- 大全：https://interview.poetries.top/roadmap/frontend.html#react%E8%B7%AF%E7%BA%BF
-- https://www.bilibili.com/video/BV1nh411e7oG/?vd_source=522153461914a766fc002cc8619314e4
-- 文字版：https://github.com/liyupi/code-roadmap/blob/main/docs/roadmap/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.md#%E7%BB%84%E4%BB%B6%E6%8F%92%E4%BB%B6
+- https://github.com/liyupi/code-roadmap/blob/main/docs/roadmap/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.md#%E7%BB%84%E4%BB%B6%E6%8F%92%E4%BB%B6
 
-技术汇总方案
+算法
 
-- 综合：https://github.com/aalansehaiyang/technology-talk.git
+- 在线练题：https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/easy/101.symmetric-tree
 
-blog
-
-- vue
-  - https://space.bilibili.com/1621571159?spm_id_from=333.337.0.0
-- 
+- 仓库
+  - https://github.com/sisterAn/JavaScript-Algorithms
 
 
 
-## 算法
-
-在线练题：https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/easy/101.symmetric-tree
-
-仓库：https://github.com/JunLiangWangX/js-algorithm
 
 
+## 面试
+
+- https://github.com/shfshanyue/Daily-Question
+  - 在线：https://q.shanyue.tech/train
+- https://github.com/azl397985856/fe-interview
 
 
 
 ## vue
 
-- awesome-vue
-  - https://github.com/vuejs/awesome-vue
-  - https://vue3js.cn/
+- https://github.com/vuejs/awesome-vue
+- https://vue3js.cn/
 
-- vue2源码：https://vue-js.com/learn-vue/start/
-- vue3源码
-  - https://vue3js.cn/start/
-  - https://diy4869.github.io/vue-next-analysis/page/bitOperators.html#%E5%8F%B3%E7%A7%BB
+vue3源码
+- https://vue3js.cn/start/
+- https://diy4869.github.io/vue-next-analysis/page/bitOperators.html#%E5%8F%B3%E7%A7%BB
 
-- https://eladmin.vip/pages/010301/
+后台系统
+- https://github.com/elunez/eladmin-web
 
-- 后台系统
-  - https://github.com/elunez/eladmin-web
-  - 
+模板
+
+- https://github.com/GeekQiaQia/vue3.0-template-admin
+- vite：https://github.com/jeddygong/vite-templates
+
+#### nuxt
 
 
 
@@ -88,9 +72,9 @@ blog
 
 - https://github.com/ManfredMT/nextjs-blog-react-admin/tree/main
 
+#### next
 
-
-
+- [商城系统](https://github.com/vercel/commerce)
 
 
 
@@ -120,10 +104,6 @@ gfast-ui
 - 预览：http://v3.g-fast.cn/sys#/login?redirect=/&params={}
 
 eladmin：https://eladmin.vip/demo/#/dashboard
-
-
-
-
 
 
 
@@ -207,3 +187,6 @@ eladmin：https://eladmin.vip/demo/#/dashboard
 - 功能齐全的
 - 有文档的
 
+看看老外是怎么做应用的，每一步都很清晰
+
+- https://www.bilibili.com/video/BV17o4y1x78N
