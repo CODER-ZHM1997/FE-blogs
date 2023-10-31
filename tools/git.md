@@ -139,13 +139,6 @@ git hooks
 
 
 
-## 连接超时
-
-：一般是ssl认证的问题，把他都关掉即可
-
-- git config --global http.sslVerify false
-- git config --global https.sslVerify false
-
 
 
 ## 忽略文件
@@ -209,3 +202,25 @@ mixed、soft、hard
 可以只下载某个分支的，不用全部分支都下载
 
 - git clone -b <branch-name> <repo-url>
+
+
+
+## 问题
+
+连接超时
+
+：一般是ssl认证的问题，把他都关掉即可
+
+- git config --global http.sslVerify false
+- git config --global https.sslVerify false
+
+22端口超时
+
+- 修改配置文件：~/.ssh/config
+
+```shell
+Host github.com
+Hostname ssh.github.com
+Port 443
+```
+

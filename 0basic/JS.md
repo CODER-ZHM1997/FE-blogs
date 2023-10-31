@@ -46,9 +46,23 @@ websocket连接不会自动断开
 
 
 
+## Web API
+
 
 
 ## 问题
+
+web api？
+
+：由浏览器支持的，是浏览器开放的接口，js可以通过这些接口跟浏览器交互
+
+常见的web api
+
+- dom
+- xhr、fetch
+- socket
+- storage
+- canvas
 
 为什么要有数据类型？
 

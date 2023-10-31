@@ -164,11 +164,11 @@ console.log("bar:", bar);
 
 ## path 路径
 
-join：拼接路径
+join：拼接路径得到相对路径
 
-- 
+- 跟__dirname搭配，可以得到绝对路径
 
-resolve：解析成绝对路径
+resolve：拼接得到绝对路劲
 
 normalize：格式化路径
 

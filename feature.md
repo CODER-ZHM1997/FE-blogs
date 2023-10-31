@@ -18,7 +18,12 @@
 
 ## 请求
 
+需求
 
+- 请求拦截
+- 多接口地址
+
+#### axios
 
 
 
@@ -28,9 +33,9 @@
 
 
 
-## 登录
+## 普通登录
 
-涉及到加密
+
 
 
 
@@ -40,13 +45,79 @@
 
 
 
-## 退出
+## 用户登出
+
+1. 向后端发出登出请求
+2. 清除本地缓存
+3. 重定向到首页
 
 
 
 
 
 ## 主题
+
+需求
+
+- 支持light、dark模式
+- 支持多种主题色
+
+
+
+#### light、dark模式
+
+1. 定义样式：在index.html
+   - 也可以指定具体的组件样式
+2. 切换模式：通过document.body.setAttribute("data-theme", "dark");
+
+```css
+// index.html
+body[data-theme="light"] {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body[data-theme="dark"] {
+    background-color: #333;
+    color: #f4f4f4;
+}
+```
+
+
+
+#### 多种主题色
+
+：跟light、dark模式差不多，只是力度更细
+
+1. 定义样式变量，
+2. 引用样式变量：在组件的css中使用对应的变量，此时颜色值不能直接写死，要写为变量了，比如var(--theme-primary-color)
+3. 切换主题色：修改对应的css变量值，比如
+
+```css
+/* themes.css */
+:root {
+  --theme-primary-color: #3498db;
+  --theme-background-color: #f2f2f2;
+  /* 添加更多主题颜色变量 */
+}
+```
+
+```js
+function changeTheme(theme) {
+  const root = document.documentElement;
+
+  if (theme === 'light') {
+    root.style.setProperty('--theme-primary-color', '#3498db');
+    root.style.setProperty('--theme-background-color', '#f2f2f2');
+    // 设置其他主题颜色变量
+  } else if (theme === 'dark') {
+    root.style.setProperty('--theme-primary-color', '#e74c3c');
+    root.style.setProperty('--theme-background-color', '#333333');
+    // 设置其他主题颜色变量
+  }
+  // 添加更多主题
+}
+```
 
 
 
@@ -70,9 +141,11 @@
 
 
 
+## 访问控制
 
 
-## 页签
+
+## 多页签
 
 
 
@@ -85,10 +158,6 @@
 
 
 
-
-
-
-## 访问控制
 
 
 
@@ -167,7 +236,7 @@
 
 ## 日志
 
-#### 操作日志
+#### 用户操作日志
 
 
 
@@ -207,7 +276,7 @@
 
 ## 二维码
 
-
+：可以时
 
 
 
@@ -215,7 +284,21 @@
 
 
 
+
+
 ## 适配
+
+
+
+
+
+## 安全
+
+
+
+## 自定义工作流
+
+：用户可以配置跳过某些环节，比如编辑》审核》发布，可以把审核跳过
 
 
 

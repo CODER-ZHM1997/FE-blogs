@@ -42,6 +42,7 @@ vue3源码
 - https://diy4869.github.io/vue-next-analysis/page/bitOperators.html#%E5%8F%B3%E7%A7%BB
 
 后台系统
+- vben：https://doc.vvbin.cn/guide/
 - https://github.com/elunez/eladmin-web
 
 模板
@@ -88,7 +89,7 @@ vue3源码
 
 大全：https://juejin.cn/post/7124909032808120328
 
-vben：https://doc.vvbin.cn/guide/
+
 
 pure-admin：https://github.com/pure-admin/vue-pure-admin
 
@@ -190,3 +191,5 @@ eladmin：https://eladmin.vip/demo/#/dashboard
 看看老外是怎么做应用的，每一步都很清晰
 
 - https://www.bilibili.com/video/BV17o4y1x78N
+
+项目归档：表示项目已完成，变成只读的了，当然你可以选择从归档状态中恢复
