@@ -1,52 +1,24 @@
-前言：本文档主要是记录一些vue3相对vue2学习要点和学习过程的产生的问题，读者通过阅读该文档+官方文档，完成vue3的入门，（注：官方文档有的东西，我不会冗余）
-
-学习计划
-
-- 官方文档+coderwhy的vue3教程
-
 教程
 
-- vue3教程
-  - https://www.bilibili.com/video/BV1QA4y1d7xf
-  - 全面：https://www.bilibili.com/video/BV1dS4y1y7vd
-  - 源码
-    - https://www.bilibili.com/video/BV19V4y177gS?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
-    - https://www.bilibili.com/video/BV1Q3411w7SQ?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
-- vue2代码迁移到vue3：https://juejin.cn/post/7064909191210598408
-
-- 规范：https://v2.cn.vuejs.org/v2/style-guide/#%E7%BB%84%E4%BB%B6-%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%89%E9%A1%B9%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%8E%A8%E8%8D%90
-
-- 前端基建
-  - 入门：https://juejin.cn/post/6844904145602740231
-
-- 项目部署
-  - https://juejin.cn/post/6844903768362860557
-  - 常见问题：https://juejin.cn/post/6844904149633466376
-- vue3新特性总结：https://juejin.cn/post/6940454764421316644
-- 教程：
-  - https://www.bilibili.com/video/BV1ra4y1H7ih?vd_source=522153461914a766fc002cc8619314e4
-  - 实战：https://www.bilibili.com/video/BV1qt4y1h7Ew?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
-- vue3中如何使用ts？
-  - https://juejin.cn/post/6844903633578885128
-  - https://juejin.cn/post/6844904063910281230
-  - ts教程：https://juejin.cn/post/6844903865255477261#heading-25
-  - 项目中使用ts：https://juejin.cn/post/7058868160706904078
-- tsx的使用
-  - https://juejin.cn/post/7007731144418394149
-  - https://juejin.cn/post/6914517242298236942
+- 异常处理：https://juejin.cn/post/6932620551827488775?searchId=202311171734478FA08540E39199F5004F
+- vue中使用jsx：https://juejin.cn/post/7272308621710213161
 
 
-项目推荐
-- https://juejin.cn/post/7036745610954801166#heading-4
-- 教你vue3如何做集成：https://juejin.cn/post/6951649464637636622
 
-开发插件
+## 核心问题
 
-- [volar](https://juejin.cn/post/6966106927990308872)
+#### 关注点
 
-代码迁移
-
-- vue3移除了很多vue2的属性，或者是修改了写法
+- vue3
+- vue3练习的demo应该如何搭建？避免重复学习
+  - 官网其实已经很详细了
+- vue生态：vue-router、pinia
+- vue3的写法（关注点集中）
+- hook
+  - hook的使用场景，与不用hook对比
+  - hook的结构：命名、参数、返回值
+  - 模仿一下优秀的hook库，比如ahooks
+- jsx
 
 
 
@@ -278,11 +250,9 @@ vue-cli还是基于webpack的
 
 ## 基础
 
-
-
 #### 生命周期
 
-：口诀，muu，destory已经被修改成为unMounted
+：口诀，cmu，destory已经被修改成为unMounted
 
 教程
 
@@ -301,42 +271,13 @@ vue-cli还是基于webpack的
 
 #### [组件通信](https://juejin.cn/post/6844903887162310669#heading-7)
 
-根据通信对象来分
+应该要根据组件间关系来学
 
-- 父子通信
-  - props/$emit、$parent/$children、$refs、provide/inject、$attrs/$listeners
-- 兄弟通信
-  - vuex、eventBus（2个可选）
-- 跨级通信
-  - vuex、$attrs/$listeners、provide/inject（3个可选）
+- 父子
+- 兄弟
+- 跨层级
 
-事件总线不推荐使用，不方便维护
 
-过滤器已经被删除了，用计算属性和方法方法代替
-
-$nextTick
-
-：将回调延迟到下次dom更新循环后执行
-
-为什么延迟？
-
-- 简单来说，就是vue修改数据之后，dom（视图与dom是绑定在一起的）不会立即更新，而是等同一事件循环(event loop)结束后再跟新dom
-
-使用场景
-
-- 我需要使用到dom结构更新后的dom时，比如create钩子中
-
-```js
-//template
-<input type="text" v-model="msg" ref="input" />
-
-//js
-this.msg = 'APP'
-console.log(this.$refs.input.value);//error
-this.$nextTick(() => {
-console.log('nextTick', this.$refs.input.value);//APP
-})
-```
 
 #### 插槽
 
@@ -347,6 +288,15 @@ ref的对象元素某个元素或者是子组件实例
 作用域插槽
 
 - 能访问自身作用域数据的插槽
+
+
+
+插槽的入口、出口
+
+- 入口：是用来定义的，在父组件
+- 出口：是用来占位的，在子组件
+
+
 
 #### 过渡、动画
 
@@ -498,7 +448,9 @@ attrs则是非响应性对象
 
 ## Hooks
 
-：[hooks与mixin的区别](https://www.nswin.cc/39279.html)
+：封装（复用）逻辑
+
+
 
 
 
@@ -529,39 +481,40 @@ tsx中不能使用setup语法糖了
 
 
 
-
-
 ## 问题
 
-指定template的三种方式：通过template属性、模板、render函数
+运行机制
 
-何为钩子：钩子即帮你把东西勾过来（如代码块），他会在指定的时机（如某个生命周期）执行
+- 初始化：初始化数据、监听器
+- 挂载：将组件实例挂在到指定的dom元素上，同时编译模板，生成虚拟dom
+- 渲染：将虚拟dom渲染成真实dom
+- 更新
+- 卸载
 
-有时候应该报错的，但是它只是提示为warning级别，所以警告信息也不能轻易放过
 
-注意有很多包，有些是压缩版，有些是未压缩的（可读），有些是阉割版，有些是完整版，你要搞清楚用的是哪个？什么时候用哪个
 
-- 代码如果需要某些编译支持，就应该选运行时+编译器版本，而不需要则是可以只选运行时runtime版本
+渲染更新流程
 
-如何生成组件声明？
+- 依赖收集
+  - 收集组件为响应式的依赖
+- 响应式数据更新
+- 组件更新：重新执行render函数，生成新的虚拟dom
+- diff算法：比如新旧虚拟dom的差异
+- 渲染：真实dom更新
 
-变量应该怎么放？是变量放一起，函数放一起，还是按功能一起放
 
-**组件注册**
 
-- 按需引入
-- 全局注册
-  - 全局按需注册
-  - 全局全量注册
+应用实例&组件实例
 
-cdn去哪里找
+- 应用实例
+  - 通过createApp来创建的，一般在main文件里，一个vue应用一般只有一个vue实例
+    - 获取：在main中可以直接获取app、其他可以通过函数传参的方式获取
 
-- 框架、库的官网：https://element-plus.gitee.io/zh-CN/guide/installation.html#unpkg
-- 或者是直接去cdn的供应商里面找：unpkg、jsdelivr
+- 应用实例
+  - 获取：ref来获取、
 
-数据字典咋用？
-
-：后端返回，前端存到sessionStorge即可，每次刷新页面的时候重新获取一下
+- 相同点：都是vue实例
+- 不同点：应用实例代表整个当前应用，组件实例只代表当前组件，能够调用的方法也是不同的
 
 
 
@@ -573,3 +526,10 @@ cdn去哪里找
 
 - 路由懒加载一定是用到了异步组件
 - 异步组件则不一定是路由懒加载
+
+动态组件&异步组件
+
+- 动态组件一般都不是异步的
+- 异步组件则可以是动态的，可以是静态的
+
+vue中使用jsx，还需要用render函数吗？

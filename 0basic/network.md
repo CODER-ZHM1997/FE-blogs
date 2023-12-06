@@ -198,3 +198,12 @@ mime类型错误会怎样
 
 数据帧（帧头、数据、帧尾）：是数据链路层的概念
 
+请求体
+
+- 类型
+  - application/url encode
+    - 简单表单提交
+  - application/json
+    - json格式提交
+  - multiple/form-data
+    - 涉及到文件上传的

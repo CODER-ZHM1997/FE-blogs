@@ -3,32 +3,35 @@
 教程
 
 - 入门：https://juejin.cn/post/6974184935804534815
+- 主教程：<https://www.cnblogs.com/anding/p/16987769.html>
 - commitizen:https://juejin.cn/post/6844903606815064077
 - git actions:https://juejin.cn/post/7189510686760779833
 - github 搜索技巧：https://juejin.cn/post/6844904058755481607
 
-学习要点
+- git提交规范：<https://juejin.cn/post/6970275680047071240>
+- 分支命名规则
+  - <https://blog.csdn.net/qq_33858250/article/details/81047883>
 
-- 
+
 
 ## 驱动问题
 
-git是啥？
+#### 关注点
 
-- 
-
-#### 核心模块
-
-- 
-- 如何规范的提问？
-  - 标题明确
-  - 信息完备
-  - 有些会有模板的，你要按模板来
-    - 
+- 工作区、存取区、版本库
+- 版本提交&回退&撤销修改
+- 推送&拉取
+- 分支管理
+  - 分支创建、合并
 
 
 
-## github搜索技巧
+
+
+
+## github
+
+#### 搜索技巧
 
 ：https://juejin.cn/post/6891056415440535565#heading-13
 
@@ -48,12 +51,56 @@ git是啥？
 
 - 直接多个关键字去搜，就能找到：nest admin
 
+#### 避坑
+
+- 学会看活跃分支：有些分支是不活跃的，就会有很多坑，你只需要关注活跃的分支即可（1年不活跃的基本就是死了）
+  - 比如ant-design-pro的
 
 
 
-## 常见操作
+#### 快捷键
 
-提交模板
+- ?：查看快捷键大全
+
+
+
+#### github.dev
+
+：在线编辑器
+
+
+
+## git clone
+
+：用于克隆仓库，默认会下载所有分支，
+
+- 只下载某个分支：git clone -b <branch-name> <repo-url>
+
+
+
+## git fetch
+
+：分支的拉取，而且只做拉取，不做合并，对当前的代码不会有影响
+
+
+
+
+
+## git init
+
+
+
+
+
+## git add
+
+：用于提交工作区的修改到暂存区
+
+
+
+## git commit
+
+：提交暂存区的修改到版本库
 
 git commitzen
 
@@ -64,84 +111,118 @@ git commitzen
 - test
 - style
 
-git flow：工作流
 
-- master
-- develop
-- feature
-- release
-- hotfix
 
-gitignore文件应该忽略哪些？
+## git pull
+
+：
 
 
 
-git fetch
+## git stash
 
-- git fetch origin xxx会新建一个分支，但是不会跟你的分支合并，你需要手动merge
-
-
-
-443的问题，直接取消代理即可
-
--  git config --global --unset http.proxy 
--  git config --global --unset https.proxy 
+：目前不想提交某些修改，需要先暂存起来
 
 
 
-git actions配置自动化部署：https://juejin.cn/post/6887751398499287054
+## git revert
 
-- 创建文件，配置即可.github/workflows/ci.yml
+：reset太粗暴了，推荐使用revert
 
-git提交格式
+- 撤销单次提交：
+- 撤销多次提交：
 
+
+
+## git reset
+
+mixed、soft、hard
+：区别在于对工作区、暂存区有没有影响，变是指
+
+- soft：只撤销commit操作，但是保留修改并暂存
+- mixed（默认）：撤销git add、commit操作，但保留修改到工作区
+- hard：撤销全部修改
+
+
+
+
+
+## git branch
+
+：主要是用于分支的管理
+
+- 创建：git branch -b dev
+- 删除：git branch -b dev
+- 重命名：
+
+
+
+## git checkout
+
+：主要是用于分支的切换
+
+- 切换分支：git checkout <branch-name>
+- 创建并切换为远程分支缩写：git checkout <origin-branch-name>
 - 
 
-[github与gitlab有啥区别？](https://www.google.com/search?q=git%E4%B8%8Egitlab%E5%8C%BA%E5%88%AB&oq=git%E4%B8%8Egitlab%E5%8C%BA%E5%88%AB&aqs=chrome..69i57j0i512l2j0i12i512j0i512l5j0i10i512.12956j0j9&sourceid=chrome&ie=UTF-8)
-
-git hooks
-
-：git某个操作前或后会执行的钩子
-
-- commit：precommit，postcommit
 
 
-恢复指定的文件到某个版本
+## git rebase
 
-- git checkout <commitid> <file-path>
+使用场景
 
-恢复项目到指定版本
-
-- git revert
-- git reset
+- 整理提交：git rebase -i HEAD~5
+  - 修改commit 描述
+  - 将多次commit合并成一个commit
+- 解决分支冲突
+  - 在feature上开发新功能，但是master上有新的提交：git rebase master
 
 
 
-#### git actions
+## git merge
+
+：会多出一个commit出来
+
+使用场景
+
+- 分支合并（同步）：git merge dev，合并dev的修改到当前分支
+
+
+
+## git tag
+
+新建的tag不会自动推送到远程，你需要执行一下推送到远程
+：git push origin --tags
+
+
+
+
+
+
+
+
+
+## git diff
+
+
+
+## git log
+
+
+
+
+
+## git reflog
+
+
+
+## git actions
 
 ：能够提供持续的ci、cd服务
 
-教程
-
-- 主教程：<https://www.cnblogs.com/anding/p/16987769.html>
-- git提交规范：<https://juejin.cn/post/6970275680047071240>
-- 分支命名规则
-  - <https://blog.csdn.net/qq_33858250/article/details/81047883>
 
 
-
-
-
-## 版本回退（也叫还原）
-
-：<https://m.php.cn/faq/506249.html>
-如：git reset <commit> <file-path>，用checkout也行
-
-
-
-
-
-## 忽略文件
+## .gitignore
 
 叫法：目录=文件夹
 
@@ -158,54 +239,25 @@ git hooks
 
 
 
-## commit相关
+## 场景题目
 
-修改commit描述
+线上版本出问题了，应该如何做？
 
-合并commit
+- 版本回退：回退到出问题前的版本，重新打包发布线上
 
+  - git revert head~1
 
+- 问题修复：在hotfix分支上修复问题，并测试
 
-查看改变内容
+- 发布新版本：在master分支合并hotfix分支，并发布
 
-commit为单位
+  - git merge hotfix
 
-- github上面可以翻到commit记录
-- 也可以通过git的gui来查看
-  - 可以通过查看整个分支的提交历史
-
-以文件为单位
-
-- git diff <commit> <file-path>
-- vscode的git插件可以查看，这个更加方便一些
-
-
-
-## git reset
-
-mixed、soft、hard
-：区别在于对你现有的几个区有么有影响（比如工作区、暂存区）有没有影响
-
-- hard：会把你现有的工作区、暂存区都清空，回退到指定的commit
-- soft：只会把你现有的工作区清空，回退到指定的commit
-- mixed：不会清空你现有的工作区，回退到指定的commit
-
-
-
-## git tag
-
-新建的tag不会自动推送到远程，你需要执行一下推送到远程
-：git push origin --tags
-
-
-
-可以只下载某个分支的，不用全部分支都下载
-
-- git clone -b <branch-name> <repo-url>
-
-
+  
 
 ## 问题
+
+
 
 连接超时
 
@@ -224,3 +276,15 @@ Hostname ssh.github.com
 Port 443
 ```
 
+配置的设置读取有几种方式
+
+- 设置
+  - 键+值：直接属性后面跟值即可，比如：git config --global https.proxy http://127.0.0.1:1080
+  - 命令+键+值：set name zeng
+- 读取
+  - 键：git config --global https.proxy 
+  - 命令行+键：get name
+
+为啥要有checkout？
+
+- 

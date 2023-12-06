@@ -32,8 +32,7 @@
 
 ## vue
 
-- https://github.com/vuejs/awesome-vue
-- https://vue3js.cn/
+：https://github.com/vuejs/awesome-vue
 
 vue3源码
 - https://vue3js.cn/start/
@@ -46,18 +45,29 @@ vue3源码
 
 模板
 
-- https://github.com/GeekQiaQia/vue3.0-template-admin
+- https://github.com/kailong321200875/vue-element-plus-admin
 - vite：https://github.com/jeddygong/vite-templates
 
 #### nuxt
 
 
 
+#### uni-app
+
+：暂时不选，因为我的关注点变多了，学习成本变高了
+
+- 商城
+  - https://gitee.com/sheepjs/shopro-uniapp
+  - https://www.bilibili.com/video/BV1Zg411d7Jo
+  - https://www.bilibili.com/video/BV1ts4y1B7rp
+- unicloud：https://www.bilibili.com/video/BV1PP411E7qG
+
+
+
 
 ## react
 
-- awesome-react：https://github.com/enaqx/awesome-react
-- 入门：https://juejin.cn/post/7108555432997683237
+：https://github.com/enaqx/awesome-react
 
 后台系统
 
@@ -78,9 +88,28 @@ vue3源码
 
 
 
+#### taro
+
+- 网易云小程序：https://github.com/lsqy/taro-music
+
+
+
 ## 源码
 
 指南：https://juejin.cn/column/7137123916396363783
+
+
+
+## mini program
+
+：主要指微信小程序
+
+- 入门
+  - https://www.bilibili.com/video/BV19G4y1K74d
+  - https://gitee.com/qingnian8/weixinNative
+
+- 商城
+  - https://github.com/Tencent/tdesign-miniprogram-starter-retail
 
 
 

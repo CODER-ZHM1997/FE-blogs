@@ -33,17 +33,6 @@
 
 
 
-## websocket
-
-：为了浏览器、服务器能够全双工通信
-
-关注点
-
-- 建立连接
-- 客户端通信
-
-websocket连接不会自动断开
-
 
 
 ## Web API
@@ -97,3 +86,129 @@ web api？
 
 - 通常是dom更新在前：比如对dom节点的curd，dom更新是js操作
 - 渲染在后：将多个dom更新合并在一起，一次性渲染
+
+arraybuffer、blob（重点）、buffer、base64、file对象的区别？还有他们之间的转换操作
+
+- buffer是node环境的
+- base64可以与很多文件、图片互转
+
+转换操作
+
+- 
+
+normalize（标准化）一个对象有啥好处？
+
+- 能够保证数据完整
+- 生成一个新的对象
+
+innerHTML、innnerText、textContent
+
+- innerHTML会把子节点渲染为标签
+- innnerText则是会考虑空格、样式之类的
+- textContent则是全部渲染为文本，不考虑样式
+
+后端可以重定向到另一个前端页面吗？
+
+- 
+
+**跨页面通信**
+
+：能否跨域
+
+方案
+
+- 同源
+
+  - cookie
+
+  - localstorage
+
+- 非同源
+
+  - websocket
+  - postmessage
+  - message channel+postmessage
+
+声明与表达式的区别
+
+- 声明主要是用于声明变量、函数、类
+  - 声明不产生值
+- 表达式：可以作为更大表达式的一部分
+  - 产生值
+
+不同上下文是指不同的运行环境
+
+- 比如不同的窗口，不同的web worker、不同的service worker
+
+web worker、service worker
+
+- service worker是升级版
+
+循环
+
+- for in、for of里await才会阻塞执行
+- forEach、map则是不会阻塞循环的执行
+
+data url与object url有啥区别？
+
+- 
+
+为啥img的src不能直接指定为file对象，而是要通过fileReader来读取，然后
+
+为啥访问有些链接会变成预览，而有些则是变成下载？取决于这两个
+
+- content-type：如果设置为图片类型的MIME类型，浏览器会尝试在线预览
+- content-disposition
+  - inline：也会尝试预览
+  - attachment：则是下载
+
+js的null与undefined有啥区别？
+
+- 相同点：都是表示变量值为空
+- 不同点：null是手动指定的，是意料之中的，而undefined则是意料之外的
+
+
+
+**高阶函数**
+
+定义：满足以下条件之一
+
+- 接收函数作为参数
+- 返回函数
+
+使用场景
+
+- 用于封装一些常见操作，比如map、filter、reduce
+- 封装一个已有函数，返回一个新函数，比如withLogging
+
+
+
+**箭头函数**
+
+使用场景
+
+- 不用绑定this，它没有自己的this，他会继承外层this
+- 简化函数
+
+不适用场景
+
+- 有动态this的情况
+
+
+
+**纯函数**
+
+：
+
+- 相同的输入会有相同的输出
+- 不会改变外部环境的状态
+
+使用场景
+
+- 函数式组件：尽量改成纯函数组件
+- reducer：
+- 高阶组件
+
+location.href与pushState的区别？
+
+- 

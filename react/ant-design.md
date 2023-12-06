@@ -276,3 +276,6 @@ ant修改默认样式
 
 - 通过在类外层套一个:global{}即可
 
+为啥会有嵌套组件的设计方案，比如Descriptions、Descriptions.Item
+
+- 

@@ -14,17 +14,11 @@
 
 ## 核心问题
 
-linux有几个类型？
-
-- debian
-  - ubuntu
-- rehat
-  - centos
-
 #### 核心模块
 
 - 开机、关机、重启
-- 用户管理、登录/注销
+- 用户管理
+- 登录/注销
 - 文件、目录操作
   - crud操作
   - 路劲切换
@@ -101,6 +95,13 @@ linux有几个类型？
 
 
 ## 问题
+
+linux有几个类型？
+
+- debian
+  - ubuntu
+- rehat
+  - centos
 
  *sudo全称*“super user do” 
 

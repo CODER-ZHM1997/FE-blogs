@@ -16,6 +16,7 @@
   - https://blog.csdn.net/meimeib/article/details/121969219
 - 模块系统
   - https://juejin.cn/post/6935973925004247077
+- registry的设置与还原：https://juejin.cn/post/7054747440032776199
 
 
 关键名称
@@ -128,3 +129,7 @@ umd是cjs和amd的组合
 依赖分几种？
 
 - 
+
+查看包的tag
+
+- npm dist-tag vue
