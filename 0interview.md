@@ -9,8 +9,16 @@
   - https://www.nowcoder.com/interview/ai/index?jobId=11226&query=
 - vue2升级到3
   - [非兼容性改变 | Vue 3 迁移指南 (vuejs.org)](https://v3-migration.vuejs.org/zh/breaking-changes/)
-- 流程设计器
+- 表单设计器
+  - ali的render：https://xrender.fun/form-render
   - [简介 (ailicloud.com)](https://doc.aibpm.ailicloud.com/guide/flow/)
+- 流程设计器
+  - https://www.bilibili.com/video/BV18D4y1C7qE
+  - flowable
+  - activiti
+  - [wflow (willianfu.top)](http://wflow.willianfu.top/docs/dev-pro/project.html)
+
+- 
 
 
 
@@ -142,6 +150,26 @@
 
 - 
 
+computed实现原理
+
+- 依赖收集
+- 缓存
+  - 只有依赖的数据发生改变时，数据才会更新
+
+
+
+watch实现原理
+
+- 依赖收集
+- 观察者模式
+  - 数据变化，会通知所有的观察者
+
+
+
+依赖收集做了什么事？
+
+- 
+
 
 
 ## react
@@ -213,20 +241,19 @@ mvc
 ## 项目难点？
 
 - 微前端
-
 - 表单设计器
-- 在线文档
-- 在线白板
 - 流程设计器
 - ui组件库
 - 组件封装
+- 在线文档
+- 在线白板
 - vue3源码、element-plus的源码解读
-
 - vue2升级到vue3，项目升级
 - 数据可视化
   - echart、threejs
 - 社区贡献
 - 服务端渲染
+- ci、cd工具
 
 
 

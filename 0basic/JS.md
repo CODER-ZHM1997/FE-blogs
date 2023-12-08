@@ -212,3 +212,11 @@ js的null与undefined有啥区别？
 location.href与pushState的区别？
 
 - 
+
+
+
+## proxy
+
+receiver指向的是代理对象
+
+- 一定要要，不然会递归
