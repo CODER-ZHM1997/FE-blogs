@@ -40,6 +40,50 @@
 
 
 
+## 正则
+
+教程
+
+- https://github.com/pingan8787/Leo-JavaScript/tree/master/Cute-JavaScript/Cute-Regular
+- https://juejin.cn/post/6844904021325512717
+- 在线正则：https://regex101.com/
+  - 可以马上看到匹配的结果
+
+常见的校验类型
+
+- 电话
+- 邮箱
+- 密码
+
+
+
+## canvas
+
+关注点
+
+- 绘制形状
+- 绘制文字
+- 合成
+- 裁剪
+- 动画
+
+
+
+## debug
+
+
+
+## coder review
+
+：简称cr
+
+教程
+
+- https://juejin.cn/post/7052570403029385253
+- https://juejin.cn/post/7007026987227152414
+
+
+
 ## 问题
 
 web api？
