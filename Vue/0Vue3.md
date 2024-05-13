@@ -297,6 +297,14 @@ tsx中不能使用setup语法糖了
 
 
 
+## vue-router
+
+
+
+## pinia
+
+
+
 
 
 ## 问题

@@ -39,7 +39,6 @@ nodejs是js的运行时环境
 - url、path、os
 - http
   - 事件、方法、客户端&服务端
-
 - buffer
 - stream
   - 流类型、流事件、管道流、数据处理（比如解析、转换、压缩）、错误处理、应用场景（文件处理、网络通信、图像&视频&音频处理）
@@ -49,16 +48,25 @@ nodejs是js的运行时环境
 - process & thread
   - process：创建&销毁进程、状态、事件、方法、通信、错误处理
   - thread：
-
 - cluster
 
-- 
 
-## NVM
+
+## nvm
 
 你要去nvm-windows下载，不要跑错地方了
 
 - [Releases · coreybutler/nvm-windows (github.com)](https://github.com/coreybutler/nvm-windows/releases)
+
+
+
+## npm
+
+关闭https验证
+
+指定新的源
+
+
 
 
 
