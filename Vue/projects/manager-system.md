@@ -1,13 +1,10 @@
 后台管理系统：慕课网的
 
-计划
-
-- 31日：看完到第8章
-- 1日：看完到第12章
-
 教程
 
 - token策略：https://juejin.cn/post/6854573219119104014
+
+
 
 ## 问题
 
@@ -30,7 +27,9 @@ eslint、prettier库与vscode[对应插件的关系](https://juejin.cn/post/6990
 
 jsconfig.js与babel.config.js有啥用？
 
-#### 登录、登出功能
+
+
+## 登录、登出功能
 
 ：涉及的点其实还是很多的
 
@@ -46,7 +45,8 @@ jsconfig.js与babel.config.js有啥用？
 验证（年龄、数字是否符合规范、字符长度、）
 
 - 需要写required为true，表示必填
-- validator为一个函数，接收的参数依次为rule、value、callback
+
+  
 
 **验证码**
 
@@ -54,13 +54,9 @@ jsconfig.js与babel.config.js有啥用？
 
 需求
 
-- 随机4位的数字、字符串、字体随机大小、背景色
-- 旋转
-- 生成5条干扰线、40个随机点
-
 实现
 
-- 需要用到随机的函数，用来生成随机的颜色、随机的某个字符、大小、偏移量、旋转角度如Math.random()*(max-min)+min
+
 
 **引入svg，编写svg-icon组件**
 
@@ -78,11 +74,15 @@ jsconfig.js与babel.config.js有啥用？
 - 批量引入svg组件，用webpack的require.context函数
 - 全局注册icon组件
 
-**密码传输加密**
+
+
+## **密码传输加密**
 
 ：一般可用md5库进行加密
 
-**LocalStorage的封装**
+
+
+## **LocalStorage的封装**
 
 ：对localStorage的简单封装，有get、set、remove、removeAllItem
 
@@ -98,7 +98,9 @@ jsconfig.js与babel.config.js有啥用？
 - 定义动作（里面调用方法），可能是放在vuex的action中
 - 触发动作（主动触发、客户触发）
 
-**退出登录**
+
+
+## **退出登录**
 
 需求：移除用户在浏览器的信息（如token、userInfo）
 
@@ -117,7 +119,9 @@ jsconfig.js与babel.config.js有啥用？
 
 用refresh_token去获取新的access_token，refresh_token有效时间比较长，比如一个月，而access_token则是2h左右，如果refresh_token也过期了，那么用户只能重新登录了
 
-#### 动态菜单
+
+
+## 动态菜单
 
 需求：菜单树渲染、icon展示、某个菜单是否显示、可点击，外链、点击刷新
 
@@ -126,7 +130,9 @@ jsconfig.js与babel.config.js有啥用？
 - 获取当前用户的路由表
 - el-menu里面套用SideItem判断是否有children，有则用子菜单展示（即调用自己SideItem），否则用el-menu-item
 
-#### 面包屑
+
+
+## 面包屑
 
 ：展示当前页面的路径，而且可以控制
 
@@ -134,7 +140,9 @@ jsconfig.js与babel.config.js有啥用？
 
 - 可以通过watch路由来实现，然后获取$route.matched得到匹配的路由
 
-#### [国际化](https://juejin.cn/post/7082730122809180174#heading-5)
+
+
+## [国际化](https://juejin.cn/post/7082730122809180174#heading-5)
 
 需求
 
@@ -149,7 +157,7 @@ jsconfig.js与babel.config.js有啥用？
 
 
 
-#### 换肤
+## 换肤
 
 教程：https://juejin.cn/post/7028395505075879967#heading-3
 
@@ -161,5 +169,6 @@ element-plus换肤：
 
 使用van-config-provider组件，配置它的属性即可
 
-#### 模糊搜索
 
+
+## 搜索框

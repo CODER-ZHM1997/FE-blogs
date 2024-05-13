@@ -2,48 +2,31 @@
 
 教程
 
-- 合并行或列：<https://juejin.cn/post/6844904046717845517>
-- xlsx：<https://docs.sheetjs.com/docs/getting-started/example#run-the-demo-locally>
-- 集成百度地图
-  - demo：<https://lbsyun.baidu.com/index.php?title=open/jsdemo>
-  - vue3搭配的框架：<https://yue1123.github.io/vue3-baidu-map-gl/zh-CN/guide/quick-start>
-- 富文本编辑器
-  - <https://juejin.cn/post/7201883287937990712>
-  - 推荐：wangEditor、tinymce
-  - wangEditor：<https://www.wangeditor.com/v5/getting-started.html>
-- 参数校验规则：<https://github.com/node-modules/parameter>
-- 接口命名：<https://juejin.cn/post/6844903949095403528>
-- 文件上传
-  - <https://juejin.cn/post/6844904103961690126>
-  - <https://juejin.cn/post/6844903991806197767>
-- 文件下载
-  - a标签、ajax：<https://blog.csdn.net/cdy_1/article/details/124983216>
-- 异常处理：<https://juejin.cn/post/6993559990610952199#heading-2>
-- restful的规范：
-  - <https://www.cnblogs.com/chenqf/p/6386163.html>
-- egg-bin与egg-scripts区别
-  - <https://zhuanlan.zhihu.com/p/225717750?utm_id=0>
-- 视频上传
-  - <https://juejin.cn/post/7018760355056713742>
-- 接口访问控制
-  - <https://juejin.cn/post/6972790316332122120>
-  - <https://juejin.cn/post/6844903925942845447>
-- jwt
-  - <https://javaguide.cn/system-design/security/jwt-intro.html#signature>
-  - <https://juejin.cn/post/7110044736848658445>
-  - token被盗的问题：<https://www.cnblogs.com/goloving/p/15143919.html>
-- 密码加密
-  - <https://juejin.cn/post/7011306453373812744>
-  - 加盐：<https://juejin.cn/post/6844904005739495432?searchId=20230728110121FF1B61258EB8AF917CB5>
-- 接口设计规范
-  - <https://juejin.cn/post/7223046446940618808>
-- 集群与分布式：<https://juejin.cn/post/6844903904971325454>
-- 日志模块如何设计？
-  - <https://juejin.cn/post/6943562255594160164>
-- egg有啥缺点？
-  - <https://www.zhihu.com/question/448856926>
 
-# 弹窗 el-dialog
+
+## token无感刷新
+
+
+
+
+
+## 权限菜单
+
+
+
+## 访问控制
+
+配置数据如何抽离？
+
+- 哪些要抽？
+- 抽到那里去？
+  - 一般是新建一个xxx.data.js文件，或者是放到config.js里面去
+
+
+
+## 弹窗
+
+：el-dialog
 
 **表单数据清除**
 
@@ -64,9 +47,86 @@ resetFields不生效问题
 
 - 只能够重置掉被prop标记的属性，未标记的属性不会重置掉
 
-# 文件下载
 
-# 拷贝树
+
+## 描述
+
+：el-description
+
+如何控制一行有多少个item？
+：通过columns
+
+如何控制某个item所占据的列？
+：通过span，而且还要关注一下它上一个item的span，因为span是相对于上一个item的
+
+怎样去控制所占据的行？
+：一般不用控制
+
+
+
+## 树形控件
+
+：el-tree
+
+添加排序功能
+：让后端返回倒叙的数组即可，构造树的时候，sort大的先塞进去，这样就是倒叙了
+
+设置当前选中节点
+：
+
+点击节点选中跟通过复选框选中有啥区别？
+：点击节点选中，只能选中一个，而复选框可以选中多个，结果是一样的都是选中了
+
+
+
+## 级联选择器
+
+：el-cascade
+
+级联与树有啥区别？
+
+cascade需要考虑key吗？el-tree是需要考虑key的
+：不需要，因为他是通过value来匹配的
+
+
+
+## 上传
+
+：el-upload
+
+需求
+
+- 同时多图上传
+- 支持回显
+- 支持图片预览与删除
+
+查看详情的时候，图片回显是怎样实现的？
+
+- 用el-upload
+  - 通过file-list，让他自己维护，然后提交的时候获取一下对应的id即可，不要自己再维护一个变量
+- 用el-image
+
+交互
+
+- 看下带上传的表单应该如何交互？
+  - 是每次自动上传还是手动上传？
+- 要看下他编辑状态下，取消上传的时候，是不是会把图片删除掉
+  - 我目前的是不会的
+- 还有一种情况，新增记录的时候做上传，怎么主表id还没生成，要怎么插入呢？
+
+问题
+
+- 数据维护的问题，el-upload他其实是自己维护file-list的
+
+不要用v-model，直接用modelList即可
+
+
+
+## 文件下载
+
+
+
+## 拷贝树
 
 数据库id、pid的记录构成的树，如何拷贝这棵树？
 
@@ -74,7 +134,11 @@ resetFields不生效问题
   - 递归的拷贝
 - 最后执行insertMany即可
 
-# 文件上传
+
+
+## 文件上传
+
+：el-upload
 
 大文件上传
 
@@ -116,7 +180,9 @@ resetFields不生效问题
 下拉框要不要默认选中一个？
 ：不需要
 
-# 图片上传
+
+
+## 图片上传
 
 需求
 
@@ -124,22 +190,13 @@ resetFields不生效问题
 - 支持多次上传图片
 - 支持回显
 
-# 视频上传
 
-# vuex
 
-- 不拆：聚合到一个变量，方便赋值和取值
-- 拆：访问的时候，少一层嵌套
 
-下拉选项统一用options来存储，我不管你有哪些option，都放到这里
-如：const options=reactive({})
 
-对于日期范围的字段，比如time_period，但是表里面是需要用到start_time和end_time的，那么这个字段就需要拆分成两个字段，一个是start_time，一个是end_time
 
-- time_period就用计算属性来搞，设置一下get和set即可
-- 表单清除的时候手动清除一下拿两个字段即可
 
-# 在线表格
+## 在线表格
 
 采用luckysheet，之前关键字搜索搜错了
 
@@ -182,13 +239,17 @@ resetFields不生效问题
 - 删除分类：需要删除所有分类为这个的所有器件记录
 - 修改分类：也需要修改所有分类为这个的器件记录
 
-# 跨域问题
+
+
+## 跨域问题
 
 有些标签不会受到跨域的影响，比如img、link、script、iframe等
 
 - 但是a标签是会受到跨域的影响的
 
-# excel
+
+
+## excel
 
 可编辑实现方案
 
@@ -224,7 +285,9 @@ select
 - 导出全部记录（不分页）
 - 导出当前页的记录
 
-# 代码编辑器
+
+
+## 代码编辑器
 
 ：在线(web)代码编辑器 monaco-editor
 
@@ -271,25 +334,29 @@ el-form 为啥要写那么多属性，prop我觉得没必要的，model也没必
 - 存数据
 - 取数据
 
-# 访问控制
 
-配置数据如何抽离？
 
-- 哪些要抽？
-- 抽到那里去？
-  - 一般是新建一个xxx.data.js文件，或者是放到config.js里面去
+- - 
 
-# 表单校验
+
+
+## 表单校验
 
 为啥选了内容还是校验不通过？
 
-# 草稿功能
 
-# 代码编辑器
+
+## 草稿功能
+
+
+
+## 代码编辑器
 
 monaco-editor 代码编辑器
 
-# 富文本
+
+
+## 富文本
 
 采用wangEditor
 
@@ -299,7 +366,7 @@ monaco-editor 代码编辑器
 预览或打印时样式丢失问题，比如表格
 ：可以自定义一些样式，然后导入即可，即可生效
 
-## wangEditor
+### wangEditor
 
 报错
 
@@ -313,11 +380,23 @@ monaco-editor 代码编辑器
 
 能够引入轮播图吗？
 
-# 数据字典
 
-是否全部开放？
 
-# 集成百度地图
+## 数据字典
+
+
+
+
+
+
+
+## 在线客服
+
+：其实放一张企业微信的二维码即可，不要自己去做通信功能，成本过高
+
+
+
+## 集成百度地图
 
 集成流程
 
@@ -340,68 +419,22 @@ GL版与非GL版的区别
 - 地图数据
   - 地址解析、逆解析
 
-# el-description
 
-如何控制一行有多少个item？
-：通过columns
 
-如何控制某个item所占据的列？
-：通过span，而且还要关注一下它上一个item的span，因为span是相对于上一个item的
-
-怎样去控制所占据的行？
-：一般不用控制
-
-# el-tree
-
-添加排序功能
-：让后端返回倒叙的数组即可，构造树的时候，sort大的先塞进去，这样就是倒叙了
-
-设置当前选中节点
-：
-
-点击节点选中跟通过复选框选中有啥区别？
-：点击节点选中，只能选中一个，而复选框可以选中多个，结果是一样的都是选中了
-
-# el-cascade
-
-级联与树有啥区别？
-
-cascade需要考虑key吗？el-tree是需要考虑key的
-：不需要，因为他是通过value来匹配的
-
-# el-upload
-
-需求
-
-- 同时多图上传
-- 支持回显
-- 支持图片预览与删除
-
-查看详情的时候，图片回显是怎样实现的？
-
-- 用el-upload
-  - 通过file-list，让他自己维护，然后提交的时候获取一下对应的id即可，不要自己再维护一个变量
-- 用el-image
-
-交互
-
-- 看下带上传的表单应该如何交互？
-  - 是每次自动上传还是手动上传？
-- 要看下他编辑状态下，取消上传的时候，是不是会把图片删除掉
-  - 我目前的是不会的
-- 还有一种情况，新增记录的时候做上传，怎么主表id还没生成，要怎么插入呢？
-
-问题
-
-- 数据维护的问题，el-upload他其实是自己维护file-list的
-
-不要用v-model，直接用modelList即可
-
-# 在线客服
-
-# 静态网页
+## 静态网页
 
 可以引入蓝狐，可以支持根据ui设计自动生成静态代码
 
 怎样批量的隐藏一棵树，或者是某个页节点？
 ：可以在构造树的时候，不塞入节点即可，
+
+
+
+## axios封装
+
+
+
+## 组件封装
+
+只做简单组件封装，集成度比较低的那种，复杂的没意义，一来你封装的不一定好，二来被人不一定会用，或者是使用成本过高
+

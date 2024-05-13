@@ -1,7 +1,0 @@
-描述：go-view是低代码数据大屏
-
-教程
-
-- 低代码项目：https://juejin.cn/post/7164694758588153863
-- 官方：https://www.mtruning.club/guide/start/
-

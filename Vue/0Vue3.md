@@ -2,6 +2,9 @@
 
 - 异常处理：https://juejin.cn/post/6932620551827488775?searchId=202311171734478FA08540E39199F5004F
 - vue中使用jsx：https://juejin.cn/post/7272308621710213161
+- 面试题
+  - [【🐰中小厂前端面经】三年工作经验求职时会被问些什么? - 掘金 (juejin.cn)](https://juejin.cn/post/7266721485811925033#heading-60)
+
 
 
 
@@ -10,241 +13,49 @@
 #### 关注点
 
 - vue3
-- vue3练习的demo应该如何搭建？避免重复学习
+- 借助官方的demo：vue3练习的demo应该如何搭建？避免重复学习
   - 官网其实已经很详细了
-- vue生态：vue-router、pinia
-- vue3的写法（关注点集中）
-- hook
-  - hook的使用场景，与不用hook对比
-  - hook的结构：命名、参数、返回值
-  - 模仿一下优秀的hook库，比如ahooks
+- 路由vue-router
+- 状态管理pinia
+- 构建工具vite
+- hook风格
 - jsx
+- 调试能力
+- 测试能力：可选
+- 兼容问题
 
 
 
-构建项目
 
-如何把多个文件引入到一个文件？
 
-```js
-export {default as AppMain} from './AppMain'
-export { default as Sidebar } from './Sidebar'
-```
+#### vue插件
 
+- [vuejs/awesome-vue: 🎉 A curated list of awesome things related to Vue.js (github.com)](https://github.com/vuejs/awesome-vue)
 
 
-[mvc、mvvm、mvp的区别？](https://juejin.cn/post/6919373017218809864#heading-3)
 
-- mvc是model手动完成与view的同步，model与view强耦合
-- mvvm则是实现了model和view的自动同步
+#### 项目
 
-怎么算异步监听？
+除了管理系统，还有啥好做的？
 
-- 
+教程
 
-created与mounted上发起请求，有什么区别？为什么要这么做？
+- [bradtraversy/50projects50days: 50+ mini web projects using HTML, CSS & JS (github.com)](https://github.com/bradtraversy/50projects50days?tab=readme-ov-file)
+- 管理系统
+  - geeker：[路由、菜单 | Geeker-Admin (spicyboy.cn)](https://docs.spicyboy.cn/guide/router.html)
+  - vben：[常见问题 | Vben Admin (vvbin.cn)](https://doc.vvbin.cn/other/faq.html#接口请求问题)
 
-- 
 
-[vue常见的错误是什么？vue错误处理怎么做？](https://juejin.cn/post/6989167699888701476#heading-2)
 
-- 通过Vue.config.errorHandler
 
-防抖节流的运用场景？
+类型
 
-- 防抖
-  - 用于关键字搜索，用户不断输入，通过防抖读取最后输入的值
-  - 窗口大小调整的时候，只对最后一个resize进行响应
-- 节流
-  - 上拉加载更多的时候，通过节流降低请求频率
-
-命令行接口包括脚手架
-
-[组合api？](https://blog.csdn.net/u011068996/article/details/111337403)
-
-- 原理：基于函数复用逻辑产生
-- 使用场景：业务变复杂时，组件越来越大，
-- 优点：可读性和可维护性变差，而组合api能够将组件进行拆分，将相关的代码放在一起，保证了可读性和可维护性，而且有良好的复用性
-- [教程](https://zhuanlan.zhihu.com/p/146097763)
-
-一般来说怎么算改变？如stu={name:'zeng'}
-
-- 修改name不算改变，而stu={name:"ZENG"}，这种才算改变
-
-
-
-解包？
-
-- 是还原成原始对象吗？
-
-优先级是怎样算得？
-
-- 根据种类来划分优先级，比如某些类别的优先级就是高
-- 或者是按照书写顺序来决定的，写在后面的优先级高
-
-[通过代理对象Proxy操作有什么好处？](https://juejin.cn/post/7006518993385160711#heading-16)
-
-- 
-
-js的参数传递还是值传递，
-
-- 引用传递就是指传递地址，所以js是引用传递
-
-[js中堆和栈的区别](https://blog.csdn.net/weixin_44468506/article/details/100785756)
-
-- 基本类型的存在栈里，对象类型的保存在堆里
-
-所谓的逻辑关注点就是以数据为单位的，比如仓库列表
-
-响应式的原理是什么？他凭什么能更新显示？
-
-- 
-
-为什么slots和attrs都是非响应式的？
-
-- 
-
-[有状态的对象](https://blog.csdn.net/qq_40635837/article/details/88089548)
-
-- 
-
-[副作用？](https://www.zhihu.com/question/467720551)
-
-- 就是tmd绑定的回调函数啊，
-
-原始对象是不具备响应性的
-
-- 如rawObj={name:'zeng'}，你改动他是不会出现响应性的
-
-Ref对象指什么？
-
-- 
-
-哪些api是不会与源对象发生绑定的，而哪些又会？
-
-- 
-
-什么是代理对象？好处是什么？
-
-- 
-
-
-
-怎样算响应式？如何实现响应式？
-
-- 我觉得响应式就是数据与视图能保持同步
-
-哪些能保持连接？哪些不能保持连接？
-
-- 
-
-什么是普通对象？
-
-- 
-
-什么是虚拟dom？
-
-混入？
-
-混入就是我提前写好方法和数据，然后在组件创建的时候注册一下，就可以复用（或者叫分发）这些数据和方法了，
-
-
-
-filter与computed区别？
-
-
-
-v-bind数据单向绑定，能绑定响应式数据，
-
-- 绑定动态属性和动态绑定属性不同
-  - 绑定动态属性：基本的用直接写值，复杂的则是直接用调用方法
-  - 动态绑定属性：v-bind=“{id:'red'}”如id为red、green
-
-v-on
-
-：用于绑定事件监听器
-
-- 绑定监听器
-- 动态绑定监听器，通过绑定一个对象的方式实现
-
-如何界定子组件和父组件？
-
-- 父组件是一个容器，里面都是由子组件构成，子组件一般是另一个文件
-
-从vue2迁移到3需要注意哪些事项？
-
-- 有些事通过命令就可以自动完成修改的
-- 有些是需要手动修改的
-
-组件的设计原则
-
-- 规范化，组件命名、参数命名需要通俗易懂，
-- 场景话，比如一个弹窗，根据场景封装成success、warning之类的
-- 一切可配置，如果有必要，组件里面用到中文标点符号还是英文的
-- 有详细的文档、变更历史能够知道这个组件是大致功能、新版本增加了什么功能
-- 可扩展性，可能前期不需要这个功能，可能后期要，你要预留位置什么的
-- 缺省，要提供默认值
-- 容错，不能说我传错一个参数你就原地爆炸
-- 颗粒话，要把组件拆分出来
-
-[mvc、mvp、mvvm模型的区别？](https://draveness.me/mvx/)
-
-- mvvm
-  - model中保存着数据和操作
-  - view只负责渲染
-  - viewmodel则是完成数据的绑定和事件的监听
-  - 优点
-    - 如果不用mvvm则是要通过操作原始dom的方式来完成数据的获取和保存，现在则是需要声明式的绑定
-
-mvvm中单条双向箭头跟两条单向箭头的区别？
-
-- 前者是双向绑定，
-- 后者是update和notify
-
-哪些东西要在beforeDestory前销毁
-
-为什么有些插件不支持vue3？是因为vue2的某些属性和方法vue3用不了了了吗？所以使用这些插件回报错？
-
-- 
-
-有些方法不会修改原数组，有些会，我怎么判断会不会啊？
-
-为什么要有key？
-
-- 牵引出vnode（本质上也是一个对象），diff算法，
-- diff算法就是找不同，有key和没key的操作是不同的嘛
-  - 没key3步，有key5步
-
-computed与方法的区别？
-
-- computed是基于缓存的，只要依赖的数据没变，那么就不会触发
-- 而方法则是主动调用的，没有缓存
-
-watch的注意实现
-
-- 可以是某个对象，也可以是对象的某个属性
-- 深度
-- 是否立即执行一下
-
-
-
-指令与函数的区别？
-
-- 只是形式不同？指令的本质还是函数吧
-
-v-model是值绑定
-
-- 指令是特殊的属性
-- 在select中就是通过value属性
-- v-model作用的对象，除了表单还可以作用于组件吗？
-
-事件修饰符（加在事件后面）
-
-- 可以影响事件，比如阻止事件的默认行为，阻止冒泡，
-
-vue-cli还是基于webpack的
-
-[proxy与Object.defineProperty](https://juejin.cn/post/6844903601416978439)
+- 数据可视化项目
+- 在线教育平台
+  - 有些有复杂交互的项目
+- 游戏网站
+- 地图应用
+- 实时通信应用
 
 
 
@@ -258,14 +69,7 @@ vue-cli还是基于webpack的
 
 - https://juejin.cn/post/7093880734246502414#comment
 
-了解生命周期有啥用，不都是只使用onMounted吗？
 
-- created中可以访问数据了，但是不能访问dom，因为还没挂载上去，直接用setup能够代替create钩子
-- mounted的时候则是可以都可以访问了
-
-变量和函数应该按是否实现的是同一个功能来决定是否在同一个分组
-
-- 比如count和add、sub都在一组
 
 
 
@@ -302,6 +106,8 @@ ref的对象元素某个元素或者是子组件实例
 
 ：雕虫小技，没那么重要，动画则是通过animate实现
 
+
+
 #### 混入
 
 ：mixin使得我们能够为vue组件编写可插拔、可重用的功能
@@ -311,6 +117,8 @@ ref的对象元素某个元素或者是子组件实例
 - 插上即实现功能，而移除也不会影响系统正常运行
 
 则是在组件自身钩子调用前调用
+
+
 
 #### 指令
 
@@ -450,11 +258,15 @@ attrs则是非响应性对象
 
 ：封装（复用）逻辑
 
+怎样才能是保证我的写法是hook风格的？
+
 
 
 
 
 ## JSX
+
+：没必要一定要往jsx靠，vue有自己的风格，就是模板
 
 - https://juejin.cn/post/6846687590704381959
 - 语法：https://juejin.cn/post/6996214286292877326
@@ -476,6 +288,12 @@ tsx中不能使用setup语法糖了
 什么时候要用括号，我老是花括号用错地方，
 
 - 有表达式的地方就要用花括号，而且是外层用，里层就不用了，比如{arr.length&&console.log('xxx')}
+
+
+
+## 兼容
+
+其实这个问题主要靠积累，让测试去验证，出了问题再说
 
 
 
@@ -534,3 +352,4 @@ tsx中不能使用setup语法糖了
 
 vue中使用jsx，还需要用render函数吗？
 
+legacy api：遗留api

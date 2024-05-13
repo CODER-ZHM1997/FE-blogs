@@ -7,6 +7,7 @@
 - 指南：https://github.com/csxiaoyaojianxian/JavaScriptStudy/tree/master/01-JS%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%AF%B9%E8%B1%A1
 - es指南：https://es6.ruanyifeng.com/#README
   - 能读懂这里面的，就能够回答90%的问题了
+- [在 web 应用程序中使用文件 - Web API | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#示例：使用对象_url_来显示图片)
 
 
 
@@ -215,8 +216,11 @@ location.href与pushState的区别？
 
 
 
-## proxy
+为啥要有blob？
 
-receiver指向的是代理对象
+- 
 
-- 一定要要，不然会递归
+浏览器获取的文件类型的资源，比如图片，通常是通过流的方式来传输，即一点一点传输
+
+- 所以叫流对象
+

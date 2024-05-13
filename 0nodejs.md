@@ -54,6 +54,12 @@ nodejs是js的运行时环境
 
 - 
 
+## NVM
+
+你要去nvm-windows下载，不要跑错地方了
+
+- [Releases · coreybutler/nvm-windows (github.com)](https://github.com/coreybutler/nvm-windows/releases)
+
 
 
 ## basic 基础

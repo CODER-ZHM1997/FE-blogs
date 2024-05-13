@@ -29,46 +29,6 @@
 
 
 
-## github
-
-#### 搜索技巧
-
-：https://juejin.cn/post/6891056415440535565#heading-13
-
-- 可以根据关键字，比如egg-demo、egg-example、awesome-egg
-
-- topic大法：如topic:egg，还可以带上admin
-
-  - 因为你大多数写的都是admin项目
-
-  - 如果是多个关键字，则是要用 OR 来展示
-
-    - vue react in:topic 是必须要同时包含
-    - vue OR  react in:topic 则是二选一
-
-
-搜管理系统类的
-
-- 直接多个关键字去搜，就能找到：nest admin
-
-#### 避坑
-
-- 学会看活跃分支：有些分支是不活跃的，就会有很多坑，你只需要关注活跃的分支即可（1年不活跃的基本就是死了）
-  - 比如ant-design-pro的
-
-
-
-#### 快捷键
-
-- ?：查看快捷键大全
-
-
-
-#### github.dev
-
-：在线编辑器
-
-
 
 ## git clone
 
@@ -159,11 +119,12 @@ mixed、soft、hard
 
 ## git checkout
 
-：主要是用于分支的切换
+：主要是用于分支的切换，虽然它也可以用来创建分支
 
 - 切换分支：git checkout <branch-name>
-- 创建并切换为远程分支缩写：git checkout <origin-branch-name>
-- 
+- 创建并切换为远程分支缩写：git checkout <branch-name> <remote_name>/<origin-branch-name>
+  - 直接git checkout <new-branch-name>，只会基于当前分支新建一个分支，这不是你想要的
+
 
 
 
@@ -246,14 +207,58 @@ mixed、soft、hard
 - 版本回退：回退到出问题前的版本，重新打包发布线上
 
   - git revert head~1
-
 - 问题修复：在hotfix分支上修复问题，并测试
-
 - 发布新版本：在master分支合并hotfix分支，并发布
 
   - git merge hotfix
 
-  
+
+
+
+## github
+
+#### 搜索技巧
+
+：https://juejin.cn/post/6891056415440535565#heading-13
+
+- 可以根据关键字，比如egg-demo、egg-example、awesome-egg
+
+- topic大法：如topic:egg，还可以带上admin
+
+  - 因为你大多数写的都是admin项目
+
+  - 如果是多个关键字，则是要用 OR 来展示
+
+    - vue react in:topic 是必须要同时包含
+    - vue OR  react in:topic 则是二选一
+
+
+搜管理系统类的
+
+- 直接多个关键字去搜，就能找到：nest admin
+
+#### 避坑
+
+- 学会看活跃分支：有些分支是不活跃的，就会有很多坑，你只需要关注活跃的分支即可（1年不活跃的基本就是死了）
+  - 比如ant-design-pro的
+
+
+
+#### 快捷键
+
+- ?：查看快捷键大全
+
+
+
+#### github.dev
+
+：在线编辑器
+
+
+
+
+
+
 
 ## 问题
 
