@@ -12,7 +12,7 @@
 - 宝塔账号密码找回：<https://www.mabiji.com/bt/wangjizhanghaomima.html>
 - curl：
 
-# 问题
+## 问题
 
 哪些东西是只能在服务器上，哪些又是只能在宝塔做的？
 开发 ip 访问
@@ -34,7 +34,20 @@
   - 这个到目录的映射是在宝塔上的 php 项目里面配置的
   - nginx 配置：则是可以跑到宝塔上的每个域名管理里面都有自己的 nginx 配置
 
-# gitea
+## baota
+
+ng配置
+
+- 目录：网站》配置文件，里面去配置
+
+添加域名解析
+
+- 先上云服务器，添加域名解析
+- 然后上宝塔，添加ng配置
+- 测试
+  - 自己上传一些文件，然后在线访问
+
+## gitea
 
 如何启动 gitea？
 
@@ -89,7 +102,7 @@ nginx 配置一下
 
 - 端口那里完成映射？
 
-# pm2
+## pm2
 
 启动一个服务
 
@@ -108,13 +121,13 @@ fork 模式与 cluster 模式的区别？
 - 防火墙问题：端口没有开放
 - 端口没有开放，之前服务用的是82，而不是3000
 
-# 迁移
+## 迁移
 
 - 检查的
 
 配置服务器的首页？
 
-# 域名解析
+## 域名解析
 
 server name可以是域名、也可以是ip
 
@@ -131,7 +144,7 @@ server name可以是域名、也可以是ip
 你不能直接在宝塔里面配置二级域名
 ：也是要通过在阿里云配置域名解析才行，不然会被拦截
 
-# 备案
+## 备案
 
 域名要走域名备案
 访问腾讯云资源又要走腾讯云备案
@@ -154,18 +167,18 @@ url访问端口跟实际端口可以不一致!!
       proxy_set_header Upgrade $http_upgrade;
       proxy_set_header Connection $connection_upgrade;
       proxy_http_version 1.1;
-      # proxy_hide_header Upgrade;
+      ## proxy_hide_header Upgrade;
       add_header X-Cache $upstream_cache_status;
     }
 ```
 
-# 部署
+## 部署
 
 跨服务器拉取git仓库代码
 
 - 可以通过gitea创建一个协作者账号，然后再服务器上配置这个协作者账号信息，就可以拉取了
 
-# 配置证书
+## 配置证书
 
 服务器一直在重启中，如何解决？
 
