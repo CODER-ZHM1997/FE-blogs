@@ -360,4 +360,5 @@ tsx中不能使用setup语法糖了
 
 vue中使用jsx，还需要用render函数吗？
 
-legacy api：遗留api
+legacy api：遗留api，也可以叫传统api
+

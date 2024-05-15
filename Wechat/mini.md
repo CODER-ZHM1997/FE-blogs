@@ -7,39 +7,143 @@
 教程
 
 - 入门：https://juejin.cn/post/6844903670589423623
-- 原生项目：https://zhuanlan.zhihu.com/p/463950919
-- 微信公众号开发：https://blog.csdn.net/woshisangsang/article/details/122669018
-- 微信支付接入：https://pay.weixin.qq.com/wiki/doc/apiv3/index.shtml
-- 云开发：https://developers.weixin.qq.com/community/develop/article/doc/00048243fc045020b609c372156813
+- [强烈推荐的微信小程序开发总结 - 掘金 (juejin.cn)](https://juejin.cn/post/6961317489225498631?searchId=2024051415031453497C767F2AF6038789#heading-3)
 - 如何挑选合适的小程序来开发？
   - 通过小程序的数据分析平台，比如阿拉丁，可以看到热门的小程序
-- 常见问题：
 
 
 
+## 关注点
 
-## 驱动问题
+- 架构
+- 开发工具
+- 页面布局
+- 数据交互
+- 生命周期
+- 组件
+- 性能优化
+- debug
 
-#### 核心模块
-
-- 开发流程
-- 开放能力
 - 打包
   - 分包
-- 发布流程：提交》审核》发布
-- 监控
-  - 线上定位错误
-- 云开发
+
+
+
+## 坑
+
+文档
+
+- 小程序的示例代码和文档对不上，比如头像昵称的获取
+  - 有些是示例代码版本落后，以文档为主吧
+
+是否收费
+
+- 它的api有些是收费的，比如获取手机号的api，你要搜一下关键字，如收费
+
+getUserInfo,getUserProfile接口已经报废了，要么不弹窗，要么返回无效数据
+
+- [小程序用户头像昵称获取规则调整公告 | 微信开放社区 (qq.com)](https://developers.weixin.qq.com/community/develop/doc/00022c683e8a80b29bed2142b56c01)
 
 
 
 
 
-## 基础
 
-Page生命周期：lsr，App的则是ls
 
-- 
+## 架构
+
+
+
+
+
+## 开发工具
+
+创建
+
+发布
+
+
+
+## 页面
+
+#### 布局
+
+
+
+#### 路由
+
+常用
+
+- wx.navigateTo：只有这个是保存的
+  - wx.navigateBack
+- wx.redirectTo
+- wx.switchTab
+
+
+
+**保存&重置页面数据**
+
+
+
+**页面之间通信**
+
+- 通过url传递
+  - 在onLoad回调中获取
+- 通过globaldata
+
+
+
+**数据绑定**
+
+- 加model前缀即可，如model:value
+
+
+
+#### 事件
+
+事件绑定，一般是通过bind或catch
+
+- 单击bind:tap
+- 长按bind:longpress
+
+
+
+target与currentTarget
+
+- target是触发事件的组件，一般用这个
+- currentTarget是绑定事件的组件
+
+
+
+
+
+
+
+#### 生命周期
+
+App的生命周期则是ls
+
+- onLaunch
+- onShow
+
+
+
+Page生命周期：lsr
+
+- onLoad/onUnload
+- onShow/onHide
+- onReady
+- 上拉加载更多：onReachBottom
+- 下拉刷新：onPullDownRefresh
+
+
+
+上滑，下滑就是对应你的手势
+
+- 上滑：之前的内容被滑上去了，但是你的视角是固定的看某个块位置的
+- 下滑：之前的内容被滑下去了
+
+
 
 组件生命周期：card
 
@@ -47,9 +151,62 @@ Page生命周期：lsr，App的则是ls
 
 
 
+## 数据交互
+
+常见操作
+
+- 发送请求
+- 解析响应
+- 
+
+
+
+## 组件
+
+：这里指内置组件
+
+常用组件
+
+- input
+- button
+- 
+- image
+
+
+
+
+
+## 自定义组件
+
+
+
+
+
+## API
+
+
+
+
+
+
+
+## 性能优化
+
+
+
+
+
+## debug
+
+
+
+
+
+
+
 ## 开放能力
 
-：就是小程序特供的一些能力，本质上是开放的接口
+：就是小程序特供的一些能力，本质上是开放的一些接口
 
 调用方式
 
@@ -60,23 +217,17 @@ Page生命周期：lsr，App的则是ls
 #### 授权
 
 - 发起授权请求：wx.authorize
-  - 如果授权被拒绝了，下次自己弹窗，引导用户开启授权，用到了getSetting，还有openSetting
+  - 如果授权请求被拒绝了，你需要引导用户开启授权，用到了getSetting，还有openSetting
+
+
 
 
 
 ## 云开发
 
-：是serverless的一种，是用来代替后端的
+：不推荐
 
-我要必有学习云开发吗？
-
-- 云开发是后端那块的，我目前没有必要学
-
-
-
-如何判断一个项目是云开发还是非云开发？
-
-：观察他的project.config.json文件，看有没有clound字段？
+[云开发涨价真的有这么夸张吗？ | 微信开放社区 (qq.com)](https://developers.weixin.qq.com/community/develop/doc/0000ae24364f905f023e73baf56400)
 
 
 
@@ -89,6 +240,40 @@ Page生命周期：lsr，App的则是ls
 - 某些配置改了，然后运行一次，可能不生效，要重启才能正确运行
 
 
+
+## 常见业务
+
+#### 用户登录
+
+：获取用户openid，unionid，session_key
+
+教程
+
+- [小程序的登录流程 - 掘金 (juejin.cn)](https://juejin.cn/post/7141839721809838094?searchId=202405141906316C3F776A92A75C2064CB)
+
+流程
+
+- 调用wx.login获取code
+- 后端通过code2session接口获取openid，unionid，session_key，生成jwt，返回给前端
+- 前端保存这个jwt即可
+
+
+
+#### 获取用户头像、昵称
+
+采用它的快速填写能力即可，通过button组件
+
+
+
+
+
+#### 分包问题
+
+教程：[基础能力 / 分包加载 / 使用分包 (qq.com)](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/basic.html)
+
+分包的原则是啥？如何避免错分？
+
+- 
 
 
 
@@ -103,12 +288,6 @@ Page生命周期：lsr，App的则是ls
 
 - 订阅号是比较基础的，有很多限制，不能提供交易服务
 - 服务号则是支持交易，
-
-微信为啥老是要采用换来换去的方法来获取东西？比如要用code》access_token，用access_token》用户信息
-
-- 主要是为了安全性，必须要用户授权，而且服务端只能拿到用户授权了的那部分信息
-
-开发流程
 
 重点是做一个完整的项目
 
@@ -133,23 +312,29 @@ app.json配置文件与project.config.json区别
 - 位图用像素的方式描述图像
 - 矢量图则是以数学公式的方式描述图像，比如线段、曲线
 
-session_key有啥用？
 
-- 主要是用于解密，比如wx.login拿到的code，这个code去换取session_key
 
 有些接口时需要授权后才能访问的
 
-access_token使用
 
-- 主要是后端在用，调用微信的接口时需要传参过去的
 
-session_key
+webview是啥？
 
-- 只能再服务端保存
+- 
 
-wx.login、wx.getUserProfile？
+tabbar页面是啥？
 
-- wx.login只能拿到基础信息，比如openid，session_key
-- wx.getUserProfile需要先调用wx.login，然后有需要时再调用它，能够获取更多信息，比如
-  - 会拿到明文+签名+密文，签名主要是为了验证数据的完整性，密文则是要用微信提供的解密算法去解，最终可以拿到unionid、性别、所属地区&国家
+- 带底部标签栏的页面，选项栏则是底部的一条
+- 通过app.json中tabBar属性指定
+
+为啥要关注access_token是否有效？
+
+- 一些敏感的接口会检验它的有效性
+- 获取：后端获取
+- 保存：后端保存
+- 前端都不用管，前端一般是获取一下code，然后拿code去换东西即可
+
+
+
+
 

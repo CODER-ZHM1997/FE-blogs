@@ -5,6 +5,9 @@
 - 官网：<https://echarts.apache.org/handbook/zh/concepts/axis>
 - echarts demo网站：<https://blog.csdn.net/qq_46034942/article/details/123660953>
 - 根据数组去生成一组echarts图例：https://www.cnblogs.com/ren17/p/12836005.html
+- 快速查找效果：[全网echarts案例资源大总结和echarts的高效使用技巧（细节版） - 掘金 (juejin.cn)](https://juejin.cn/post/7078834647005822983)
+
+
 
 # 驱动问题
 
@@ -38,6 +41,8 @@
 - 多看核心概念，xAxis、yAxis、series
 
 series，每个元素都对应一个序列，如果出现多个元素则是穿插其中的
+
+
 
 # 问题
 

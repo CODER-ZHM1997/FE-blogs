@@ -6,12 +6,14 @@
 
 教程
 
-- 入门：https://juejin.cn/post/7050304120082661407
+- 入门
+
+  - https://juejin.cn/post/7050304120082661407
+  - [Docker从入门到部署项目 - 掘金 (juejin.cn)](https://juejin.cn/post/7266721485812547625?searchId=20240513204052C646BBB88D0A330F8E0C#heading-24)
+
 - 官网：https://docs.docker.com/compose/
-- 部署vue项目：https://juejin.cn/post/6992848354753380389#comment
-- 视屏：https://www.bilibili.com/video/BV1gr4y1U7CY?p=31&vd_source=522153461914a766fc002cc8619314e4
 
-
+  
 
 ## 驱动问题
 
@@ -160,6 +162,10 @@ docker-compose.yml配置文件应该怎么写？
 ## 部署前端项目
 
 ：一般单个容器即可
+
+教程
+
+- 
 
 
 
