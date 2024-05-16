@@ -7,43 +7,38 @@
 - 在线练习
   - 平台：https://www.typescriptlang.org/play
   - 问题：https://github.com/type-challenges/type-challenges/blob/main/README.zh-CN.md
-  - https://ghaiklor.github.io/type-challenges-solutions/zh/
-  - https://juejin.cn/post/6994102811218673700?searchId=2023102310013171261D37BB241D1A8272#heading-7
-  
 - 视频教程
   - https://www.bilibili.com/video/BV14Z4y1u7pi/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4
-  - https://www.bilibili.com/video/BV1Xy4y1v7S2?p=2&vd_source=522153461914a766fc002cc8619314e4
-- tsconfig：https://www.typescriptlang.org/tsconfig#esModuleInterop
-- 工具类型：https://juejin.cn/post/6994102811218673700
+- 工具类型：[一文盘点Typescript中23个内置类型工具! (建议收藏) - 掘金 (juejin.cn)](https://juejin.cn/post/7341669201009655845?searchId=20240515155854D2BA2A0157F403852D00#heading-1)
+- [infer | 深入理解 TypeScript (jkchao.github.io)](https://jkchao.github.io/typescript-book-chinese/tips/infer.html#介绍)
 - 面试题：https://juejin.cn/post/6999985372440559624
 
 
 
-## 核心关注点
+## 关注点
 
 注意事项
 
 - 使不使用ts，跟你的代码好坏没有关系
 - 会用ts也不会给你加钱，反而增加了工作量
 
-
-
 ts是啥？
 
-- 能够让你的前端代码可读性更好，还有更加容易维护
-- js的超集，增加了静态类型计算和检查，还有一些面向对象的特性：接口、装饰器、枚举
-
-
+- js的超集
 
 ts解决了什么问题？
 
-- 编译期类型检查：可以提前发现问题，js则是没有编译期
+- 支持编译期类型检查：可以提前发现问题，js则是没有编译期
 - 支持丰富的类型
 - 更加容易维护
 
 
 
+薄弱点
 
+- [x] 类
+- [ ] 泛型
+- [ ] ts的实战
 
 
 
@@ -77,6 +72,10 @@ ts解决了什么问题？
 
 为了弥补any类型没有类型保护的缺陷，unknown
 
+使用场景
+
+- 
+
 
 
 **void**
@@ -101,15 +100,17 @@ x is boolean有啥用
 
 
 
+
+
 ## 类型断言
 
-：是编译时行为，是开发者告诉编译器将变量视为某个类型，所以类型断言其实是开发者断言给编译器的
+：是开发者告诉编译器将变量视为某个类型，所以类型断言其实是开发者断言给编译器的
 
 
 
 ## 类型守卫
 
-：这个是运行时行为，跟类型断言互补的，它是运行时检查变量的类型
+：这个是运行时行为，跟类型断言互补的，它是运行时检查变量类型
 
 通常以函数或者是表达式的方式被调用
 
@@ -122,12 +123,27 @@ js中typeof只能适用于基础类型的变量，如typeof person.name=="string
 
 
 
-常用的：iiit
+常用的
 
-- in
+- typeof
 - instanceof
 - is
-- typeof
+  - 能够告诉编译器某个变量的类型是啥，这样编译器在后面的语句中知道你是啥类型了
+  - 之前以为他没啥卵用，原来是告诉编译器某个变量类型的
+- in
+
+
+
+## 对象
+
+对象展开运算符...
+
+- 通常却是为了组装对象，哈哈
+- 写到等号右边才是展开
+
+
+
+
 
 
 
@@ -135,28 +151,56 @@ js中typeof只能适用于基础类型的变量，如typeof person.name=="string
 
 
 
+
+
 ## 接口
 
-接口与类型别名的区别
+优点
 
-：接口的限制比较多
+- 接口的局限性比较小
 
-- 接口只能表示对象形状或者是函数签名，不能表示基础类型，而类型别名可以
-- 接口可以声明多次，再合并，而类型别名则是只能声明一次
+常用接口还是类型别名？或者说哪种情况下用的什么？
 
-继承与实现的区别？
+：常用的是接口
 
-标记为可实例化
+- 只有生成复杂类型的时候才会使用类型别名
+  - 涉及到联合，交叉，函数类型时
 
-- new ():string
+
+
+
+
+## 类型别名
+
+优缺点
+
+
+
+
+
+## 类
+
+常见操作
+
+- 抽象类abstract
+
+- 继承extends
+
+- 重载
+
+- 访问器getter、setter
+
+- 
+
+  
+
+
 
 
 
 ## 泛型
 
-：是为了进一步保证类型安全，提高代码的安全性
-
-实现方式：类型参数化（即类型不是固定的，他取决于你传入的实参类型），调用时需要传入类型
+：能够支持更多类型，实现方式：类型参数化，即调用时需要指定类型
 
 擦除？
 
@@ -166,9 +210,25 @@ js中typeof只能适用于基础类型的变量，如typeof person.name=="string
 
 
 
+
+
+
+
 #### 工具类型
 
-：可以通过工具类型计算得到一个新类型
+：一种特殊类型，可以用它计算得到一个新类型
+
+typeof
+
+：也可以用于获取一个类型，比如typeof person
+
+keyof
+
+：也可以用于获取一个类型
+
+in
+
+
 
 需要了解各个工具类型的使用场景，想不到场景你就找gpt要
 
@@ -186,17 +246,9 @@ js中typeof只能适用于基础类型的变量，如typeof person.name=="string
 
 
 
-infer：只能用于条件类型的extends子句中
+infer：用于推导变量类型，常用于推导参数类型，返回值类型
 
-- type RT<T>=T extends (...args:any[])=>infer R ? R : any;
-
-连属性名也不能写死的时候
-
-- 你就用in遍历出来
-
-```ts
-type Record<T extends string|number|symbol,V>={[k in T]:V}
-```
+- extends优先级高，三木运算符优先级低，
 
 
 
@@ -204,50 +256,24 @@ type Record<T extends string|number|symbol,V>={[k in T]:V}
 
 
 
-## 模块化
-
-文件分：全局文件、模块文件
-
-- 没有import或者是export的文件就是全局文件
-- 一旦有import或export的就是模块文件
-  - 使用模块文件可以减少污染
-
-不是所有文件都是被当成模块的！成为模块是有条件的，项目内有module、non-module
-
-- 在顶层使用import或export，
 
 
 
-类型声明
 
-- 可以通过ts的官网找一个对应的**类型声明**文件（如lodash），然后下载，它会提供映射，一个模块如果没有对应的类型声明文件，导入编译都不能通过
-  - 通过插件自带的
-- 如何**自定义类型声明文件**，哈哈
-  - 声明模块、类、方法、变量、
+## 技巧
 
-声明命名空间有啥用：declare namespace
-
-export = xxx？
-
-import与require的区别？
-
-不写export会怎样呢？变成全局变量声明文件吗？
-
-- 
-
-仅仅是import 不写变量有啥用?
-
-- 一般是import css
-
-仅导入模块？
-
-- import 'xxx'，有啥用？
-
-
+- 语法：可选，类型，值
+  - 如name?:string="zeng"
 
 
 
 ## 问题
+
+类型不兼容会怎样？
+
+- ts编译器会报错，但是你可以无视它的报错
+
+
 
 常用的是对象数组还是数组对象？
 

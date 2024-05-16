@@ -46,9 +46,15 @@ ssh（secure shell）
 
 ## vscode
 
+[(81 封私信 / 3 条消息) VSCode不能直接跳转到源码怎么处理？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/620884482/answer/3205751690)
+
 [各种框架应用开发的vs插件](https://juejin.cn/post/6844903635017531405#heading-7)
 
 - 我早应该找一篇包括插件集合的文章
+
+无法跳转到源代码
+
+
 
 
 
