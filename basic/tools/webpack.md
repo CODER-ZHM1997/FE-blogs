@@ -13,25 +13,77 @@
 
 
 
-## 驱动问题
 
-webpack是啥？
 
-核心关注点
+## 核心关注点
 
-- input：入口
-- output：出口
-- loader：加载器
-  - 自定义加载器
-- plugin：插件
-  - 自定义插件
-- config：配置
-  - 配置优化
-- env：环境
+学习策略
+
+- 感觉没啥好学的
+
+
+
+input：入口
+
+output：出口
+
+loader：加载器
+
+plugin：插件
+
+config：配置
+
+env：环境
+
+
+
+## input
+
+
+
+
+
+## output
+
+
+
+
+
+## config
+
+
+
+
+
+## env
+
+
+
+
+
+## loader
+
+：把webpack不认识的资源转换成webpack认识的，比如语法转换，内容的拼接，如css-loader与style-loader
+
+css-loader：负责解析css文件，转换语法
+
+style-loader：负责将内容拷贝到style标签中
+
+
+
+
+
+## plugin
+
+
 
 
 
 ## 问题
+
+webpack中解释了为何webpack模块
+
+- [模块（Modules） | webpack 中文文档 (docschina.org)](https://webpack.docschina.org/concepts/modules/)
 
 如何优化？
 

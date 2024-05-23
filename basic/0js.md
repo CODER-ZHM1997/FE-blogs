@@ -4,10 +4,12 @@
 
 教程
 
-- 指南：https://github.com/csxiaoyaojianxian/JavaScriptStudy/tree/master/01-JS%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%AF%B9%E8%B1%A1
-- [「2021」高频前端面试题汇总之JavaScript篇（上） - 掘金 (juejin.cn)](https://juejin.cn/post/6940945178899251230#heading-90)
+- 指南：[JavaScript 中 try...catch 的 10 个使用技巧 (yuque.com)](https://www.yuque.com/wangpingan/knowledge/rk3glhlqht56o43u#52b77608)
+- 面试题：
+  - [「2021」高频前端面试题汇总之JavaScript篇（上） - 掘金 (juejin.cn)](https://juejin.cn/post/6940945178899251230#heading-90)
+  - [【建议星星】要就来45道Promise面试题一次爽到底(1.1w字用心整理) - 掘金 (juejin.cn)](https://juejin.cn/post/6844904077537574919?searchId=20240518181731471A65E69D8E19117E12#heading-50)
+
 - es指南：https://es6.ruanyifeng.com/#README
-  - 能读懂这里面的，就能够回答90%的问题了
 - [在 web 应用程序中使用文件 - Web API | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#示例：使用对象_url_来显示图片)
 - [import语句与函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import)
 
@@ -20,11 +22,15 @@ js三大模块：es、dom、bom
 
 
 
+
+
+
+
+
+
 ## web api
 
-web api？
-
-：由浏览器提供支持的接口，js可以通过这些接口跟浏览器交互
+：由浏览器提供支持的接口，但是通常用js来调用
 
 常见的web api
 
@@ -33,6 +39,56 @@ web api？
 - socket
 - storage
 - canvas
+- event
+
+
+
+#### event
+
+- target（常用）：指向最先触发事件的元素
+- currentTarget：指向事件绑定的元素
+
+
+
+
+
+#### storage
+
+
+
+怎么存？
+
+- 好像存的是一个对象，而不是一个属性一个属性的存
+
+怎么取？
+
+- 你也可以用JSON.parse来将字符串转换成对象，如JSON.parse(localStorage.getItem("userInfo"))
+- 一般是pinia帮我们做这件事了，不用我们单独的取
+
+注意
+
+- 遵守同源策略，所以三级域名不能访问二级域名
+
+
+
+#### websocket
+
+：一种双向通信通信协议，目的是服务端推送
+
+场景：跟王者一样
+
+- 多人游戏：传输其他玩家的动作和状态
+- 聊天室
+- 数据监控
+
+
+
+全双工&半双工
+
+- 区别
+  - 全双工：双方可以同时发送和接受数据，如电话
+  - 半双工：在某一时刻只能有一方在发送，另一方在接受数据，如对讲机
+- 相同点：都能双向通信
 
 
 
@@ -58,6 +114,16 @@ bom对象包括dom对象
 
 
 
+各种宽度，高度，
+
+- 不包括滚动条：document.body.clientWidth，换成document.documentElement.clientWidth也一样
+  - 包括滚动条：window.innerWidth
+- 内容高度：document.body.scrollHeight
+  - 内容高度可能小于clientHeight，也可能大于
+- 
+
+
+
 ## dom
 
 ：文档对象模型
@@ -70,7 +136,7 @@ dom可以在浏览器提供支持
 
 
 
-- 
+
 
 
 
@@ -138,6 +204,12 @@ dom可以在浏览器提供支持
 
 
 
+**立即执行函数**
+
+：有些函数需要先无条件执行1次，比如单例模式的函数
+
+
+
 ## regex
 
 教程
@@ -155,9 +227,31 @@ dom可以在浏览器提供支持
 
 
 
-## 原型
+## prototype
 
-虽然原型链由proto连接，但是编码过程中应该关注prototype
+虽然原型链由proto连接，但是编码过程中应该关注prototype，
+
+
+
+__proto__属性：每个对象都有的属性，指向它的原型对象
+
+创建构造函数对象时会生成一个原型对象，通过prototype关联
+
+- 创建普通对象时，js引擎会自动关联一个proto属性，指向原型对象
+
+函数是特殊的对象，它也有proto属性
+
+Function.prototype是所有函数对象的原型对象
+
+- 所以Foo.proto,Object.proto都指向它，也继承了它的方法
+
+其实就是“特殊”的proto指向“一般”
+
+- 比如Foo函数，就是特殊的一个Function函数
+
+设计出那个图的人真的牛逼啊
+
+
 
 
 
@@ -172,8 +266,6 @@ dom可以在浏览器提供支持
 - 动画
 
 
-
-## debug
 
 
 
@@ -190,11 +282,101 @@ dom可以在浏览器提供支持
 
 
 
+## Proxy
+
+：能够代理某些动作
+
+其实工作中用的不多，可以先放着
+
+getter函数
+
+- target参数指向被拦截的对象
+- receiver则是指向proxy对象本身
+
+有了代理对象后，访问属性一般是通过代理对象来访问属性，而不是直接通过原始对象，比如personProxy.name
+
+- 直接通过原始对象访问属性，不会触发拦截操作
+
+
+
+
+
+## Reflect
+
+：用来代替Object对象，为了操作对象设计的新的API
+
+动态绑定上下文(this)，就能够实现方法借用（或者是复用）
+
+- 比如Reflect.get方法，就支持方法借用
+
+Reflect方法一般在Proxy里面调用
+
+
+
+
+
+## Promise
+
+：相当于一个容器，保存着一个异步操作的结果
+
+构造函数
+
+- 参数为一个函数，用来指定promise的状态
+
+then函数
+
+- fulfill回调函数
+- reject回调函数：可选
+- 一般用then+catch来代替
+
+通过链式调用来解决回调地狱的问题
+
+- 回调地狱：指函数多层嵌套的情况
+
+Promise构造函数
+
+- 返回一个目前未知状态（未来可知）的promise对象
+
+Promise.reject
+
+- 直接返回一个reject状态的promise对象
+
+
+
+
+
+## 异常处理
+
+：[JavaScript 中 try...catch 的 10 个使用技巧 (yuque.com)](https://www.yuque.com/wangpingan/knowledge/rk3glhlqht56o43u#93d71b7d)
+
+场景
+
+- 需要异常时给点提示
+
+
+
+try，catch只能捕获同步异常
+
+- 异步的要用await或者是promise.catch方法
+
+没捕获异常会怎样？
+
+- 会抛到浏览器，并且在控制台打印出来
+
+
+
+- 
+
+
+
 
 
 ## 问题
 
-- 
+js api与web api区别？
+
+- web api是浏览器厂商提供的，必须要在浏览器环境下才能执行
+- 前者包括后者
 
 为什么要有数据类型？
 
@@ -276,10 +458,28 @@ location.href与pushState的区别？
 document与document.documentElement
 
 - 前者代表整个文档
-- 后者只代表根元素，如html标签
+- 后者只代表根元素，即html元素
+- document.body则是对应body元素
 
 import语句
 
 - 其实与if语句，差不多，都是用于实现特定操作的指令
 - import函数会返回一个promise
+
+无论多少处import，都只会生成一个对象
+
+- 
+
+null通常与undefined归类到一起，不跟flase和0归类到一起
+
+- 
+
+uri与url区别？
+
+：uri包括url，url只是uri的一种特殊形式
+
+- uri统一资源标识符，只需要能唯一标识一个资源即可
+- url统一资源定位符，包括了地址信息，比如网页url
+
+
 

@@ -3,25 +3,20 @@
 教程
 
 - 怎么学？https://juejin.cn/post/7255217876365115449?searchId=20230919113658FCFBAE399D57ED702F2E
-
 - 大全：https://github.com/sisterAn/JavaScript-Algorithms
-
 - 在线练题：https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings
-
 - 复杂度
   - https://zhuanlan.zhihu.com/p/248284657#:~:text=log%E8%A1%A8%E7%A4%BA%E5%AF%B9%E6%95%B0.,%E6%95%B0%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89%E5%9F%9F%E2%80%A6
   - https://cloud.tencent.com/developer/article/1613822
   
-  
 
-## 核心问题
-
-#### 目标
+学习目标
 
 - 学到入门即可，因为js不适合写算法，而且我也没有那么多时间
 
-#### 关注点
+## 关注点
 
+- 怎么学？
 - 数据结构
   - 线性：数组、链表、栈、队列
   - 非线性：树、堆、图、散列表
@@ -37,6 +32,16 @@
   8. 加密
   9. 机器学习
 - 复杂度分析
+
+
+
+## 怎么学？
+
+：多刷题
+
+那怎么刷题？
+
+- 先刷简单的
 
 
 

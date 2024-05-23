@@ -6,26 +6,10 @@ nodejs是js的运行时环境
   - 学习指南
     - https://juejin.cn/column/7246672925667344441
     - https://github.com/qufei1993/Nodejs-Roadmap
-  - 实战：https://github.com/csxiaoyaojianxian/JavaScriptStudy/blob/master/17-nodejs/03-buffer.js
-  - 7天入门：http://nqdeng.github.io/7-days-nodejs/
-  - 快速入门：https://juejin.cn/post/6911853807756378125
-  - https://github.com/csxiaoyaojianxian/JavaScriptStudy/blob/master/17-nodejs/02-%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF.js
-  - https://juejin.cn/post/6844903767926636558
-  - 大纲：https://github.com/ringcrl/node-point/blob/master/README.md
-  - 视频：https://www.bilibili.com/video/BV1gM411W7ex
-  - [常见操作](https://juejin.cn/post/6844904029219192839#heading-1)
 - node18新特性：https://juejin.cn/post/7089353090687565832
-- 搭建cli：https://juejin.cn/post/7063657010885034020
-- liveserver：https://juejin.cn/post/7074620057547964453
 - nvm：https://juejin.cn/post/7000652162950758431
   - 安装：直接跑到官网去安装即可：https://github.com/coreybutler/nvm-windows/releases
 - 命令行解析工具minimist：https://juejin.cn/post/6975687741761650695
-- nodejs的流：https://juejin.cn/post/6854573219060400141
-- web worker:https://juejin.cn/post/7176788060619669565
-- npx：https://juejin.cn/post/7142666525365764104
-- package：https://juejin.cn/post/7240805459288522808?searchId=20230717003123FDFD6C5E378389D16FA2
-- 实战：https://juejin.cn/column/7246672925667344441
-- 适用场景：https://juejin.cn/post/7258881840823713848?searchId=20230903234954A6D80AD93A5581AA7891#heading-2
 
 
 
@@ -387,6 +371,13 @@ main
 
 
 ## 问题
+
+怎样算一个node项目？纯前端项目算node项目吗？
+
+- node项目是最终通过nodejs来运行的，如node server.js
+- 而纯前端项目它最终则是在浏览器端运行的，所以不是node项目
+  - 但是它在构建过程可以借助node的api
+  - 但是你不能在运行时调用node的api
 
 node的架构是怎样的？
 

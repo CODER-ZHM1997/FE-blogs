@@ -34,15 +34,13 @@
 
 
 
-## 同源机制
+## 同源策略
 
-#### 跨域
-
-
+：[同源限制 - JavaScript 教程 - 网道 (wangdoc.com)](https://wangdoc.com/javascript/bom/same-origin)
 
 
 
-## 事件
+
 
 
 
