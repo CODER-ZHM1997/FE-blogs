@@ -8,10 +8,10 @@
 - 面试题：
   - [「2021」高频前端面试题汇总之JavaScript篇（上） - 掘金 (juejin.cn)](https://juejin.cn/post/6940945178899251230#heading-90)
   - [【建议星星】要就来45道Promise面试题一次爽到底(1.1w字用心整理) - 掘金 (juejin.cn)](https://juejin.cn/post/6844904077537574919?searchId=20240518181731471A65E69D8E19117E12#heading-50)
-
 - es指南：https://es6.ruanyifeng.com/#README
 - [在 web 应用程序中使用文件 - Web API | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#示例：使用对象_url_来显示图片)
 - [import语句与函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import)
+- 
 
 
 
@@ -45,6 +45,16 @@ js三大模块：es、dom、bom
 
 #### event
 
+事件类型
+
+- 鼠标
+- 键盘
+- 屏幕
+- 焦点
+- 
+
+
+
 - target（常用）：指向最先触发事件的元素
 - currentTarget：指向事件绑定的元素
 
@@ -54,7 +64,7 @@ js三大模块：es、dom、bom
 
 #### storage
 
-
+：只能存字符串，存数字也会被转换成字符串
 
 怎么存？
 
@@ -69,11 +79,21 @@ js三大模块：es、dom、bom
 
 - 遵守同源策略，所以三级域名不能访问二级域名
 
+sessionStorage
+
+- 必须是同一标签才行，同一窗口不同标签都不行
+
+localStorage
+
+- 同一窗口即可
+
 
 
 #### websocket
 
 ：一种双向通信通信协议，目的是服务端推送
+
+[前端使用WebSocket，非常简单！看完就是会了！！_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Af421Z7AZ/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4)
 
 场景：跟王者一样
 
@@ -89,6 +109,14 @@ js三大模块：es、dom、bom
   - 全双工：双方可以同时发送和接受数据，如电话
   - 半双工：在某一时刻只能有一方在发送，另一方在接受数据，如对讲机
 - 相同点：都能双向通信
+
+
+
+#### drag/drop
+
+：拖拽与放置
+
+
 
 
 
@@ -212,9 +240,14 @@ dom可以在浏览器提供支持
 
 ## regex
 
+学习目标
+
+- 了解一些基础的即可，不需要太深入
+- 
+
 教程
 
-- https://github.com/pingan8787/Leo-JavaScript/tree/master/Cute-JavaScript/Cute-Regular
+- [1.字符匹配 (yuque.com)](https://www.yuque.com/wangpingan/knowledge/muae4k)
 - https://juejin.cn/post/6844904021325512717
 - 在线正则：https://regex101.com/
   - 可以马上看到匹配的结果
@@ -224,6 +257,49 @@ dom可以在浏览器提供支持
 - 电话
 - 邮箱
 - 密码
+
+
+
+方法
+
+- str.match：提取正则匹配的内容
+- reg.test：判断整个字符串与正则匹配
+
+
+
+匹配内容
+
+匹配位置
+
+- 这个比较难，你只需要了解一下怎么验证以什么开头，以什么结尾即可
+
+```js
+// 都不需要加括号
+// 以he开头
+/^he/.test("hello")
+// 以lo结尾
+/lo$/.test("hello")
+```
+
+
+
+修饰符
+
+- i：忽略大小写
+- m：多行
+- g：全局，不要只匹配一个就完事了，把全部匹配完
+
+贪婪量词
+
+- .*之类的
+
+懒惰量词
+
+- .*?之类的，比如
+
+
+
+
 
 
 
@@ -319,6 +395,14 @@ Reflect方法一般在Proxy里面调用
 
 ：相当于一个容器，保存着一个异步操作的结果
 
+promise的很多方法都是返回一个新的promise实例
+
+关注点
+
+- 构造：接收一个函数作为参数
+- 回调函数：也是接收一个函数作为参数
+  - then、catch
+
 构造函数
 
 - 参数为一个函数，用来指定promise的状态
@@ -345,7 +429,7 @@ Promise.reject
 
 
 
-## 异常处理
+## exception
 
 ：[JavaScript 中 try...catch 的 10 个使用技巧 (yuque.com)](https://www.yuque.com/wangpingan/knowledge/rk3glhlqht56o43u#93d71b7d)
 
@@ -366,6 +450,111 @@ try，catch只能捕获同步异常
 
 
 - 
+
+
+
+## module
+
+关注点（相当于废话，其实可以不写的，学习的时候首先要找关注点）
+
+- 导入
+- 导出
+
+import *并不能去到export default的，你只能import xxx from
+
+导出有2种方式
+
+- 命名导出
+- 默认导出
+
+如果需要同时获取命名导出和默认导出，可以这样写
+
+- import defaultExport, { export1, export2 } from './module';
+
+
+
+##  闭包
+
+：能够访问另一个函数作用域的函数
+
+常用
+
+- 防抖，节流函数
+
+
+
+场景，场景一般就是它的优点了
+
+- 创建私有变量
+- 维持状态
+
+
+
+缺点
+
+- 内存泄漏
+- 调试困难，比如嵌套多层闭包时可读性下降
+
+
+
+## 深浅拷贝
+
+浅拷贝
+
+- ...
+- Object.asign
+
+深拷贝
+
+- json序列化保存，然后再反序列化
+
+
+
+
+
+## 遍历
+
+一般都是遍历数组，不需要遍历对象，但是这里是来遍历对象
+
+for in
+
+- 拿到的是key，而且它会去取出
+
+for of：后面出的，用于遍历数组
+
+- 拿到的是值
+
+
+
+## 代码规范
+
+[前端代码规范（vue篇） - 掘金 (juejin.cn)](https://juejin.cn/post/7331714933388525580?searchId=2024060114305985826F055E845590EC32#heading-21)
+
+js
+
+- 优先使用let，const，不要用var
+- 常量用大写，下划线连接
+- 使用单引号
+- 无用代码要删除，比如打印语句，弃用了的功能
+- 函数命名
+  - 开头：is、can、has、get、set
+  - 单词过长可以缩写，比如statistic，改成stat
+
+
+
+变量
+
+- 复数的要加s，比如props
+- 后缀不用加，比如type
+- 
+
+
+
+## 运算符
+
+??与||区别
+
+- ??更加严格，只有为null或undefined才会返回右值
 
 
 
@@ -480,6 +669,14 @@ uri与url区别？
 
 - uri统一资源标识符，只需要能唯一标识一个资源即可
 - url统一资源定位符，包括了地址信息，比如网页url
+
+
+
+静态方法与实例方法的本质区别是是否与状态有关，对吗？
+
+es的支持一般是由浏览器提供的
+
+- 也可以靠工具链如babel，将高级的es翻译成低级的es
 
 
 

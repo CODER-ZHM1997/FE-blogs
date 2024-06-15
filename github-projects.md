@@ -2,16 +2,27 @@
 
 
 
-## 教程
+教程
 
-项目日刊
+- 学习路线：[编程导航学习指南 - 飞书云文档 (feishu.cn)](https://yuyuanweb.feishu.cn/wiki/CHzBwweCIiKEoLkB5TVcPsGNnTf)
+- 50个有趣的项目：[乔木真言的个人空间-乔木真言个人主页-哔哩哔哩视频 (bilibili.com)](https://space.bilibili.com/688238053/channel/collectiondetail?sid=578008)
 
-- https://github.com/521xueweihan/HelloGitHub
-- https://github.com/FrontEndGitHub/FrontEndGitHub
+- B站up推荐：[SyMind/awesome-bilibili: b 站的宝藏 up 主名单，他们教技术。关于 Web 开发、计算机科学、机器学习、游戏开发、网络安全等 😎 (github.com)](https://github.com/SyMind/awesome-bilibili?tab=readme-ov-file#前端)
 
-学习路线
 
-- [编程导航学习指南 - 飞书云文档 (feishu.cn)](https://yuyuanweb.feishu.cn/wiki/CHzBwweCIiKEoLkB5TVcPsGNnTf)
+
+
+## 推荐方向
+
+- 工程化
+- 3d
+- 视频
+- 音频
+- gis
+
+
+
+- [ ] 
 
 
 
@@ -24,96 +35,6 @@
 
 
 
-## 面试
-
-- https://github.com/shfshanyue/Daily-Question
-  - 在线：https://q.shanyue.tech/train
-- https://github.com/azl397985856/fe-interview
-
-
-
-## vue
-
-：https://github.com/vuejs/awesome-vue
-
-vue3源码
-- https://vue3js.cn/start/
-- https://diy4869.github.io/vue-next-analysis/page/bitOperators.html#%E5%8F%B3%E7%A7%BB
-
-后台系统
-- vben：https://doc.vvbin.cn/guide/
-- https://github.com/elunez/eladmin-web
-
-
-模板
-
-- https://github.com/kailong321200875/vue-element-plus-admin
-- vite：https://github.com/jeddygong/vite-templates
-
-
-
-
-## react
-
-：https://github.com/enaqx/awesome-react
-
-后台系统
-
-- https://github.com/HalseySpicy/Hooks-Admin.git
-- 基于umi：https://preview.pro.ant.design/
-
-日历系统
-
-- https://github.com/usememos/memos
-
-博客系统
-
-- https://github.com/ManfredMT/nextjs-blog-react-admin/tree/main
-
-
-
-
-
-## 小程序
-
-：主要指微信小程序
-
-- 入门
-  - https://zhuanlan.zhihu.com/p/463950919
-  - https://www.bilibili.com/video/BV19G4y1K74d
-  - https://gitee.com/qingnian8/weixinNative
-  - [因为不想上班，我花了四个月的时间做了两款小程序（上） - 掘金 (juejin.cn)](https://juejin.cn/post/7155471183620603912?searchId=20240514142106D788595E979EC95DFB37)
-  
-- 商城
-  - https://github.com/Tencent/tdesign-miniprogram-starter-retail
-
-
-
-## 后台系统
-
-大全：https://juejin.cn/post/7124909032808120328
-
-
-
-pure-admin：https://github.com/pure-admin/vue-pure-admin
-
-- 文档：https://yiming_chang.gitee.io/pure-admin-doc/pages/introduction/
-- 视频：https://www.bilibili.com/video/BV1534y1S7HV/?spm_id_from=333.999.0.0&vd_source=522153461914a766fc002cc8619314e4
-
-vue-next-admin
-- 仓库：https://gitee.com/lyt-top/vue-next-admin/tree/vue-next-admin-template-js/#https://lyt-top.gitee.io/vue-next-admin-doc-preview
-- 预览
-
-gfast-ui
-- 仓库地址：https://gitee.com/tiger1103/gfast-ui
-- 预览：http://v3.g-fast.cn/sys#/login?redirect=/&params={}
-
-eladmin：https://eladmin.vip/demo/#/dashboard
-
-
-
-
-
 ## 综合
 
 - https://github.com/ponkans/F2E
@@ -123,6 +44,35 @@ eladmin：https://eladmin.vip/demo/#/dashboard
 - 30day-js:https://github.com/Asabeneh/30-Days-Of-JavaScript
 - https://github.com/FrontEndGitHub/FrontEndGitHub
 - 副业：https://github.com/easychen/lean-side-bussiness
+
+
+
+
+
+## vue
+
+- [三十的前端课视频专辑-三十的前端课视频合集-哔哩哔哩视频 (bilibili.com)](https://space.bilibili.com/2114295304/channel/series)
+- [大侠不能倒在路上投稿视频-大侠不能倒在路上视频分享-哔哩哔哩视频 (bilibili.com)](https://space.bilibili.com/405125788/video?tid=0&pn=2&keyword=&order=pubdate)
+
+
+
+vant
+
+- 实现音乐播放器：[【前端实战项目】手把手教你从零开始做一个网易云音乐，月嫂级毕业设计教程_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1c44y1g7ac/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4)
+- [18_Sticky 粘性布局_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Zm421M7hs?p=18&vd_source=522153461914a766fc002cc8619314e4)
+- [3天吃透Vue3+Vant移动开发的新特性/前端/编程/小白_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1TU4y177UG/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4)
+
+
+
+
+
+## react
+
+
+
+
+
+## mini
 
 
 

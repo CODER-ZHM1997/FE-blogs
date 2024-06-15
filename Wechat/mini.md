@@ -95,7 +95,16 @@ getUserInfo,getUserProfile接口已经报废了，要么不弹窗，要么返回
 
 **数据绑定**
 
-- 加model前缀即可，如model:value
+- 加model前缀即可，如model:value="{{name}}"
+  - vue的话加了个v前缀v-model:value
+
+
+
+
+**数据获取与设置**
+
+- 获取this.data
+- 设置：this.setData
 
 
 
@@ -110,7 +119,7 @@ getUserInfo,getUserProfile接口已经报废了，要么不弹窗，要么返回
 
 target与currentTarget
 
-- target是触发事件的组件，一般用这个
+- target是最先触发事件的组件，一般用这个
 - currentTarget是绑定事件的组件
 
 
@@ -253,9 +262,10 @@ Page生命周期：lsr
 
 流程
 
-- 调用wx.login获取code
+- 调用wx.login获取code，拿这个code请求后端
 - 后端通过code2session接口获取openid，unionid，session_key，生成jwt，返回给前端
-- 前端保存这个jwt即可
+- 前端保存这个jwt，之后请求时携带这个jwt即可
+- 
 
 
 
@@ -264,6 +274,10 @@ Page生命周期：lsr
 采用它的快速填写能力即可，通过button组件
 
 
+
+#### 请求拦截器
+
+- 需要自己封装一个request函数，里面绑定interceptor属性
 
 
 
@@ -274,6 +288,8 @@ Page生命周期：lsr
 分包的原则是啥？如何避免错分？
 
 - 
+
+
 
 
 
@@ -336,5 +352,7 @@ tabbar页面是啥？
 
 
 
+如何获取、设置全局数据？
 
-
+- 设置：通过在app.js中定义globalData对象，然后定义获取数据的方法
+- 获取：通过getApp方法拿到app实例，然后调用appInstance.globalData即可获取

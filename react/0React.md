@@ -5,8 +5,8 @@
 ：如果你熟悉react，你能多很多面试机会，而且薪资更高
 
 - 官网：https://zh-hans.react.dev/learn
+- 入门：https://www.bilibili.com/video/BV1Mu411p7cV/?spm_id_from=333.788.recommend_more_video.17
 - 状态管理库：https://juejin.cn/post/7195513281228898363?searchId=202309101453107D2EB6FCFD72B42FDB0E#comment
-- 面试题：
 - 搭配的hook：https://ahooks.js.org/zh-CN/hooks/use-map
 - react17、18的更新：https://segmentfault.com/a/1190000042680491#item-3
 - 生态

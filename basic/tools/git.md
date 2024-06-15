@@ -5,9 +5,7 @@
 - 入门：https://juejin.cn/post/6974184935804534815
 - 主教程：<https://www.cnblogs.com/anding/p/16987769.html>
 - commitizen:https://juejin.cn/post/6844903606815064077
-- git actions:https://juejin.cn/post/7189510686760779833
 - github 搜索技巧：https://juejin.cn/post/6844904058755481607
-
 - git提交规范：<https://juejin.cn/post/6970275680047071240>
 - 分支命名规则
   - <https://blog.csdn.net/qq_33858250/article/details/81047883>
@@ -83,18 +81,36 @@ git commitzen
 
 ：目前不想提交某些修改，需要先暂存起来
 
+场景
+
+- A分支开发到一半，又要切换到B分支，但是有不想增加一个无意义的commit
+
+- 添加注释：git stash save ""
+- 查看暂存记录：git statsh list
+
 
 
 ## git revert
 
 ：reset太粗暴了，推荐使用revert
 
+[【GIT】终于学会如何优雅地回退代码了｜IDEA｜Revert_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV15Z421Y7gX/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4)
+
+
+
 - 撤销单次提交：
-- 撤销多次提交：
+- 撤销多次提交
+
+场景
+
+- 撤销某个需求的提交
+  - 
 
 
 
 ## git reset
+
+：会影响历史记录，个人项目可以这么玩，团队的用revert
 
 mixed、soft、hard
 ：区别在于对工作区、暂存区有没有影响，变是指
@@ -127,16 +143,20 @@ mixed、soft、hard
 
 
 
-
 ## git rebase
+
+[【GIT】什么？你还不知道Merge和Rebase的区别吗？_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Te411z7fd/?spm_id_from=333.788&vd_source=522153461914a766fc002cc8619314e4)
 
 使用场景
 
-- 整理提交：git rebase -i HEAD~5
+- 获取另一个分支的更新：
+- 合并多个提交记录：git rebase -i HEAD~5
   - 修改commit 描述
   - 将多次commit合并成一个commit
-- 解决分支冲突
-  - 在feature上开发新功能，但是master上有新的提交：git rebase master
+
+注意
+
+- 操作只对当前所在分支有影响，对其他分支没有影响
 
 
 
@@ -154,6 +174,8 @@ mixed、soft、hard
 
 新建的tag不会自动推送到远程，你需要执行一下推送到远程
 ：git push origin --tags
+
+一般是commit之后打tag，或者是找之前的commit进行tag
 
 
 
@@ -177,9 +199,7 @@ mixed、soft、hard
 
 
 
-## git actions
 
-：能够提供持续的ci、cd服务
 
 
 
@@ -200,6 +220,17 @@ mixed、soft、hard
 
 
 
+## PR
+
+场景：有2种
+
+- 来自fork仓库的合并请求：先fork仓库，然后再pr
+  - 参与开源项目，常见的是这种pr
+- 来自其他分支的合并请求：比如feature 合并到master分支
+  - 这种是你已经成为项目团队成员了，你才能这样玩
+
+
+
 ## 场景题目
 
 线上版本出问题了，应该如何做？
@@ -211,6 +242,71 @@ mixed、soft、hard
 - 发布新版本：在master分支合并hotfix分支，并发布
 
   - git merge hotfix
+
+
+
+## git actions
+
+：能够提供持续的ci、cd服务，可以把很多动作自动化，流程化，比如在推送带v的提交时，会自动安装依赖、打包项目、发布到npm仓库，
+
+主要关注怎么找到合适的workflow，还有找action
+
+- 关键字：npm
+
+常见操作
+
+- 配置node
+- 配置pnpm
+- 编写自己的action
+- 
+
+[GitHub Actions 入门教程 - 阮一峰的网络日志 (ruanyifeng.com)](https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
+
+git actions:https://juejin.cn/post/7189510686760779833
+
+actions列表：[Marketplace (github.com)](https://github.com/marketplace?type=actions)
+
+发布到npm：[Github Actions实践--自动化发布npm包 - 掘金 (juejin.cn)](https://juejin.cn/post/7083566139426471949?searchId=20240530131404A9467AD8C1BA95682298)
+
+
+
+运行环境：github提供的云端
+
+层级：workflow》job任务》step步骤》action动作，口诀扔不动
+
+- 一个workflow对应一个文件
+
+
+如何将项目部署到服务器？
+
+- 监听事件：主版本提交
+- 使用rsync通过ssh连接，将打包后的dist文件传部署到服务器
+
+workflow文件不用你自己从0开始写，它有基础模板的
+
+- 
+
+怎么测试？不会只能通过提交才能运行吧？
+
+- 
+
+常用第三方的actions有哪些？
+
+- 检出分支：actions/checkout，将git指定分支版本代码克隆到运行环境中
+- pnpm配置
+- 
+
+
+
+发布到github pages
+
+- 
+
+发布到npm
+
+- 去npm官网生成token，然后拷贝到github中使用这个token
+
+
 
 
 
@@ -257,6 +353,8 @@ mixed、soft、hard
 
 
 
+
+## 
 
 
 

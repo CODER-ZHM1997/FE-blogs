@@ -20,6 +20,7 @@
 注意事项
 
 - 使不使用ts，跟你的代码好坏没有关系
+- ts只有在实战中才能提升，已经发展它的重点
 - 会用ts也不会给你加钱，反而增加了工作量
 
 ts是啥？
@@ -39,6 +40,28 @@ ts解决了什么问题？
 - [x] 类
 - [ ] 泛型
 - [ ] ts的实战
+
+
+
+如果定义类型？
+
+- 老老实实写结构，{...}
+- 通过typeof来获取类型，比如type InputEmits=typeof inputEmits
+
+
+
+如何给变量指定类型？
+
+```ts
+// 通过冒号的方式指定
+let foo:string;
+// 通过类型推断
+let foo=ref<HTMLElement>();
+```
+
+
+
+
 
 
 
@@ -166,6 +189,21 @@ js中typeof只能适用于基础类型的变量，如typeof person.name=="string
 - 只有生成复杂类型的时候才会使用类型别名
   - 涉及到联合，交叉，函数类型时
 
+可以为接口指定多个函数签名，比如
+
+```ts
+// 目的是能够满足多种输入类型
+interface TooltipEmits {
+    (e: "double"): void;
+    (e: "click", value?: boolean): void;
+}
+
+// 定义变量时，要同时满足接口里面的签名，
+const tool: TooltipEmits = (e: string, value?: boolean) => {
+    console.log(e, value);
+}
+```
+
 
 
 
@@ -256,6 +294,25 @@ infer：用于推导变量类型，常用于推导参数类型，返回值类型
 
 
 
+## 配置文件
+
+这个配置文件内容太多了，不建议深入，你按默认的配置即可，这不是我该操心的事情
+
+tsconfig文件除了影响ts文件，还可以影响tsx还有vue文件
+
+
+
+需要修改的配置
+
+```json
+// 配置模块解析策略，如何找模块
+"moduleResolution": "Bundler",
+// 配置生成的代码使用哪种模块系统
+"module": "ESNext",
+// 配置es的语法等级,一般是es6即可
+"target": "ESNext"
+```
+
 
 
 
@@ -265,6 +322,26 @@ infer：用于推导变量类型，常用于推导参数类型，返回值类型
 - 语法：可选，类型，值
   - 如name?:string="zeng"
 
+ts可以导出类型，也可以导出变量
+
+- 
+
+
+
+## 坑
+
+找不到模块或者是它的类型声明
+
+- 重启一下ts server
+  - 跑到js或ts文件下，然后打开c+s+p，然后输入restart
+- 重启以下vscode，或者是重新打开一下文件
+- 指定一下include属性即可
+- 或者是配置以下paths，完成路径映射
+
+找得到模块，但是提示没法找到它的类型声明文件
+
+- 比如import { ElButton } from 'elusa-ui';
+
 
 
 ## 问题
@@ -273,7 +350,20 @@ infer：用于推导变量类型，常用于推导参数类型，返回值类型
 
 - ts编译器会报错，但是你可以无视它的报错
 
+- 
 
+比如
+
+```ts
+import { withInstall } from "@elusa-ui/utils";
+```
+
+
+
+ts报错会怎样？
+
+- 会影响构建吗？不会
+- 
 
 常用的是对象数组还是数组对象？
 
@@ -300,3 +390,6 @@ infer：用于推导变量类型，常用于推导参数类型，返回值类型
 
 什么时候可以用@ts-ignore?
 
+找不到变量，比如__dirname
+
+- 安装一下@types/node，还有@types/jsdom

@@ -10,6 +10,9 @@ nodejs是js的运行时环境
 - nvm：https://juejin.cn/post/7000652162950758431
   - 安装：直接跑到官网去安装即可：https://github.com/coreybutler/nvm-windows/releases
 - 命令行解析工具minimist：https://juejin.cn/post/6975687741761650695
+- package.json文件
+  - [中高级前端必须掌握的package.json最新最全指南 - 掘金 (juejin.cn)](https://juejin.cn/post/7240805459288522808?searchId=202405281829098AE7D2A0258C9D4222E8)
+
 
 
 
@@ -38,6 +41,8 @@ nodejs是js的运行时环境
 
 ## nvm
 
+node版本管理工具
+
 你要去nvm-windows下载，不要跑错地方了
 
 - [Releases · coreybutler/nvm-windows (github.com)](https://github.com/coreybutler/nvm-windows/releases)
@@ -46,11 +51,129 @@ nodejs是js的运行时环境
 
 ## npm
 
+包管理工具
+
 关闭https验证
 
 指定新的源
 
+登录失败
 
+- [npm login error "Public registration is not allowed"? - Stack Overflow](https://stackoverflow.com/questions/73147053/npm-login-error-public-registration-is-not-allowed)
+
+发包
+
+- [代码魔法：探秘背后的奇幻-NPM库世界 - 掘金 (juejin.cn)](https://juejin.cn/post/7264900667595702331?searchId=20240527163851488AA75C7FA007B5EC83#heading-23)
+
+包有几种类型
+
+- js包
+- ui包
+- css包
+
+[自定义Vue前端组件发包到npm - 掘金 (juejin.cn)](https://juejin.cn/post/6953450915940532237?searchId=202405271509366A69C73EDF1971A3E054#heading-2)
+
+- 
+
+如果没有配置.npmignore文件，它会把
+
+前缀跟账号有关，不是任意账号都可以发@vue前缀的包的
+
+- 需要授权，
+- 或者是用你自己的账号作为前缀
+
+
+
+发包最好也用一条命令搞定
+
+- 
+
+
+
+
+
+
+
+
+
+## pnpm
+
+命名和参数的位置不能倒置
+
+- 必须是参数在前，命令在后，比如pnpm -r build
+
+
+
+## monorepo
+
+关注点
+
+- 安装
+- 打包
+
+教程
+
+- [从构建到发布：Monorepo 的最佳实践 - 掘金 (juejin.cn)](https://juejin.cn/post/7210310775276716092?searchId=202405262009597CF8E51E235A1CEB61CC)
+- [Monorepo pnpm模式管理多个web项目（Vue3） - 掘金 (juejin.cn)](https://juejin.cn/post/7117897323014783013?searchId=20240526201519AAE0270EA3B82A42A574#heading-7)
+
+优点
+
+- 能够将多个项目放到同一个代码仓库中，不用每个项目都单独一个仓库
+- 而且A项目依赖于B项目，也不需要安装依赖了，直接导入即可
+
+
+
+怎么安装，要不要安装，才能引入同个仓库下的其他包？
+
+- 直接全局安装一下即可，这样包就可以导入了
+
+怎么打包？
+
+- 
+
+安装时提示无效包，可以考虑一下删除配置和包，然后再安装
+
+```c
+rm -rf node_modules pnpm-lock.yaml
+pnpm install
+```
+
+
+
+怎么发包到npm？
+
+
+
+
+
+
+
+## 插件
+
+#### bumpp
+
+：主要是用于版本提升的时候调用，主要是跟master版本有关的，平时dev分支分支的卡还根本不用调用bumpp
+
+调用方式
+
+- 手动：常见
+- 自动：写在在github actions
+
+#### release-it
+
+：可以用于发布到npm
+
+
+
+#### nrm
+
+包的源管理工具
+
+
+
+## yaml
+
+教程：[YAML 入门教程 | 菜鸟教程 (runoob.com)](https://www.runoob.com/w3cnote/yaml-intro.html)
 
 
 
@@ -76,14 +199,17 @@ event loop
 
 
 
-
 ## module 模块系统
+
+[前端的导入导出：「CommonJS」「ES Module」模块化规范 - 掘金 (juejin.cn)](https://juejin.cn/post/6970296913039999007?searchId=20240527160402C18897667B9ADB588673#heading-4)
 
 模块系统
 
 - cjs
-- esm
+  - 最开始是用于服务端的，即nodejs
 
+- esm
+  - 适用于浏览器，而且服务端也支持，做到了大一统
 
 
 模块分类
@@ -92,25 +218,11 @@ event loop
 - 第三方
 - 自定义
 
-
-
 常见操作
 
 - 导入导出
 - 模块查找
 - 缓存
-
-
-
-主题
-
-- 模块
-- 模块初始化
-- 模块路劲解析
-  - 涉及到查找规则列表和优先级
-- 包
-  - 入口模块
-- 包管理器npm
 
 
 
@@ -147,16 +259,21 @@ nodejs如何加载es模块？
 
 
 
-node如何混合使用模块？
+cjs模块也可以兼容esm模块系统，通过加配置，这样就可以直接import这个cjs模块了
 
-- 只允许esm模块支持导入cjs模块，通过import的方式，不能用require，还有文件名也要改成cjs
+- Object.defineProperty(exports, "__esModule", { value: true });
 
-```js
-import foo from "./src/foo.js";
-import bar from "./src/bar.cjs";
-console.log("foo:", foo);
-console.log("bar:", bar);
-```
+
+
+在vite项目的vue文件中无法使用require函数
+
+- 因为vite使用的是es模块系统，由浏览器直接提供支持
+
+
+
+esm导入的变量都是单例的
+
+- 如果不是单例的其实没有太大意义，因为状态无法保存
 
 
 

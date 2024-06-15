@@ -59,6 +59,8 @@
 - 重复代码：维护困难，容易漏改
 -
 
+
+
 ## 调试
 
 自动化测试：不用启动项目
@@ -174,12 +176,51 @@ launch、attach的区别
 
 ## Vitest
 
-速记：die（descripe、it、expect）
+：提供测试环境，还有hrm功能
+
+速记：dte（descripe、test、expect）
 
 命令行
 
 - 如果没有指定-t，则是用文件名来匹配，npx vitest foo.spec.ts
 - 指定-t,则是以测试用例名来匹配，如npx vitest run -t foo
+
+如何快速搭建测试环境？
+
+- 安装依赖pnpm i vitest jsdom @vue/test-untils -D
+- 编写配置文件
+
+语法结构
+
+- expect(xxx).toxxx()
+  - 比如断言包含什么，为falsy，
+
+
+
+## @vue/test-utils
+
+：用于测试vue组件，能够模拟和监听事件，常常与vitest搭配使用
+
+常见操作
+
+- 触发
+- 监听
+
+
+
+## TDD
+
+适用场景
+
+- 组件开发
+- 
+
+
+
+不适用场景
+
+- 简单功能的
+- 页面：页面也写tdd的话，太耗费时间了
 
 
 
