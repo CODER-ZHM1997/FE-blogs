@@ -104,7 +104,7 @@ git commitzen
 场景
 
 - 撤销某个需求的提交
-  - 
+- 
 
 
 
@@ -115,9 +115,14 @@ git commitzen
 mixed、soft、hard
 ：区别在于对工作区、暂存区有没有影响，变是指
 
-- soft：只撤销commit操作，但是保留修改并暂存
+- soft：只*撤销*commit操作，但是*保留*修改并暂存
 - mixed（默认）：撤销git add、commit操作，但保留修改到工作区
 - hard：撤销全部修改
+
+```sh
+git reset --soft HEAD~1 //撤销最近1次修改，并暂存
+
+```
 
 
 

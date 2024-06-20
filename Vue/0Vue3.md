@@ -9,7 +9,6 @@
 
 
 
-
 ## 核心问题
 
 #### 关注点
@@ -396,10 +395,28 @@ tsx中不能使用setup语法糖了
 
 风格不应该成为编码的负担，所以挑几个看即可，每多记一组就多个负担
 
-- 方法命名
-- 目录规范
+- 变量、方法的规范
 
 [前端代码规范（vue篇） - 掘金 (juejin.cn)](https://juejin.cn/post/7331714933388525580?searchId=202405161429156789AD1AEB243D1B3F8A#heading-30)
+
+[前端命名规则与各个场景的命名方法，解决你取变量名的痛苦！！！（二） - 掘金 (juejin.cn)](https://juejin.cn/post/7016139493312823303?searchId=20240620160310BA82F5ACACFA9D683F95)
+
+变量
+
+- boolean：can,has,is,
+  - 如isShow
+- map：by，如usersByName
+
+函数
+
+- add,edit,remove,queryXXX
+- open,close
+- submit,reset
+- 不要onxxxClick，我觉得这样太麻烦了，直接
+
+下划线：前端中_一般作为特殊使用的下划线，一般使用中划线
+
+- 比如常量中作为语义分隔(`MAX_VALUE`)，前置作为私有不能使用的变量(`__myprovite`)。
 
 
 

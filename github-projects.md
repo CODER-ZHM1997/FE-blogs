@@ -12,6 +12,17 @@
 
 
 
+
+## 综合
+
+- https://github.com/ponkans/F2E
+- 面试专题
+- leo-script https://www.yuque.com/wangpingan/knowledge)](https://www.yuque.com/wangpingan)
+- javascript-stydy:https://github.com/csxiaoyaojianxian/JavaScriptStudy
+- 副业：https://github.com/easychen/lean-side-bussiness
+
+
+
 ## 推荐方向
 
 - 工程化
@@ -22,11 +33,9 @@
 
 
 
-- [ ] 
 
 
-
-## 算法
+## algorithms
 
 - 在线练题：https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/easy/101.symmetric-tree
 
@@ -35,21 +44,16 @@
 
 
 
-## 综合
-
-- https://github.com/ponkans/F2E
-- 面试专题
-- leo-script:https://github.com/pingan8787/Leo-JavaScript
-- javascript-stydy:https://github.com/csxiaoyaojianxian/JavaScriptStudy
-- 30day-js:https://github.com/Asabeneh/30-Days-Of-JavaScript
-- https://github.com/FrontEndGitHub/FrontEndGitHub
-- 副业：https://github.com/easychen/lean-side-bussiness
-
-
-
 
 
 ## vue
+
+模板
+
+- 后台系统：[HalseySpicy/Geeker-Admin at template (github.com)](https://github.com/HalseySpicy/Geeker-Admin/tree/template)
+- h5：[vue3-h5-template](https://github.com/yulimchen/vue3-h5-template)
+
+
 
 - [三十的前端课视频专辑-三十的前端课视频合集-哔哩哔哩视频 (bilibili.com)](https://space.bilibili.com/2114295304/channel/series)
 - [大侠不能倒在路上投稿视频-大侠不能倒在路上视频分享-哔哩哔哩视频 (bilibili.com)](https://space.bilibili.com/405125788/video?tid=0&pn=2&keyword=&order=pubdate)
@@ -61,8 +65,6 @@ vant
 - 实现音乐播放器：[【前端实战项目】手把手教你从零开始做一个网易云音乐，月嫂级毕业设计教程_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1c44y1g7ac/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4)
 - [18_Sticky 粘性布局_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Zm421M7hs?p=18&vd_source=522153461914a766fc002cc8619314e4)
 - [3天吃透Vue3+Vant移动开发的新特性/前端/编程/小白_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1TU4y177UG/?spm_id_from=333.337.search-card.all.click&vd_source=522153461914a766fc002cc8619314e4)
-
-
 
 
 
