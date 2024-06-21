@@ -63,15 +63,14 @@
 
 ## 亮点
 
-- 使用ai助手进行需求分析
+- pnpm+monorepo的架构
+- 使用ai助手进行需求分析，参考element-plus的设计风格
 - 使用tdd模式驱动开发，通过vitest进行单元测试，
 - 使用story-book测试和编写文档
-- 对打包进行分包，支持按需引入
+- 支持按需引入
 - 使用git-actions来ci/cd，比如自动化npm包发布，自动化线上部署
 - 使用css模块化，遵循bem规范
 - 支持组件多种方式提供内容，比如props和slot
-- hook
-- 
 
 
 

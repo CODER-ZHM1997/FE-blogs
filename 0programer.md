@@ -160,7 +160,9 @@
 
 即使是粗略的学习，系统化学习也很重要
 
-- 比如js的模块化，我就没学好，一直是
+- 比如js的模块化，我就没学好，直到看到了别人写的文档
+  - [模块导入 import - JavaScript Guidebook (tsejx.github.io)](https://tsejx.github.io/javascript-guidebook/core-modules/modularization/import)
+  - 要知道名字，不然你都不知道有几种语法
 
 多找项目，多做项目
 
@@ -445,7 +447,9 @@
 
 - 可以考虑抽离为回调函数
 
+全局共享的变量，应该在定义处编写update方法
 
+- 通过调用方法来修改，而不是直接修改
 
 #### 提问
 

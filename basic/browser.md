@@ -119,6 +119,7 @@ sessionStorage在不同标签并不会同步
 
 - xss
   - 设置cookie为http-only，不让脚本去读
+  - 敏感数据转码
 - csrf
   - 检查一下referer，必须是可信的refer才行
 
